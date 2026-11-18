@@ -1,0 +1,1362 @@
+[
+  {
+    "id": 1,
+    "code": "P.1",
+    "type": "PG",
+    "stem": "Dalam rancangan ERD perpustakaan kelas, beberapa murid menjadikan nama siswa sebagai primary key karena setiap murid punya nama. Guru menemukan dua murid bernama Nisa. Tindakan pembelajaran yang paling tepat adalah ...",
+    "options": [
+      "Memberi definisi primary key untuk dicatat lalu meminta murid lanjut menggambar.",
+      "Memperlihatkan dua rekaman bernama Nisa, mengajak murid menguji identitas unik, lalu merevisi rancangan dengan ID siswa.",
+      "Langsung mengganti semua nama menjadi nomor urut tanpa diskusi.",
+      "Menghapus salah satu rekaman Nisa agar tidak ada duplikasi."
+    ],
+    "key": "B",
+    "why": "Pertentangan data nyata mengungkap miskonsepsi: nama tidak menjamin keunikan, sedangkan ID siswa dapat menjadi PK. Guru membantu murid menemukan alasan sebelum memperbaiki ERD.",
+    "section": "PCK"
+  },
+  {
+    "id": 2,
+    "code": "P.1",
+    "type": "MCMA",
+    "stem": "Kelompok merancang basis data peminjaman alat lab. Guru ingin menghubungkan konsep relasi satu-ke-banyak dengan implementasi SQL. Aktivitas mana yang paling mendukung? Pilih semua jawaban yang tepat.",
+    "options": [
+      "Meminta murid menyalin definisi foreign key berulang kali.",
+      "Membuat contoh satu siswa yang memiliki beberapa peminjaman.",
+      "Mengabaikan tabel referensi agar latihan lebih singkat.",
+      "Menempatkan id_siswa pada tabel peminjaman dan menguji data yang terhubung.",
+      "Meminta murid menjelaskan dampak jika id_siswa pada peminjaman tidak merujuk siswa yang ada."
+    ],
+    "key": [
+      "B",
+      "D",
+      "E"
+    ],
+    "why": "B, D, E menghubungkan kardinalitas, implementasi FK, dan integritas referensial. Menyalin definisi atau menghilangkan referensi tidak memfasilitasi pemahaman.",
+    "section": "PCK"
+  },
+  {
+    "id": 3,
+    "code": "P.1",
+    "type": "PG",
+    "stem": "Murid membuat formulir Laravel yang bisa dikirim walaupun kolom email kosong. Mereka menyimpulkan atribut required di HTML saja pasti cukup menjaga validitas data. Cara paling tepat meluruskan konsep adalah ...",
+    "options": [
+      "Menyuruh murid menghafal semua aturan validasi Laravel.",
+      "Mengganti framework agar validasi otomatis sempurna.",
+      "Mendemonstrasikan pengiriman request yang melewati validasi browser, lalu membimbing penerapan validasi sisi server.",
+      "Menganggap hasilnya benar selama tampilan formulir rapi."
+    ],
+    "key": "C",
+    "why": "Validasi browser membantu pengalaman pengguna, tetapi pemeriksaan data tetap diperlukan di server. Demonstrasi request memperlihatkan alasan teknisnya.",
+    "section": "PCK"
+  },
+  {
+    "id": 4,
+    "code": "P.1",
+    "type": "Kategori",
+    "stem": "Guru memakai dua tabel kecil, siswa dan peminjaman, untuk membangun pemahaman JOIN. Nilai tiap tindakan sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Murid memprediksi hasil JOIN sebelum menjalankan query, lalu membandingkan prediksi dengan keluaran.",
+      "Guru langsung memberikan query jadi tanpa membahas relasi tabel.",
+      "Murid menjelaskan mengapa baris tertentu muncul atau tidak muncul dalam hasil INNER JOIN."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Prediksi, uji, dan penjelasan hasil membangun model mental. Query yang hanya disalin dapat menghasilkan keluaran tanpa pemahaman relasi.",
+    "section": "PCK"
+  },
+  {
+    "id": 5,
+    "code": "P.1",
+    "type": "PG",
+    "stem": "Saat mengenalkan objek dalam pemrograman berorientasi objek, murid menyamakan class dan object. Representasi awal mana yang paling membantu?",
+    "options": [
+      "Membandingkan class dengan rancangan atribut/perilaku dan object dengan dua instans nyata berbeda.",
+      "Meminta murid langsung membuat aplikasi kompleks tanpa contoh.",
+      "Mengatakan class dan object identik agar mudah diingat.",
+      "Menunda pembahasan hingga ujian akhir."
+    ],
+    "key": "A",
+    "why": "Contoh dua objek dari satu class membedakan cetak biru dan instans sambil mempertahankan keterkaitan konsep dengan kode.",
+    "section": "PCK"
+  },
+  {
+    "id": 6,
+    "code": "P.1",
+    "type": "MCMA",
+    "stem": "Kelompok belajar kolaborasi Git pada proyek website kelas. Bukti pemahaman alur kerja yang layak diminta guru adalah ... Pilih semua yang tepat.",
+    "options": [
+      "Mengumpulkan satu file ZIP terakhir tanpa riwayat perubahan.",
+      "Memperlihatkan commit dengan pesan yang menjelaskan perubahan.",
+      "Menjelaskan kapan sebuah branch perlu digabung dan bagaimana menangani konflik.",
+      "Memastikan semua murid memakai satu akun agar mudah.",
+      "Menjelaskan perubahan lewat perbandingan diff pada dua versi kode."
+    ],
+    "key": [
+      "B",
+      "C",
+      "E"
+    ],
+    "why": "Commit, branch/merge, dan diff merupakan bukti proses version control; satu file ZIP atau satu akun bersama menghilangkan jejak kontribusi.",
+    "section": "PCK"
+  },
+  {
+    "id": 7,
+    "code": "P.1",
+    "type": "PG",
+    "stem": "Pada kasus transaksi koperasi sekolah, setiap transaksi bisa berisi banyak jenis barang. Murid membuat satu kolom barang1, barang2, barang3 pada tabel transaksi. Pertanyaan pemantik terbaik adalah ...",
+    "options": [
+      "“Kenapa kalian tidak memilih nama kolom lebih pendek?”",
+      "“Siapa yang paling cepat bisa menghafal SQL?”",
+      "“Bagaimana jika satu transaksi memuat enam barang dan jumlah tiap barang berbeda?” lalu mengarahkan ke tabel detail_transaksi.",
+      "“Maukah kalian menghapus transaksi yang berisi banyak barang?”"
+    ],
+    "key": "C",
+    "why": "Kasus enam barang menonjolkan keterbatasan kolom berulang dan kebutuhan tabel detail yang terhubung dengan transaksi serta barang.",
+    "section": "PCK"
+  },
+  {
+    "id": 8,
+    "code": "P.1",
+    "type": "Kategori",
+    "stem": "Guru mengajar perulangan dengan tabel pelacakan nilai variabel. Nilai tindakan sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Mengajak murid menelusuri nilai variabel pada setiap iterasi sebelum menjalankan program.",
+      "Menilai jawaban benar dari keluaran akhir saja tanpa memeriksa alasan murid.",
+      "Membandingkan pelacakan manual dengan keluaran program lalu membahas selisihnya."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Trace table membantu menjelaskan keadaan program, bukan hanya hasil akhir. Membandingkan hasil merupakan kesempatan refleksi.",
+    "section": "PCK"
+  },
+  {
+    "id": 9,
+    "code": "P.2",
+    "type": "PG",
+    "stem": "Asesmen awal menunjukkan sebagian murid sudah lancar SELECT-WHERE, sebagian belum mengenal kondisi WHERE. Strategi paling responsif adalah ...",
+    "options": [
+      "Memberikan tugas identik dengan target waktu sama untuk semuanya.",
+      "Membagi dukungan dan tingkat tantangan secara fleksibel sesuai bukti awal, dengan tujuan belajar inti yang sama.",
+      "Memindahkan murid yang belum lancar ke luar kelas.",
+      "Hanya menunjuk murid paling cepat untuk menjawab."
+    ],
+    "key": "B",
+    "why": "Diferensiasi menyesuaikan jalan menuju tujuan yang sama berdasarkan kebutuhan nyata; bukan pelabelan kelompok tetap.",
+    "section": "PCK"
+  },
+  {
+    "id": 10,
+    "code": "P.2",
+    "type": "Kategori",
+    "stem": "Di laboratorium, empat murid belum mendapat komputer. Nilai keputusan guru sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Menyusun giliran operator, penguji, dan pencatat sehingga semua berperan dan berganti peran.",
+      "Memberikan penilaian keterampilan komputer hanya kepada murid yang kebagian perangkat.",
+      "Menyiapkan tugas prediksi query atau rancangan ERD saat menunggu giliran praktik."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Rotasi dan tugas tanpa perangkat menjaga partisipasi serta kesempatan menunjukkan capaian. Penilaian harus adil terhadap akses.",
+    "section": "PCK"
+  },
+  {
+    "id": 11,
+    "code": "P.2",
+    "type": "MCMA",
+    "stem": "Salah satu murid memiliki kendala penglihatan dan kesulitan membaca tangkapan layar kode yang kecil. Penyesuaian apa yang tepat? Pilih semua.",
+    "options": [
+      "Menyediakan teks kode yang dapat diperbesar atau dibaca pembaca layar.",
+      "Mengurangi target menjadi hanya menonton teman tanpa kontribusi.",
+      "Memastikan kontras dan keterbacaan bahan praktik.",
+      "Mengizinkan alternatif cara menjelaskan logika program selama mengukur tujuan yang sama.",
+      "Mengecualikan murid dari asesmen agar tidak kesulitan."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Penyesuaian akses dan cara respons dapat menjaga target kompetensi. Menghapus kesempatan praktik atau asesmen bukan pilihan inklusif.",
+    "section": "PCK"
+  },
+  {
+    "id": 12,
+    "code": "P.2",
+    "type": "PG",
+    "stem": "Murid yang cepat selesai CRUD mulai tidak tertantang, sementara teman lain masih membuat tabel. Tindakan terbaik adalah ...",
+    "options": [
+      "Memberikan tantangan lanjutan validasi dan uji kasus batas, sambil menyediakan bantuan bertahap bagi yang masih kesulitan.",
+      "Menjadikan murid cepat selesai sebagai pengganti guru sepanjang jam.",
+      "Menghentikan kegiatan semua murid sampai seluruh kelas sama cepat.",
+      "Memberi tugas menyalin ulang kode tanpa tujuan baru."
+    ],
+    "key": "A",
+    "why": "Tantangan pengayaan dan scaffolding disesuaikan kesiapan. Tutor sebaya boleh membantu, tetapi tidak menggantikan tanggung jawab guru.",
+    "section": "PCK"
+  },
+  {
+    "id": 13,
+    "code": "P.2",
+    "type": "PG",
+    "stem": "Dalam diskusi ERD ada murid yang sulit mengikuti penjelasan lisan di ruang bising. Respons guru yang paling tepat adalah ...",
+    "options": [
+      "Menganggap murid tidak fokus dan menegur di depan kelas.",
+      "Menambah volume bicara saja tanpa melihat hambatan.",
+      "Memberikan instruksi tertulis/visual, memastikan posisi dan akses komunikasi, serta mengecek pemahaman secara pribadi.",
+      "Membebaskan murid dari tujuan pembelajaran."
+    ],
+    "key": "C",
+    "why": "Akses multimodal dan pengecekan pemahaman membuat murid dapat ikut tanpa distigma.",
+    "section": "PCK"
+  },
+  {
+    "id": 14,
+    "code": "P.3",
+    "type": "PG",
+    "stem": "Saat latihan debugging banyak murid malu karena error. Guru ingin kelas aman untuk mencoba. Respons terbaik adalah ...",
+    "options": [
+      "Mengumumkan siapa paling banyak error.",
+      "Menunjukkan contoh error dari kode sederhana, menormalisasi revisi, dan meminta murid menjelaskan langkah diagnosis.",
+      "Menghapus latihan debugging dari kegiatan.",
+      "Menghitung semua error sebagai pelanggaran tata tertib."
+    ],
+    "key": "B",
+    "why": "Menormalisasi kesalahan sebagai bukti proses belajar dan mengajarkan strategi diagnosis mendukung keberanian bereksperimen.",
+    "section": "PCK"
+  },
+  {
+    "id": 15,
+    "code": "P.3",
+    "type": "Kategori",
+    "stem": "Guru menyiapkan proyek pencatatan peminjaman kelas. Nilai praktik berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Membuka pembelajaran dengan masalah yang dekat dengan kebutuhan murid dan menjelaskan alasan mempelajarinya.",
+      "Mewajibkan setiap kelompok menghias slide tanpa menguji fungsi database.",
+      "Mengakhiri proyek dengan refleksi keputusan desain, kendala, dan perbaikan."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Pembelajaran bermakna menghubungkan tujuan, pengalaman, dan refleksi; hiasan bukan bukti capaian teknis.",
+    "section": "PCK"
+  },
+  {
+    "id": 16,
+    "code": "P.3",
+    "type": "MCMA",
+    "stem": "Guru ingin suasana diskusi kode menyenangkan tetapi tetap menantang. Pilih praktik yang tepat.",
+    "options": [
+      "Mengizinkan kelompok menjelaskan alternatif solusi tanpa diejek.",
+      "Menyebut kode murid tertentu “paling bodoh” sebagai humor.",
+      "Memberi kriteria keberhasilan yang jelas dan kesempatan memperbaiki produk.",
+      "Memuji proses pengujian dan argumentasi, bukan hanya jawaban tercepat.",
+      "Mewajibkan semua murid meniru satu cara tanpa berdiskusi."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Keamanan psikologis, kesempatan revisi, dan penghargaan atas alasan membangun keterlibatan tanpa menurunkan standar.",
+    "section": "PCK"
+  },
+  {
+    "id": 17,
+    "code": "P.3",
+    "type": "PG",
+    "stem": "Menjelang akhir sesi SQL, murid mulai kehilangan fokus. Pilihan yang tetap bermakna adalah ...",
+    "options": [
+      "Memberi ceramah baru selama 30 menit tanpa interaksi.",
+      "Menutup pelajaran lebih awal tanpa asesmen.",
+      "Meminta murid menyalin definisi JOIN sebanyak sepuluh kali.",
+      "Melakukan tantangan singkat: prediksi query, uji di DB, lalu simpulkan satu temuan dan satu pertanyaan."
+    ],
+    "key": "D",
+    "why": "Aktivitas singkat yang mengaktifkan prediksi–uji–refleksi memulihkan keterlibatan sekaligus memeriksa pemahaman.",
+    "section": "PCK"
+  },
+  {
+    "id": 18,
+    "code": "P.4",
+    "type": "PG",
+    "stem": "Murid menggunakan AI untuk membuat kode autentikasi dan menganggap hasilnya pasti aman. Guru sebaiknya ...",
+    "options": [
+      "Melarang pembicaraan tentang AI selamanya.",
+      "Meminta murid menguji dan menjelaskan kode, memeriksa pengelolaan sandi serta input, dan mendiskusikan keterbatasan keluaran AI.",
+      "Memberi nilai penuh karena aplikasi berhasil dijalankan.",
+      "Membagikan kredensial server sekolah ke AI untuk meminta perbaikan."
+    ],
+    "key": "B",
+    "why": "Literasi AI mencakup verifikasi fungsi, keamanan, sumber data, dan tanggung jawab penggunaan.",
+    "section": "PCK"
+  },
+  {
+    "id": 19,
+    "code": "P.4",
+    "type": "Kategori",
+    "stem": "Guru memakai platform daring untuk penugasan RPL. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Menyiapkan alternatif akses saat jaringan atau perangkat murid terbatas.",
+      "Mengunggah data identitas siswa asli ke layanan publik agar contoh terlihat realistis.",
+      "Memilih alat berdasarkan kontribusinya terhadap tujuan belajar, bukan popularitasnya."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Penggunaan TIK perlu mempertimbangkan akses, privasi, dan kesesuaian tujuan, bukan semata fitur.",
+    "section": "PCK"
+  },
+  {
+    "id": 20,
+    "code": "P.4",
+    "type": "MCMA",
+    "stem": "Saat internet lab tidak stabil, guru tetap ingin murid mempelajari hubungan tabel. Pilih alternatif yang tepat.",
+    "options": [
+      "Menggunakan kartu entitas dan atribut untuk memodelkan relasi secara luring.",
+      "Menunggu internet pulih tanpa aktivitas belajar apa pun.",
+      "Menyiapkan skrip SQL lokal atau dataset contoh yang bisa dijalankan tanpa internet.",
+      "Menggunakan kertas untuk memprediksi hasil JOIN, lalu menguji saat perangkat siap.",
+      "Menghapus tujuan belajar hari itu selamanya."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Model fisik, SQL lokal, dan prediksi kertas tetap menargetkan konsep yang sama meski koneksi tidak tersedia.",
+    "section": "PCK"
+  },
+  {
+    "id": 21,
+    "code": "P.4",
+    "type": "PG",
+    "stem": "Guru hendak memilih aplikasi gambar ERD daring. Murid mampu menggambar ERD di kertas. Prinsip pilihan paling tepat adalah ...",
+    "options": [
+      "Gunakan aplikasi apa pun asalkan paling ramai dipakai.",
+      "Teknologi wajib digunakan di setiap tahap meskipun waktu terbuang untuk registrasi.",
+      "Pilih alat apabila membantu menguji relasi, merevisi rancangan, atau kolaborasi; kertas tetap sah bila mencapai tujuan.",
+      "Hanya hasil digital yang boleh dinilai."
+    ],
+    "key": "C",
+    "why": "Teknologi alat, bukan tujuan. Pilihan didasarkan pada nilai tambah pedagogis dan kondisi akses.",
+    "section": "PCK"
+  },
+  {
+    "id": 22,
+    "code": "P.4",
+    "type": "PG",
+    "stem": "Sebuah generator kode AI menghasilkan query yang menampilkan informasi pribadi siswa tanpa pembatasan. Tugas belajar yang paling tepat adalah ...",
+    "options": [
+      "Membandingkan keluaran dengan kebutuhan dan prinsip akses data, lalu merancang query yang hanya menampilkan informasi yang diperlukan.",
+      "Menggunakan query itu apa adanya karena dapat dijalankan.",
+      "Mempublikasikan hasil query agar mudah dinilai.",
+      "Menghapus topik keamanan data dari silabus."
+    ],
+    "key": "A",
+    "why": "Kritik terhadap keluaran otomatis menuntut pemahaman kebutuhan, minimisasi data, dan pengujian hasil.",
+    "section": "PCK"
+  },
+  {
+    "id": 23,
+    "code": "P.5",
+    "type": "PG",
+    "stem": "Guru ingin memberi tugas rancangan basis data yang dekat dengan kehidupan murid. Masalah peminjaman alat olahraga sekolah tersedia dan datanya bisa disimulasikan. Kegiatan terbaik adalah ...",
+    "options": [
+      "Memilih kasus industri yang rumit walaupun murid belum memahami entitas.",
+      "Menyalin rancangan dari internet tanpa memahami kebutuhan.",
+      "Membiarkan murid menggambar tabel sesuka hati tanpa spesifikasi.",
+      "Mengobservasi kebutuhan peminjaman, menyusun entitas-relasi, dan menguji rancangan dengan contoh transaksi."
+    ],
+    "key": "D",
+    "why": "Kebutuhan lokal yang konkret dapat menghubungkan konsep ERD, relasi, dan validasi rancangan.",
+    "section": "PCK"
+  },
+  {
+    "id": 24,
+    "code": "P.5",
+    "type": "Kategori",
+    "stem": "Guru mengadaptasi studi kasus untuk SMK. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Memakai contoh proses koperasi setempat tanpa menganggap semua murid memiliki pengalaman yang sama.",
+      "Memilih konteks hanya karena tren walaupun tidak mendukung kompetensi yang dinilai.",
+      "Mengajak murid menyebutkan contoh alur data lain yang setara bila pengalaman awal berbeda."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Konteks lokal membantu jika relevan dan membuka beragam pengalaman; guru tidak boleh berasumsi semua murid sama.",
+    "section": "PCK"
+  },
+  {
+    "id": 25,
+    "code": "P.5",
+    "type": "MCMA",
+    "stem": "Pada kelas RPL dengan komputer terbatas, guru menerapkan proyek inventaris. Tindakan yang mempertahankan substansi belajar adalah ... Pilih semua.",
+    "options": [
+      "Membagi peran perancang ERD, penulis SQL, dan penguji dengan rotasi.",
+      "Menilai hanya keberhasilan mengetik tercepat.",
+      "Menyediakan contoh data kecil untuk menguji PK/FK.",
+      "Mengadakan presentasi alasan desain yang dapat diikuti anggota tanpa perangkat.",
+      "Membiarkan murid yang tak mendapat komputer tidak mengerjakan apa pun."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Peran rotasi, data uji, dan pertanggungjawaban desain memberi kontribusi nyata bagi seluruh murid.",
+    "section": "PCK"
+  },
+  {
+    "id": 26,
+    "code": "P.5",
+    "type": "PG",
+    "stem": "Kelompok hendak memakai data asli pelanggan usaha keluarga siswa untuk praktik. Respons paling tepat adalah ...",
+    "options": [
+      "Menggunakan semua nomor telepon asli agar realistis.",
+      "Membuat data simulasi/anonym dan mempertahankan struktur kebutuhan usaha, sambil menjelaskan perlindungan data pribadi.",
+      "Membagikan data ke seluruh sekolah.",
+      "Menghapus semua konteks usaha dari pembelajaran."
+    ],
+    "key": "B",
+    "why": "Kasus lokal tetap dapat dipakai tanpa membuka data pribadi; tujuan pembelajaran terletak pada model dan logika data.",
+    "section": "PCK"
+  },
+  {
+    "id": 27,
+    "code": "P.6",
+    "type": "PG",
+    "stem": "Sebelum mengajar PK dan FK, guru bertanya apakah dua orang boleh memiliki nama sama dan apakah dua peminjaman bisa dilakukan satu siswa. Fungsi utama pertanyaan itu ialah ...",
+    "options": [
+      "Asesmen diagnostik untuk memetakan gagasan awal tentang identitas dan relasi.",
+      "Penilaian akhir yang langsung menentukan nilai rapor.",
+      "Menguji hafalan seluruh sintaks SQL lanjutan.",
+      "Menentukan murid mana yang tidak boleh praktik."
+    ],
+    "key": "A",
+    "why": "Pertanyaan sebelum pembelajaran memunculkan konsepsi awal dan membantu memilih dukungan belajar.",
+    "section": "PCK"
+  },
+  {
+    "id": 28,
+    "code": "P.6",
+    "type": "MCMA",
+    "stem": "Murid menghasilkan query JOIN tetapi sebagian rekaman hilang. Bukti asesmen formatif apa yang membantu guru menemukan sumber masalah? Pilih semua.",
+    "options": [
+      "Meminta murid menjelaskan tabel mana yang menjadi asal setiap kolom.",
+      "Mencatat hanya waktu tercepat menjalankan query.",
+      "Meminta prediksi baris yang seharusnya muncul dan membandingkannya dengan hasil.",
+      "Memeriksa apakah kondisi JOIN dan data kunci cocok.",
+      "Memberikan nilai nol sebelum mengetahui alasan kesalahan."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Penelusuran asal kolom, prediksi data, dan pemeriksaan kondisi JOIN menunjukkan miskonsepsi secara spesifik.",
+    "section": "PCK"
+  },
+  {
+    "id": 29,
+    "code": "P.6",
+    "type": "Kategori",
+    "stem": "Guru membuat rubrik tugas ERD. Nilai pernyataan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Kriteria mencakup kecocokan entitas, PK, kardinalitas, dan alasan hubungan dengan kasus.",
+      "Penilaian hanya berdasarkan warna dan kerapian gambar, tanpa memeriksa kebenaran model.",
+      "Guru menjelaskan rubrik sebelum bekerja sehingga murid dapat menggunakannya untuk revisi."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Rubrik selaras dengan tujuan belajar dan transparan sejak awal. Tampilan boleh dipertimbangkan, tetapi bukan inti kompetensi ERD.",
+    "section": "PCK"
+  },
+  {
+    "id": 30,
+    "code": "P.6",
+    "type": "PG",
+    "stem": "Murid menggambar relasi siswa–peminjaman sebagai 1:1 padahal satu siswa dapat meminjam berkali-kali. Umpan balik yang paling berguna adalah ...",
+    "options": [
+      "“Salah semua, ulang dari awal.”",
+      "“Bagus, yang penting garisnya lurus.”",
+      "“Coba uji kasus satu siswa dengan tiga transaksi. Apakah rancanganmu masih menampung semuanya? Perbaiki kardinalitasnya.”",
+      "“Ikuti gambar kelompok lain tanpa bertanya.”"
+    ],
+    "key": "C",
+    "why": "Umpan balik spesifik memicu pengujian model terhadap kasus sehingga siswa memahami alasan perbaikan.",
+    "section": "PCK"
+  },
+  {
+    "id": 31,
+    "code": "P.6",
+    "type": "PG",
+    "stem": "Setelah kuis JOIN, 70% murid salah membedakan INNER dan LEFT JOIN. Langkah selanjutnya paling tepat adalah ...",
+    "options": [
+      "Melanjutkan bab baru karena rencana sudah ditulis.",
+      "Mengelompokkan tipe kesalahan, mengajar ulang dengan data kecil yang punya baris tanpa pasangan, lalu mengecek ulang pemahaman.",
+      "Menaikkan nilai agar semua terlihat berhasil.",
+      "Memberikan tugas menyalin sintaks tanpa analisis kesalahan."
+    ],
+    "key": "B",
+    "why": "Hasil asesmen harus dipakai untuk mengubah pengajaran. Data tanpa pasangan memberi bukti konkret perbedaan jenis JOIN.",
+    "section": "PCK"
+  },
+  {
+    "id": 32,
+    "code": "P.6",
+    "type": "MCMA",
+    "stem": "Untuk menilai kompetensi implementasi relasi basis data, bukti yang relevan adalah ... Pilih semua.",
+    "options": [
+      "Skrip pembuatan tabel lengkap dengan PK dan FK yang valid.",
+      "Screenshot editor kosong yang rapi.",
+      "Data uji yang membuktikan relasi dan penjelasan hasil query.",
+      "Uraian alasan memilih kardinalitas dari kebutuhan kasus.",
+      "Jumlah ikon pada halaman presentasi."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Bukti autentik harus mencakup artefak teknis, uji perilaku, dan justifikasi rancangan.",
+    "section": "PCK"
+  },
+  {
+    "id": 33,
+    "code": "P.6",
+    "type": "PG",
+    "stem": "Tujuan pembelajaran adalah “murid mampu menentukan primary key yang tepat dalam kasus pencatatan data”. Bentuk asesmen paling selaras adalah ...",
+    "options": [
+      "Menghafalkan sejarah SQL.",
+      "Menggambar ikon database.",
+      "Menyalin definisi entitas dari modul.",
+      "Memilih dan membenarkan PK pada dua kasus dengan nama/atribut yang berpotensi sama."
+    ],
+    "key": "D",
+    "why": "Tugas memilih dan menjelaskan PK mengukur keputusan teknis sesuai tujuan, bukan hafalan lepas konteks.",
+    "section": "PCK"
+  },
+  {
+    "id": 34,
+    "code": "P.6",
+    "type": "Kategori",
+    "stem": "Nilai tindakan umpan balik berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Guru menyebut bagian query yang sudah benar dan memberi petunjuk pada kondisi yang perlu diperiksa.",
+      "Guru mempublikasikan peringkat murid paling banyak salah untuk mempermalukan mereka.",
+      "Guru meminta murid memperbaiki hasilnya lalu menjelaskan perubahan dan alasan revisi."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Umpan balik harus spesifik, aman, dan dapat ditindaklanjuti; revisi menunjukkan belajar dari asesmen.",
+    "section": "PCK"
+  },
+  {
+    "id": 35,
+    "code": "PF.1",
+    "type": "PG",
+    "stem": "Pembelajaran proyek aplikasi sekolah dianggap selesai jika website bisa dibuka. Agar tujuan pendidikan kejuruan tercapai lebih utuh, guru seharusnya juga ...",
+    "options": [
+      "Memastikan murid dapat menjelaskan keputusan, bekerja bertanggung jawab, mengevaluasi keamanan, dan menerima umpan balik pengguna.",
+      "Menilai estetika saja.",
+      "Membatasi murid pada meniru tampilan tanpa memahami kebutuhan.",
+      "Mengutamakan ranking kecepatan mengetik."
+    ],
+    "key": "A",
+    "why": "Kompetensi SMK mengaitkan penguasaan teknis, penalaran, kerja sama, etika, dan kemampuan beradaptasi.",
+    "section": "PCK"
+  },
+  {
+    "id": 36,
+    "code": "PF.1",
+    "type": "Kategori",
+    "stem": "Proyek pembuatan sistem kelas dilakukan dalam pembelajaran. Nilai pernyataan sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Mengajak murid membahas hak akses dan dampak aplikasi terhadap pengguna.",
+      "Menganggap keberhasilan teknis membenarkan pengumpulan data pribadi berlebihan.",
+      "Mengaitkan kemampuan pemrograman dengan penyelesaian masalah nyata dan tanggung jawab sosial."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Tujuan pendidikan menuntut kompetensi dan karakter; etika digital tidak boleh dikorbankan demi fitur.",
+    "section": "PCK"
+  },
+  {
+    "id": 37,
+    "code": "PF.2",
+    "type": "PG",
+    "stem": "Saat mengajar keamanan aplikasi, murid membangun query dengan menggabungkan input pengguna ke string SQL. Penjelasan dan perbaikan yang tepat adalah ...",
+    "options": [
+      "Mengajarkan penggunaan prepared statement/parameter binding dan menunjukkan mengapa input tidak boleh diperlakukan sebagai bagian sintaks SQL.",
+      "Memakai kata sandi yang sama untuk semua akun agar mudah.",
+      "Menganggap input hanya angka sehingga selalu aman.",
+      "Menyembunyikan error tanpa memperbaiki query."
+    ],
+    "key": "A",
+    "why": "Parameter binding memisahkan data input dari struktur perintah SQL, sehingga efektif menjadi contoh konsep keamanan aplikasi.",
+    "section": "PCK"
+  },
+  {
+    "id": 38,
+    "code": "PF.2",
+    "type": "MCMA",
+    "stem": "Murid mendesain tabel siswa dan peminjaman dengan relasi 1:N. Manakah rancangan/aktivitas teknis yang benar? Pilih semua.",
+    "options": [
+      "Kolom id_siswa dapat menjadi PK di tabel siswa.",
+      "Memakai nama_siswa sebagai satu-satunya pengenal karena pasti unik.",
+      "Kolom id_siswa di peminjaman dapat menjadi FK menuju siswa.",
+      "Menguji apakah sistem menolak peminjaman dengan id_siswa yang tidak ada jika constraint FK aktif.",
+      "Satu baris siswa harus digandakan untuk setiap peminjaman."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "PK unik di tabel siswa, FK di sisi banyak, dan pengujian integritas merepresentasikan relasi 1:N yang benar.",
+    "section": "PCK"
+  },
+  {
+    "id": 39,
+    "code": "PF.2",
+    "type": "PG",
+    "stem": "Murid mengirim form Laravel dengan method POST, tetapi route hanya didaftarkan untuk GET. Strategi pembelajaran tepat adalah ...",
+    "options": [
+      "Meminta murid me-restart komputer berulang kali.",
+      "Mengganti seluruh proyek dengan HTML statis.",
+      "Menelusuri alur request dari form ke route dan controller, membandingkan method, lalu memperbaiki definisi route.",
+      "Menghapus semua validasi agar request diproses."
+    ],
+    "key": "C",
+    "why": "Kesalahan method menjadi kesempatan memeriksa hubungan form, HTTP method, route, dan controller.",
+    "section": "PCK"
+  },
+  {
+    "id": 40,
+    "code": "PF.2",
+    "type": "Kategori",
+    "stem": "Guru memakai contoh tabel siswa (S1, S2) dan peminjaman (hanya milik S1). Nilai pernyataan konsep SQL sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "INNER JOIN pada kunci siswa hanya mengembalikan pasangan yang cocok dalam contoh ini.",
+      "LEFT JOIN dari tabel siswa ke peminjaman dapat tetap memunculkan S2 dengan kolom peminjaman bernilai NULL.",
+      "Setiap LEFT JOIN selalu memiliki jumlah baris tepat sama dengan tabel kiri meski ada beberapa pasangan."
+    ],
+    "key": [
+      "T",
+      "T",
+      "F"
+    ],
+    "why": "INNER JOIN memerlukan pasangan; LEFT JOIN mempertahankan baris kiri, tetapi bisa menghasilkan lebih banyak baris jika satu baris kiri memiliki banyak pasangan.",
+    "section": "PCK"
+  },
+  {
+    "id": 41,
+    "code": "PF.2",
+    "type": "PG",
+    "stem": "Murid membuat kondisi “nilai >= 75” untuk menentukan tuntas. Saat nilai tepat 75, program menyatakan tuntas. Untuk menguji pemahaman kondisi batas, guru sebaiknya meminta ...",
+    "options": [
+      "Hanya menjalankan input 90 berulang kali.",
+      "Menguji nilai 74, 75, 76, lalu menjelaskan fungsi operator >= terhadap ketiga hasil.",
+      "Mengganti semua operator menjadi ==.",
+      "Menilai warna tombol terlebih dahulu."
+    ],
+    "key": "B",
+    "why": "Kasus batas 74, 75, 76 secara langsung menampakkan efek operator perbandingan.",
+    "section": "PCK"
+  },
+  {
+    "id": 42,
+    "code": "PF.2",
+    "type": "MCMA",
+    "stem": "Untuk membimbing praktik Git yang dapat dipertanggungjawabkan, guru mengutamakan ... Pilih semua.",
+    "options": [
+      "Commit perubahan kecil dengan pesan bermakna.",
+      "Menyimpan kata sandi ke repositori publik supaya semua bisa uji.",
+      "Menggunakan pull request/review perubahan untuk proyek kolaboratif.",
+      "Menangani konflik penggabungan dengan membaca perubahan yang bertentangan.",
+      "Menghapus riwayat agar kontribusi tidak terlihat."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Praktik version control mencakup jejak perubahan, review, dan resolusi konflik. Kredensial tidak boleh dipublikasikan.",
+    "section": "PCK"
+  },
+  {
+    "id": 43,
+    "code": "PF.3",
+    "type": "PG",
+    "stem": "Sebagian siswa memahami logika program tetapi kesulitan membaca instruksi teks panjang. Guru ingin mengukur logika seleksi kondisi. Penyesuaian terbaik adalah ...",
+    "options": [
+      "Memberi diagram alir sederhana dan contoh input-output, lalu meminta siswa menjelaskan atau mengimplementasikan logika yang sama.",
+      "Mengganti semua kompetensi menjadi hafalan istilah.",
+      "Menganggap kesulitan membaca berarti tidak mampu pemrograman.",
+      "Menilai kualitas tulisan tangan sebagai kompetensi inti."
+    ],
+    "key": "A",
+    "why": "Representasi visual dan contoh mengurangi hambatan bahasa tanpa menghilangkan tuntutan logika seleksi.",
+    "section": "PCK"
+  },
+  {
+    "id": 44,
+    "code": "PF.3",
+    "type": "MCMA",
+    "stem": "Guru menggunakan kasus katalog produk UMKM setempat untuk basis data kelas. Praktik yang tepat adalah ... Pilih semua.",
+    "options": [
+      "Menyusun dataset tiruan yang menjaga struktur produk-kategori-transaksi.",
+      "Mengharuskan semua murid memiliki pengalaman usaha keluarga.",
+      "Memberikan penjelasan istilah yang belum dikenal murid.",
+      "Membuka alternatif kasus sepadan bagi murid yang lebih memahami perpustakaan atau inventaris.",
+      "Memakai informasi kontak pelanggan asli tanpa izin."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Kasus lokal relevan dengan dukungan bahasa, pilihan konteks setara, dan perlindungan privasi.",
+    "section": "PCK"
+  },
+  {
+    "id": 45,
+    "code": "PF.3",
+    "type": "Kategori",
+    "stem": "Untuk menetapkan kesiapan kelas sebelum materi API, nilai tindakan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Memeriksa apakah murid sudah memahami request, response, dan format data sederhana.",
+      "Menganggap semua murid otomatis memahami API karena sering memakai aplikasi.",
+      "Menyiapkan contoh konkret JSON dan alur pertukaran data bagi yang membutuhkan."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Membaca kebutuhan berdasarkan prasyarat nyata, bukan asumsi kebiasaan memakai teknologi.",
+    "section": "PCK"
+  },
+  {
+    "id": 46,
+    "code": "PF.4",
+    "type": "PG",
+    "stem": "Sekolah perlu mengontekstualkan pembelajaran RPL dengan kebutuhan inventaris. Guru sedang menyusun alur tujuan pembelajaran. Pilihan terbaik adalah ...",
+    "options": [
+      "Mengganti seluruh capaian menjadi dekorasi website karena paling disukai murid.",
+      "Memilih aktivitas populer tanpa menghubungkan ke tujuan.",
+      "Menetapkan tujuan kompetensi terkait analisis kebutuhan, model data, dan pengujian; kasus inventaris menjadi konteks pencapaiannya.",
+      "Menyamakan semua murid tanpa mempertimbangkan pengetahuan awal."
+    ],
+    "key": "C",
+    "why": "Adaptasi kurikulum tetap menurunkan tujuan dari capaian dan memilih konteks untuk mencapainya.",
+    "section": "PCK"
+  },
+  {
+    "id": 47,
+    "code": "PF.4",
+    "type": "MCMA",
+    "stem": "Framework web berubah versi. Guru ingin materi tetap relevan secara kurikuler. Mana yang tepat? Pilih semua.",
+    "options": [
+      "Mempertahankan prinsip request-response, validasi, dan pengelolaan data sebagai konsep lintas-versi.",
+      "Mewajibkan murid menghafal seluruh sintaks versi lama tanpa memahami konsep.",
+      "Memperbarui contoh sesuai dokumentasi tepercaya sambil menguji kompatibilitas.",
+      "Membandingkan perubahan sintaks dengan prinsip yang tetap berlaku.",
+      "Menghapus semua pelajaran dasar karena framework akan selalu berubah."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Kurikulum adaptif memperbarui contoh tanpa mengorbankan konsep fundamental serta tujuan kompetensi.",
+    "section": "PCK"
+  },
+  {
+    "id": 48,
+    "code": "PF.4",
+    "type": "Kategori",
+    "stem": "Guru menyelaraskan tujuan, kegiatan, dan asesmen untuk materi ERD. Nilai berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Jika tujuan menentukan kardinalitas, siswa diberi kasus untuk menjelaskan arah relasi dan jumlah keterlibatan entitas.",
+      "Jika tujuan merancang ERD, tes satu-satunya harus menanyakan warna simbol pada aplikasi gambar tertentu.",
+      "Rubrik menyebut indikator kebenaran entitas, hubungan, dan alasan model."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Keselarasan capaian–aktivitas–asesmen lebih penting daripada fitur alat tertentu.",
+    "section": "PCK"
+  },
+  {
+    "id": 49,
+    "code": "PF.5",
+    "type": "PG",
+    "stem": "Guru mencatat bahwa murid berulang kali salah menentukan foreign key walau sudah diberi penjelasan. Tindakan pengembangan praktik paling ilmiah adalah ...",
+    "options": [
+      "Menganggap murid malas dan mempertahankan pendekatan yang sama.",
+      "Mencoba intervensi contoh data berelasi, membandingkan bukti kerja sebelum-sesudah, lalu merefleksikan hasilnya.",
+      "Memilih intervensi baru hanya karena sedang viral.",
+      "Mengurangi target asesmen agar tampak berhasil."
+    ],
+    "key": "B",
+    "why": "Perbaikan profesional bertumpu pada identifikasi masalah, tindakan beralasan, bukti hasil, dan refleksi.",
+    "section": "PCK"
+  },
+  {
+    "id": 50,
+    "code": "PF.5",
+    "type": "MCMA",
+    "stem": "Setelah proyek website, guru mengembangkan praktik melalui komunitas guru RPL. Tindakan yang etis dan bermanfaat adalah ... Pilih semua.",
+    "options": [
+      "Membagikan contoh rubrik dan data hasil belajar yang telah dianonimkan untuk mendapat masukan.",
+      "Menyebarkan nilai beserta nomor telepon siswa kepada publik.",
+      "Menguji masukan rekan pada kelas dan mengamati dampaknya.",
+      "Mendokumentasikan keterbatasan uji coba agar tidak mengklaim pasti berhasil.",
+      "Mengklaim satu percobaan kecil membuktikan semua metode lain salah."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Pengembangan praktik harus reflektif, terbuka pada bukti, dan melindungi identitas murid.",
+    "section": "PCK"
+  },
+  {
+    "id": 51,
+    "code": "P.1",
+    "type": "PG",
+    "stem": "Guru IPS ingin siswa memahami perubahan lingkungan, menerapkan konsep pada lingkungan sekitar, lalu merefleksikan pilihan tindakannya. Rancangan terbaik adalah ...",
+    "options": [
+      "Ceramah definisi lalu tes hafalan semata.",
+      "Kuis cepat tanpa kegiatan lanjutan.",
+      "Mengamati masalah sekitar, menganalisis dengan konsep yang dipelajari, mengusulkan langkah, dan menulis refleksi.",
+      "Meminta menyalin isi buku tanpa diskusi."
+    ],
+    "key": "C",
+    "why": "Rancangan ini menyatukan pemahaman konsep, penerapan kontekstual, dan refleksi bermakna sebagaimana P.1.",
+    "section": "PU"
+  },
+  {
+    "id": 52,
+    "code": "P.1",
+    "type": "Kategori",
+    "stem": "Nilai langkah pembelajaran bermakna berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Membuka ruang bagi siswa menjelaskan apa yang berubah dari pemahaman awalnya.",
+      "Membatasi keberhasilan pada selesai menyalin jawaban guru.",
+      "Menautkan kegiatan dengan tujuan yang jelas dan tantangan di kehidupan nyata."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Refleksi dan transfer menunjukkan pemahaman; reproduksi jawaban saja belum cukup.",
+    "section": "PU"
+  },
+  {
+    "id": 53,
+    "code": "P.1",
+    "type": "MCMA",
+    "stem": "Guru menemukan miskonsepsi pada konsep yang menjadi prasyarat pelajaran berikutnya. Strategi yang tepat adalah ... Pilih semua.",
+    "options": [
+      "Mengumpulkan jawaban awal untuk mengetahui penalaran siswa.",
+      "Memberi contoh pembanding yang menguji gagasan keliru.",
+      "Menolak pertanyaan karena mengganggu jadwal.",
+      "Meminta siswa membandingkan gagasan awal dan hasil setelah eksplorasi.",
+      "Memberi nilai akhir hanya dari kecepatan menjawab."
+    ],
+    "key": [
+      "A",
+      "B",
+      "D"
+    ],
+    "why": "Perubahan konsep dibantu diagnosis, bukti pembanding, dan refleksi pemahaman.",
+    "section": "PU"
+  },
+  {
+    "id": 54,
+    "code": "P.2",
+    "type": "PG",
+    "stem": "Dalam satu kelas ada siswa dengan kemampuan membaca berbeda. Guru ingin semua memahami gagasan utama bacaan. Pilihan terbaik adalah ...",
+    "options": [
+      "Memakai satu bahan sulit tanpa dukungan karena adil artinya sama persis.",
+      "Menyediakan teks inti, penjelasan visual/audio yang relevan, dan pertanyaan tujuan sama dengan dukungan berbeda.",
+      "Mengeluarkan siswa yang lambat dari kegiatan.",
+      "Menggantikan tujuan memahami bacaan menjadi sekadar kehadiran."
+    ],
+    "key": "B",
+    "why": "Kesetaraan tujuan dapat disertai variasi dukungan agar hambatan akses tidak menghalangi pencapaian.",
+    "section": "PU"
+  },
+  {
+    "id": 55,
+    "code": "P.2",
+    "type": "Kategori",
+    "stem": "Kelas terdiri atas siswa dari beragam latar bahasa. Nilai tindakan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Guru memastikan istilah penting dipahami melalui contoh tanpa merendahkan bahasa rumah siswa.",
+      "Guru menganggap aksen berbeda sebagai tanda kemampuan berpikir rendah.",
+      "Guru memberi kesempatan murid mengungkapkan ide secara bertahap dengan dukungan bahasa."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Pembelajaran responsif menghargai identitas bahasa sekaligus menjaga target akademik.",
+    "section": "PU"
+  },
+  {
+    "id": 56,
+    "code": "P.2",
+    "type": "MCMA",
+    "stem": "Guru mengatur kerja kelompok dengan siswa yang berbeda kesiapan dan kebutuhan. Pilih keputusan yang tepat.",
+    "options": [
+      "Membagikan peran jelas dan kesempatan rotasi peran.",
+      "Menyerahkan semua pekerjaan ke satu siswa yang dianggap pintar.",
+      "Mengecek secara berkala siapa yang belum mendapat kesempatan bicara.",
+      "Menyediakan kriteria tugas dan bantuan berjenjang.",
+      "Memberi label permanen kelompok pintar dan lemah."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Peran, pemantauan partisipasi, dan scaffolding mendukung keterlibatan seluruh siswa.",
+    "section": "PU"
+  },
+  {
+    "id": 57,
+    "code": "P.2",
+    "type": "PG",
+    "stem": "Siswa pindahan belum mengenal istilah teknis yang telah dipelajari kelas. Langkah awal paling tepat adalah ...",
+    "options": [
+      "Menganggap ia tertinggal permanen.",
+      "Memberi ujian dengan skor nol lalu mengumumkannya.",
+      "Mewajibkan menghafal semua istilah dalam satu malam.",
+      "Memeriksa prasyarat, memberi glosarium/contoh ringkas, dan memasangkan dukungan belajar tanpa mengurangi tujuan."
+    ],
+    "key": "D",
+    "why": "Dukungan spesifik berdasarkan prasyarat lebih efektif daripada stigma atau tuntutan tanpa bantuan.",
+    "section": "PU"
+  },
+  {
+    "id": 58,
+    "code": "P.3",
+    "type": "PG",
+    "stem": "Seorang siswa memberi jawaban salah dan beberapa teman tertawa. Guru sebaiknya ...",
+    "options": [
+      "Mengajak kelas menghargai proses mencoba, menanyakan alasan jawaban, dan menuntun peninjauan bukti tanpa mempermalukan.",
+      "Membiarkan ejekan demi kebebasan berekspresi.",
+      "Langsung menghapus nilai siswa yang salah.",
+      "Membuat daftar siswa yang tidak boleh menjawab lagi."
+    ],
+    "key": "A",
+    "why": "Keamanan psikologis dan pembahasan alasan menciptakan ruang belajar yang berkesadaran dan menggembirakan.",
+    "section": "PU"
+  },
+  {
+    "id": 59,
+    "code": "P.3",
+    "type": "Kategori",
+    "stem": "Nilai gagasan tentang pembelajaran berkesadaran, bermakna, dan menggembirakan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Siswa memahami tujuan belajar dan diberi ruang merefleksikan prosesnya.",
+      "Pembelajaran menggembirakan selalu berarti tanpa tantangan akademik.",
+      "Aktivitas boleh menantang apabila ada dukungan, relevansi, dan suasana aman."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Kegembiraan belajar bukan hiburan semata; fokus, relevansi, tantangan yang terdukung, dan rasa aman bisa berjalan bersama.",
+    "section": "PU"
+  },
+  {
+    "id": 60,
+    "code": "P.4",
+    "type": "PG",
+    "stem": "Guru ingin siswa memakai AI untuk membuat rangkuman materi. Risiko utamanya ialah jawaban AI bisa keliru dan data siswa dapat terbuka. Langkah tepat adalah ...",
+    "options": [
+      "Mewajibkan semua siswa mengunggah informasi keluarga.",
+      "Mengevaluasi keluaran dengan sumber tepercaya, melarang pengiriman data pribadi, dan meminta siswa menjelaskan hasil dengan bahasa sendiri.",
+      "Melarang semua diskusi literasi digital.",
+      "Menganggap keluaran AI otomatis bersumber resmi."
+    ],
+    "key": "B",
+    "why": "Literasi digital meliputi verifikasi dan privasi, bukan hanya kemampuan menjalankan alat.",
+    "section": "PU"
+  },
+  {
+    "id": 61,
+    "code": "P.4",
+    "type": "MCMA",
+    "stem": "Guru memilih media pembelajaran digital untuk kelas dengan akses beragam. Pertimbangan yang tepat adalah ... Pilih semua.",
+    "options": [
+      "Tersedia versi berukuran ringan atau alternatif luring.",
+      "Tampilan dan petunjuk mudah diakses dengan kebutuhan murid yang beragam.",
+      "Selalu mewajibkan gawai spesifikasi tinggi walau banyak murid tidak memiliki.",
+      "Data murid yang diperlukan dibatasi sesuai tujuan.",
+      "Memilih media hanya karena sedang populer."
+    ],
+    "key": [
+      "A",
+      "B",
+      "D"
+    ],
+    "why": "Akses, inklusi, dan keamanan data menjadi dasar pemilihan TIK yang kritis.",
+    "section": "PU"
+  },
+  {
+    "id": 62,
+    "code": "P.5",
+    "type": "PG",
+    "stem": "Guru akan mengajar perbandingan dengan contoh kehidupan sekitar. Sebagian siswa belum familiar dengan konteks pasar tradisional. Pilihan terbaik adalah ...",
+    "options": [
+      "Memakai hanya satu contoh dan menyalahkan yang tidak paham.",
+      "Menghindari konteks nyata sama sekali.",
+      "Menyediakan beberapa konteks setara yang familier dan mengajak siswa menghubungkan ke konsep yang sama.",
+      "Menilai latar budaya sebagai faktor kemampuan permanen."
+    ],
+    "key": "C",
+    "why": "Konteks beragam membantu transfer konsep tanpa mengasumsikan pengalaman semua siswa identik.",
+    "section": "PU"
+  },
+  {
+    "id": 63,
+    "code": "P.5",
+    "type": "Kategori",
+    "stem": "Nilai pilihan sumber belajar berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Sumber lokal dipilih karena membantu mencapai tujuan dan dapat diakses murid.",
+      "Contoh lokal harus selalu dipakai meskipun menimbulkan stereotip kelompok tertentu.",
+      "Guru memeriksa kesesuaian isi sumber dengan tingkat kesiapan murid."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Kontekstual bukan otomatis baik; guru perlu menjaga relevansi, akurasi, dan penghargaan pada keragaman.",
+    "section": "PU"
+  },
+  {
+    "id": 64,
+    "code": "P.6",
+    "type": "PG",
+    "stem": "Di awal topik pecahan, guru memberi dua soal singkat untuk melihat apakah siswa memahami bagian dari keseluruhan. Informasi ini paling tepat dipakai untuk ...",
+    "options": [
+      "Menentukan dukungan, contoh, dan kelompok fleksibel sebelum pembelajaran inti.",
+      "Menghukum murid yang jawabannya salah.",
+      "Menetapkan nilai rapor tanpa pembelajaran.",
+      "Mengabaikan hasil karena baru asesmen awal."
+    ],
+    "key": "A",
+    "why": "Asesmen awal dipakai untuk mengidentifikasi kebutuhan belajar, bukan memberi label atau hukuman.",
+    "section": "PU"
+  },
+  {
+    "id": 65,
+    "code": "P.6",
+    "type": "MCMA",
+    "stem": "Setelah exit ticket, guru mengetahui separuh kelas masih bingung menentukan alasan jawaban. Langkah tepat adalah ... Pilih semua.",
+    "options": [
+      "Mengelompokkan jawaban untuk mengidentifikasi pola kesalahan.",
+      "Memberi penjelasan/model tambahan yang menanggapi pola tersebut.",
+      "Mengajak siswa mengerjakan soal cek singkat untuk memastikan perbaikan.",
+      "Mengabaikan hasil karena materi sudah selesai diajarkan.",
+      "Mempermalukan siswa yang jawabannya belum tepat."
+    ],
+    "key": [
+      "A",
+      "B",
+      "C"
+    ],
+    "why": "Asesmen formatif bermakna jika hasilnya ditafsirkan dan digunakan untuk memperbaiki proses serta mengecek dampaknya.",
+    "section": "PU"
+  },
+  {
+    "id": 66,
+    "code": "P.6",
+    "type": "Kategori",
+    "stem": "Nilai contoh umpan balik berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "“Alasanmu sudah menyebut dua bukti; cek lagi apakah bukti ketiga mendukung simpulanmu.”",
+      "“Kamu memang tidak berbakat; jangan mencoba soal ini lagi.”",
+      "“Bandingkan jawabanmu dengan rubrik, revisi satu bagian, lalu jelaskan mengapa diubah.”"
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Umpan balik yang baik spesifik, menjaga martabat, dan menyebut langkah perbaikan yang dapat dilakukan.",
+    "section": "PU"
+  },
+  {
+    "id": 67,
+    "code": "P.6",
+    "type": "PG",
+    "stem": "Hasil penilaian akhir memperlihatkan banyak siswa belum mencapai satu indikator. Tindakan guru berikutnya yang paling bertanggung jawab adalah ...",
+    "options": [
+      "Menganggap tugas selesai karena nilai sudah terbit.",
+      "Membuat semua soal berikutnya lebih mudah tanpa pembelajaran.",
+      "Menyembunyikan hasil dari siswa.",
+      "Menganalisis indikator yang lemah, merancang tindak lanjut sesuai kebutuhan, serta mengomunikasikan kesempatan perbaikan."
+    ],
+    "key": "D",
+    "why": "Hasil asesmen digunakan untuk keputusan pembelajaran dan tindak lanjut, bukan sekadar angka akhir.",
+    "section": "PU"
+  },
+  {
+    "id": 68,
+    "code": "K.1",
+    "type": "PG",
+    "stem": "Seorang murid menceritakan sedang mengalami masalah keluarga dan meminta tidak diumumkan. Respons guru yang paling etis adalah ...",
+    "options": [
+      "Menjadikan cerita sebagai contoh di depan kelas dengan nama lengkap.",
+      "Mendengarkan secara empatik, menjaga kerahasiaan sesuai kewajiban perlindungan murid, dan merujuk ke pihak yang berwenang bila ada risiko keselamatan.",
+      "Menyebarkannya di grup guru tanpa pertimbangan.",
+      "Mengabaikan seluruh informasi meski ada tanda bahaya."
+    ],
+    "key": "B",
+    "why": "Etika menuntut empati dan privasi; jika terdapat risiko keselamatan, guru mengikuti prosedur perlindungan dan rujukan yang tepat.",
+    "section": "PU"
+  },
+  {
+    "id": 69,
+    "code": "K.1",
+    "type": "Kategori",
+    "stem": "Nilai perilaku guru berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Guru menyampaikan kriteria penilaian sebelum tugas dan menerapkannya konsisten.",
+      "Guru menaikkan nilai murid tertentu karena kedekatan pribadi tanpa bukti belajar.",
+      "Guru mengakui kekeliruan penjelasannya lalu memperbaiki di depan kelas secara profesional."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Keteladanan ditunjukkan oleh keadilan, integritas, dan tanggung jawab memperbaiki kesalahan.",
+    "section": "PU"
+  },
+  {
+    "id": 70,
+    "code": "K.2",
+    "type": "PG",
+    "stem": "Setelah proyek kelompok gagal mencapai target, guru merasa metode yang dipilih tidak efektif. Refleksi profesional paling tepat adalah ...",
+    "options": [
+      "Menyalahkan sepenuhnya karakter murid.",
+      "Mengulangi tugas sama tanpa perubahan.",
+      "Meninjau bukti aktivitas dan hasil, meminta umpan balik murid, lalu menetapkan perbaikan yang bisa diuji.",
+      "Berhenti mencoba pembelajaran kolaboratif selamanya."
+    ],
+    "key": "C",
+    "why": "Refleksi diri berbasis bukti mendukung pola pikir bertumbuh dan peningkatan praktik.",
+    "section": "PU"
+  },
+  {
+    "id": 71,
+    "code": "K.2",
+    "type": "MCMA",
+    "stem": "Guru ingin mengembangkan kompetensi secara berkelanjutan. Mana yang mencerminkan growth mindset profesional? Pilih semua.",
+    "options": [
+      "Mencatat satu aspek pembelajaran yang perlu diperbaiki dari umpan balik.",
+      "Mencoba strategi baru secara terukur dan membandingkan buktinya.",
+      "Menganggap kritik berarti dirinya bukan guru yang baik sehingga menolak masukan.",
+      "Berdiskusi dengan rekan dan menyesuaikan praktik dari temuan.",
+      "Mengklaim dirinya sudah tidak perlu belajar karena telah lulus pendidikan guru."
+    ],
+    "key": [
+      "A",
+      "B",
+      "D"
+    ],
+    "why": "Pola pikir bertumbuh tampak dalam penerimaan masukan, eksperimen terukur, dan tindak lanjut hasil refleksi.",
+    "section": "PU"
+  },
+  {
+    "id": 72,
+    "code": "K.3",
+    "type": "PG",
+    "stem": "Dalam diskusi kelas, hanya beberapa siswa berani berbicara. Guru ingin membangun budaya belajar saling mendukung. Langkah terbaik adalah ...",
+    "options": [
+      "Memberi label murid pendiam sebagai tidak aktif.",
+      "Memanggil siswa acak lalu mempermalukannya jika belum siap.",
+      "Mengizinkan siswa dominan berbicara sepanjang waktu.",
+      "Menyepakati aturan diskusi, memberi waktu berpikir, dan memakai giliran berbagi yang aman serta adil."
+    ],
+    "key": "D",
+    "why": "Keputusan guru perlu konsisten membangun partisipasi dan rasa aman untuk mengembangkan potensi semua murid.",
+    "section": "PU"
+  },
+  {
+    "id": 73,
+    "code": "K.3",
+    "type": "Kategori",
+    "stem": "Nilai keputusan pembentukan budaya belajar berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Guru menegaskan bahwa semua siswa dapat berkembang melalui latihan dan umpan balik.",
+      "Guru menjadikan ranking publik sebagai identitas kemampuan yang tidak dapat berubah.",
+      "Guru memberi kesempatan revisi tugas berdasarkan kriteria yang jelas."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Budaya belajar positif menekankan perkembangan, standar yang jelas, dan peluang belajar dari kesalahan.",
+    "section": "PU"
+  },
+  {
+    "id": 74,
+    "code": "S.1",
+    "type": "PG",
+    "stem": "Orang tua menghubungi guru karena anaknya merasa tidak dipahami di kelas. Respons komunikasi paling tepat adalah ...",
+    "options": [
+      "Menjawab defensif bahwa guru selalu benar.",
+      "Mendengarkan kekhawatiran, menggali contoh konkret, menjelaskan temuan tanpa menyalahkan, lalu menyepakati tindak lanjut.",
+      "Mengunggah percakapan ke media sosial.",
+      "Menilai anak hanya dari komentar orang tua tanpa observasi."
+    ],
+    "key": "B",
+    "why": "Komunikasi inklusif dan empatik mencari pemahaman bersama dan tindakan yang berbasis informasi.",
+    "section": "PU"
+  },
+  {
+    "id": 75,
+    "code": "S.1",
+    "type": "MCMA",
+    "stem": "Guru memberi umpan balik kepada siswa yang berbeda latar bahasa dan gaya komunikasi. Cara yang tepat adalah ... Pilih semua.",
+    "options": [
+      "Menggunakan kalimat jelas dan contoh spesifik.",
+      "Memastikan siswa memahami tindak lanjut dengan kesempatan bertanya.",
+      "Mengejek pengucapan bahasa siswa.",
+      "Menyediakan saluran tertulis/visual bila membantu komunikasi.",
+      "Memotong penjelasan siswa karena lambat menyampaikan ide."
+    ],
+    "key": [
+      "A",
+      "B",
+      "D"
+    ],
+    "why": "Umpan balik inklusif menyesuaikan cara komunikasi sambil menghargai martabat dan kebutuhan murid.",
+    "section": "PU"
+  },
+  {
+    "id": 76,
+    "code": "S.2",
+    "type": "PG",
+    "stem": "Seorang siswa sering absen sehingga tertinggal tugas. Guru mata pelajaran belum memahami penyebabnya. Langkah kolaboratif paling tepat adalah ...",
+    "options": [
+      "Menyimpulkan bahwa orang tua tidak peduli.",
+      "Mengumumkan identitas dan masalah siswa pada publik.",
+      "Berkoordinasi dengan wali kelas/BK secara proporsional, mendengar siswa dan keluarga, serta menyusun dukungan belajar.",
+      "Memberi nilai nol permanen tanpa mencari informasi."
+    ],
+    "key": "C",
+    "why": "Kolaborasi dengan pihak terkait memetakan hambatan dan merancang dukungan, tetap menjaga privasi.",
+    "section": "PU"
+  },
+  {
+    "id": 77,
+    "code": "S.2",
+    "type": "Kategori",
+    "stem": "Nilai tindakan kolaborasi sekolah–orang tua berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Guru berbagi perkembangan belajar yang relevan melalui jalur komunikasi yang tepat.",
+      "Guru menyebarkan data pribadi murid kepada semua orang tua agar transparan.",
+      "Guru melibatkan pihak sekolah sesuai kewenangan saat merancang tindak lanjut kebutuhan murid."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Kolaborasi memerlukan komunikasi terarah dan perlindungan kerahasiaan data murid.",
+    "section": "PU"
+  },
+  {
+    "id": 78,
+    "code": "S.3",
+    "type": "PG",
+    "stem": "Komunitas guru membahas cara meningkatkan keterlibatan siswa dalam diskusi. Kontribusi paling bermanfaat adalah ...",
+    "options": [
+      "Berbagi praktik beserta bukti, mendengarkan masukan rekan, dan mencoba perbaikan yang sesuai konteks kelas.",
+      "Mengirim materi orang lain tanpa atribusi dan mengklaim hasilnya.",
+      "Menganggap semua strategi pasti cocok di semua sekolah.",
+      "Hanya meminta sertifikat tanpa mengikuti diskusi."
+    ],
+    "key": "A",
+    "why": "Komunitas pembelajaran berguna ketika praktik, bukti, dan refleksi dibagikan secara bertanggung jawab.",
+    "section": "PU"
+  },
+  {
+    "id": 79,
+    "code": "PF.1",
+    "type": "PG",
+    "stem": "Guru menilai proyek lintas mata pelajaran. Hasil belajar paling menggambarkan tujuan pendidikan yang luas adalah ...",
+    "options": [
+      "Siswa hanya meniru jawaban tanpa memahami alasannya.",
+      "Siswa hanya memperoleh angka ujian yang tinggi.",
+      "Siswa menyelesaikan tugas cepat tetapi menolak berdiskusi.",
+      "Siswa mampu menjelaskan penalaran, bekerja sama secara etis, dan menerapkan pengetahuan untuk masalah bermakna."
+    ],
+    "key": "D",
+    "why": "Tujuan pendidikan mencakup penguasaan pengetahuan, karakter, kolaborasi, dan penerapan yang bertanggung jawab.",
+    "section": "PU"
+  },
+  {
+    "id": 80,
+    "code": "PF.3",
+    "type": "MCMA",
+    "stem": "Dalam proyek sains lingkungan, sekolah memiliki keterbatasan alat dan kondisi lingkungan yang berbeda. Adaptasi yang tetap menjaga kompetensi adalah ... Pilih semua.",
+    "options": [
+      "Menggunakan pengamatan lingkungan setempat dengan prosedur aman dan data yang dapat dicatat.",
+      "Menyediakan format pencatatan sederhana dan contoh analisis data.",
+      "Menghapus kompetensi analisis karena alat laboratorium terbatas.",
+      "Membandingkan hasil dengan konsep ilmiah dan membahas keterbatasan pengamatan.",
+      "Memaksakan alat yang tidak aman demi meniru sekolah lain."
+    ],
+    "key": [
+      "A",
+      "B",
+      "D"
+    ],
+    "why": "Konteks lokal dapat menggantikan media mahal jika tujuan dan penalaran tetap dipertahankan secara aman.",
+    "section": "PU"
+  }
+]

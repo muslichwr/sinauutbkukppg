@@ -1,0 +1,105 @@
+/* Real Chrome file:// integration tests. Install QA dependency: npm install --prefix .tools playwright */
+const { chromium } = require('../.tools/node_modules/playwright');
+const { pathToFileURL } = require('node:url');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const KEY = 'ukpppg-pplg-drill:v2';
+const url = pathToFileURL(path.resolve('index.html')).href;
+
+(async()=>{
+  const browser=await chromium.launch({channel:'chrome',headless:true});
+  const context=await browser.newContext();
+  await context.setOffline(true);
+  const page=await context.newPage();
+  const errors=[]; page.on('pageerror', e=>errors.push(e.message));
+  await page.goto(url);
+  await page.getByLabel('Durasi latihan (menit)').fill('0');
+  await page.getByRole('button',{name:'Mulai simulasi 80 soal'}).click();
+  await page.locator('#question-title').waitFor();
+  assert.equal(await page.locator('.numbers button').count(),80);
+  assert.equal(await page.locator('.review').count(),0);
+  assert.equal(await page.getByText('Kunci:',{exact:false}).count(),0);
+  await page.locator('#opt-B').check();
+  await page.getByRole('button',{name:'Tandai ragu',exact:true}).click();
+  await page.reload();
+  assert.equal(await page.locator('#opt-B').isChecked(),true);
+  assert.equal(await page.getByRole('button',{name:'Hapus tanda ragu',exact:true}).getAttribute('aria-pressed'),'true');
+  // MCMA selection, deselection and persistence.
+  await page.getByRole('button',{name:'Soal 2,',exact:false}).click();
+  await page.locator('#opt-A').check(); await page.locator('#opt-C').check();
+  await page.locator('#opt-A').uncheck(); await page.reload();
+  assert.equal(await page.locator('#opt-A').isChecked(),false);
+  assert.equal(await page.locator('#opt-C').isChecked(),true);
+  assert.equal(await page.locator('.review').count(),0);
+  // Incomplete categories cannot count as answered; keyboard focus survives input change.
+  await page.getByRole('button',{name:'Soal 4,',exact:false}).click();
+  await page.locator('#cat-0-T').check();
+  await page.locator('#cat-1-F').focus(); await page.keyboard.press('Space');
+  assert.equal(await page.evaluate(()=>document.activeElement.id),'cat-1-F');
+  assert.match(await page.locator('#answered-count').innerText(),/2\/80/);
+  await page.locator('#cat-2-T').check();
+  await page.reload();
+  assert.match(await page.locator('#answered-count').innerText(),/3\/80/);
+  // A second tab merges updates through Web Locks; prior answers survive.
+  const second=await context.newPage(); await second.goto(url);
+  await second.getByRole('button',{name:'Beranda',exact:true}).click();
+  await second.getByRole('button',{name:'Lanjutkan simulasi',exact:true}).click();
+  await second.getByRole('button',{name:'Soal 3,',exact:false}).click();
+  await second.locator('#opt-C').check();
+  await page.reload();
+  await page.getByRole('button',{name:'Soal 3,',exact:false}).click();
+  assert.equal(await page.locator('#opt-C').isChecked(),true);
+  const stored=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);
+  assert.equal(stored.attempts[0].answers['p1-001'],'B');
+  await second.close();
+  // Complete with blanks: dialog cancellation must leave the exam active.
+  page.once('dialog',d=>d.dismiss());
+  await page.getByRole('button',{name:'Akhiri ujian',exact:true}).click();
+  assert.equal(await page.locator('.review').count(),0);
+  page.once('dialog',d=>d.accept());
+  await page.getByRole('button',{name:'Akhiri ujian',exact:true}).click();
+  await page.getByRole('heading',{name:'Hasil Paket 1'}).waitFor();
+  assert.equal(await page.locator('[data-group="codes"] tbody tr').count(),17);
+  assert.equal(await page.locator('[data-group="sections"] tbody tr').count(),2);
+  assert.equal(await page.locator('[data-group="types"] tbody tr').count(),3);
+  await page.getByRole('button',{name:'Tinjau semua jawaban'}).click();
+  await page.locator('.review').waitFor();
+  assert.equal(await page.locator('input:enabled').count(),0);
+  assert.equal(await page.locator('.option-reason').count(),4);
+  await page.getByRole('button',{name:'Kembali ke hasil'}).click();
+  await page.getByRole('button',{name:'Review jawaban salah'}).click();
+  await page.locator('.review.bad').waitFor();
+  assert.ok(await page.locator('.numbers button').count()<80);
+  assert.equal(await page.locator('.review.bad').count(),1);
+  await page.getByRole('button',{name:'Kembali ke hasil'}).click();
+  await page.getByRole('button',{name:'Ulang paket penuh'}).click();
+  await page.locator('#question-title').waitFor();
+  assert.match(await page.locator('#answered-count').innerText(),/0\/80/);
+  const db=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);
+  assert.equal(db.attempts.length,2);
+  assert.equal(db.attempts[0].status,'completed');
+  assert.equal(db.attempts[0].answers['p1-001'],'B');
+  // Retrying an older result must create a fresh full attempt even while a retry is active.
+  await page.locator('#opt-A').check();
+  await page.getByRole('button',{name:'Beranda',exact:true}).click();
+  await page.getByRole('button',{name:'Lihat hasil',exact:true}).click();
+  await page.getByRole('button',{name:'Ulang paket penuh'}).click();
+  await page.locator('#question-title').waitFor();
+  const third=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),KEY);
+  assert.equal(third.attempts.length,3);
+  assert.deepEqual(third.attempts[2].answers,{});
+  assert.equal(third.attempts[1].answers['p1-001'],'A');
+  // Narrow mobile and keyboard navigation.
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.locator('#opt-A').focus(); await page.keyboard.press('ArrowDown');
+  assert.equal(await page.locator('#opt-B').isChecked(),true);
+  assert.equal(await page.evaluate(()=>document.activeElement.id),'opt-B');
+  fs.mkdirSync('test-results',{recursive:true});
+  await page.screenshot({path:'test-results/mobile-exam.png',fullPage:true});
+  assert.deepEqual(errors,[]);
+  console.log('PASS: file:// offline, PG/MCMA/Kategori, refresh, ragu, navigasi, keyboard, dua tab, hasil/17 kode, review, ulang, mobile 390px');
+  await context.close();
+  await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

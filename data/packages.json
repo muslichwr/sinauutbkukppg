@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "id": 1,
+      "title": "Paket 1",
+      "version": "2026-11-18.4",
+      "file": "bank_soal_80.json",
+      "reviewFile": "references/Bank_Soal_80_dan_Pembahasan.md"
+    }
+  ]
+}
