@@ -1,0 +1,2188 @@
+[
+  {
+    "id": 1,
+    "uid": "p2-001",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.1",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Basis Data",
+    "case_focus": "NULL dan nol",
+    "stem": "Dalam data pengukuran, 0 berarti hasil ukur nol dan NULL berarti belum diukur. Murid mengganti semua NULL menjadi 0 agar rata-rata mudah dihitung. Langkah guru paling tepat adalah ...",
+    "options": [
+      "Meminta murid membulatkan rata-rata ke bilangan bulat.",
+      "Membandingkan rata-rata sebelum dan sesudah penggantian, lalu membahas makna penyebutnya.",
+      "Mengisi NULL dengan rata-rata sebelum memeriksa alasan data belum tersedia.",
+      "Mengajarkan penulisan alias kolom pada query."
+    ],
+    "key": "B",
+    "why": "Rata-rata atas nilai yang diketahui berbeda dari rata-rata yang memasukkan nol buatan. Murid perlu menafsirkan makna data sebelum memilih perlakuan NULL.",
+    "explanations": [
+      "Pembulatan tidak menyelesaikan perbedaan makna data.",
+      "Perubahan penyebut memperlihatkan akibat menganggap belum diukur sebagai nol.",
+      "Imputasi memerlukan alasan dan asumsi; mengisinya langsung belum memperbaiki pemahaman perbedaan NULL dan nol.",
+      "Alias memperjelas nama, bukan makna nilai yang dihitung."
+    ]
+  },
+  {
+    "id": 2,
+    "uid": "p2-002",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.6",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": "Basis Data",
+    "case_focus": "COUNT kolom",
+    "stem": "Guru menilai pemahaman COUNT pada tabel berisi lima respons; dua nilai komentar adalah NULL. Nilai bukti berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Murid menjelaskan mengapa COUNT(*) bernilai 5 dan COUNT(komentar) bernilai 3.",
+      "Murid hanya menyebut kedua hasil harus sama karena tabelnya satu.",
+      "Murid memprediksi perubahan kedua hitungan saat satu NULL diisi teks."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "COUNT(*) menghitung baris; COUNT pada kolom menghitung nilai non-NULL. Prediksi perubahan lebih informatif daripada hafalan keluaran.",
+    "explanations": [
+      "Penjelasan membedakan jumlah baris dan nilai non-NULL.",
+      "Tabel yang sama tidak menjamin ekspresi COUNT menghitung hal yang sama.",
+      "Prediksi menguji pemahaman pengaruh nilai terhadap agregasi."
+    ]
+  },
+  {
+    "id": 3,
+    "uid": "p2-003",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.2",
+    "type": "PG",
+    "difficulty": "menantang",
+    "cp_element": "Basis Data",
+    "case_focus": "filter agregat",
+    "stem": "Murid ingin menampilkan kategori dengan total penjualan di atas satu juta, tetapi menaruh SUM pada WHERE. Guru akan memakai dua tahap penyaringan. Demonstrasi paling tepat adalah ...",
+    "options": [
+      "Mengurutkan seluruh transaksi menurut harga satuan.",
+      "Menyaring transaksi dengan harga satuan di atas satu juta.",
+      "Memodelkan filter baris, pengelompokan, lalu HAVING.",
+      "Menambahkan DISTINCT pada nama kategori di hasil awal."
+    ],
+    "key": "C",
+    "why": "Kesalahan terjadi pada tingkat data yang disaring. Model dua tahap menjelaskan perbedaan WHERE dan HAVING, bukan sekadar memperbaiki ejaan SQL.",
+    "explanations": [
+      "Pengurutan bukan penyaringan kelompok berdasarkan total.",
+      "Harga satuan tidak setara dengan total per kategori.",
+      "Urutan ini membedakan kondisi baris dan kondisi hasil agregasi.",
+      "Penghilangan duplikasi tidak menerapkan syarat agregat."
+    ]
+  },
+  {
+    "id": 4,
+    "uid": "p2-004",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.2",
+    "type": "MCMA",
+    "difficulty": "menantang",
+    "cp_element": "Basis Data",
+    "case_focus": "tipe desimal",
+    "stem": "Hasil penjumlahan pecahan uang dengan tipe floating point menyisakan selisih kecil. Guru ingin murid memilih representasi berdasarkan kebutuhan ketepatan. Pilih semua kegiatan yang relevan.",
+    "options": [
+      "Membandingkan floating point dan DECIMAL untuk nilai uang yang sama.",
+      "Memperbanyak angka di belakang koma pada tampilan saja.",
+      "Menyimpulkan semua bilangan harus disimpan sebagai teks.",
+      "Menguji penyimpanan dalam satuan rupiah bulat bila aturan harga memungkinkan."
+    ],
+    "key": [
+      "A",
+      "D"
+    ],
+    "why": "Representasi dipilih menurut satuan dan operasi yang diperlukan. Memoles tampilan tidak memperbaiki ketepatan penyimpanan.",
+    "explanations": [
+      "Perbandingan menunjukkan konsekuensi representasi bilangan.",
+      "Format tampilan tidak mengubah nilai yang tersimpan.",
+      "Teks menyulitkan operasi numerik dan tidak mengikuti kebutuhan tiap data.",
+      "Satuan bulat dapat menjaga ketepatan bila tidak memerlukan pecahan rupiah."
+    ]
+  },
+  {
+    "id": 5,
+    "uid": "p2-005",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.3",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Basis Data",
+    "case_focus": "urut tanggal",
+    "stem": "Murid dapat mengurutkan angka, tetapi urutan tanggal berbentuk teks DD/MM/YYYY tidak kronologis. Guru ingin menemukan prasyarat yang belum dipahami. Pertanyaan awal terbaik adalah ...",
+    "options": [
+      "Membandingkan urutan teks dan waktu pada dua tanggal.",
+      "Berapa banyak tanggal yang mampu kalian ketik per menit?",
+      "Meminta murid menyeragamkan tanda pemisah tanggal sebelum membandingkan urutannya.",
+      "Apakah warna kolom tanggal sudah berbeda dari kolom lain?"
+    ],
+    "key": "A",
+    "why": "Guru memeriksa hubungan tipe data dengan operasi pembandingan, lalu dapat menyiapkan konversi ke tipe tanggal sesuai kebutuhan belajar.",
+    "explanations": [
+      "Pasangan itu mengungkap perbedaan pembandingan teks dan tanggal.",
+      "Kecepatan mengetik tidak menjelaskan cara nilai dibandingkan.",
+      "Pemisah yang seragam belum mengubah pembandingan teks menjadi pembandingan waktu.",
+      "Warna kolom bukan prasyarat pengurutan kronologis."
+    ]
+  },
+  {
+    "id": 6,
+    "uid": "p2-006",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.6",
+    "type": "Kategori",
+    "difficulty": "dasar",
+    "cp_element": "Basis Data",
+    "case_focus": "backup dipulihkan",
+    "stem": "Kelompok menyerahkan file backup basis data. Tujuan asesmen ialah memastikan data dapat dipulihkan. Nilai bukti berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Ukuran file backup besar sehingga pemulihan dianggap terbukti.",
+      "Pemulihan dicoba pada basis data uji dan hasilnya dibandingkan dengan data asal.",
+      "Kelompok mencatat versi alat dan langkah pemulihan yang berhasil."
+    ],
+    "key": [
+      "F",
+      "T",
+      "T"
+    ],
+    "why": "Backup dinilai dari keterpulihan dan kecocokan hasil, bukan keberadaan file saja. Pengujian dilakukan pada lingkungan uji agar data kerja aman.",
+    "explanations": [
+      "Ukuran tidak menjamin isi lengkap atau dapat dipulihkan.",
+      "Uji pemulihan memeriksa kemampuan yang ditargetkan.",
+      "Catatan membuat proses pemulihan dapat diperiksa ulang."
+    ]
+  },
+  {
+    "id": 7,
+    "uid": "p2-007",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.4",
+    "type": "PG",
+    "difficulty": "menantang",
+    "cp_element": "Basis Data",
+    "case_focus": "indeks dan pola akses",
+    "stem": "Guru memakai alat penampil rencana eksekusi untuk mengajarkan indeks. Murid menyimpulkan setiap query pasti lebih cepat setelah indeks ditambah. Pemanfaatan alat paling tepat adalah ...",
+    "options": [
+      "Memilih tangkapan layar rencana dengan warna paling sedikit.",
+      "Mengukur query sebelum dan sesudah indeks pada dua ukuran data yang berbeda.",
+      "Meminta murid menghafalkan nama semua operator pada alat.",
+      "Membandingkan query terpilih pada data sama, lalu membaca rencana dan hasil waktunya."
+    ],
+    "key": "D",
+    "why": "Alat memperlihatkan bukti penggunaan indeks dan batas manfaatnya. Ukuran data, pola pencarian, dan biaya pemeliharaan indeks tetap perlu dipertimbangkan.",
+    "explanations": [
+      "Tampilan grafis tidak menjadi ukuran biaya query.",
+      "Perubahan ukuran data mengaburkan pengaruh indeks sehingga bukti perbandingan belum terkontrol.",
+      "Nama operator belum menjelaskan hubungan indeks dengan pola akses.",
+      "Kondisi yang sebanding membantu menilai kapan indeks digunakan."
+    ]
+  },
+  {
+    "id": 8,
+    "uid": "p2-008",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.5",
+    "type": "MCMA",
+    "difficulty": "sedang",
+    "cp_element": "Basis Data",
+    "case_focus": "kamus data lokal",
+    "stem": "Data curah hujan desa memakai kode kosong, 0, dan -999 dengan arti berbeda. Guru akan menggunakannya untuk latihan query. Pilih semua langkah pemanfaatan sumber lokal yang tepat.",
+    "options": [
+      "Menganggap -999 sebagai pengukuran sah karena berupa angka.",
+      "Membaca kamus data bersama narasumber sebelum menentukan filter.",
+      "Menyediakan cuplikan data beserta definisi kode untuk tugas analisis.",
+      "Menghapus semua nilai 0 sebelum tujuan analisis ditetapkan."
+    ],
+    "key": [
+      "B",
+      "C"
+    ],
+    "why": "Konteks lokal berguna bila makna datanya dipahami. Pemilihan filter harus mengikuti definisi sumber, bukan bentuk angka semata.",
+    "explanations": [
+      "Bentuk numerik tidak menjamin maknanya hasil pengukuran.",
+      "Kamus data menjelaskan arti kode dalam konteks sumber.",
+      "Definisi menjaga agar murid dapat menafsirkan hasil query.",
+      "Nol dapat merupakan pengukuran sah yang penting."
+    ]
+  },
+  {
+    "id": 9,
+    "uid": "p2-009",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.1",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Basis Data",
+    "case_focus": "duplikasi hasil DISTINCT",
+    "stem": "Dua peserta berbeda memilih jawaban survei yang sama. Murid memakai DISTINCT pada seluruh jawaban lalu menyatakan jumlah responden berkurang. Tindakan guru terbaik adalah ...",
+    "options": [
+      "Menghitung kembali jumlah baris setelah DISTINCT untuk menentukan jumlah peserta.",
+      "Membedakan hitungan peserta dan daftar jawaban unik.",
+      "Mengurutkan jawaban sebelum menghitung kembali hasil DISTINCT.",
+      "Mengganti seluruh jawaban sama dengan teks acak."
+    ],
+    "key": "B",
+    "why": "DISTINCT menjawab pertanyaan tentang nilai unik. Jumlah peserta memerlukan unit hitung yang sesuai, meskipun jawaban mereka sama.",
+    "explanations": [
+      "Hitungan itu tetap menghitung nilai unik, bukan peserta yang jawabannya dapat sama.",
+      "Dua tujuan tersebut menjelaskan mengapa hasil DISTINCT tidak mewakili jumlah responden.",
+      "Urutan tidak mengembalikan baris yang disatukan.",
+      "Perubahan isi merusak data, bukan memperbaiki penafsiran."
+    ]
+  },
+  {
+    "id": 10,
+    "uid": "p2-010",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.1",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": "Basis Data",
+    "case_focus": "otorisasi view",
+    "stem": "Dalam proyek laporan kesehatan sekolah di SMK, murid belajar bertanggung jawab atas penggunaan data. Nilai rancangan kegiatan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Menguji akun pembaca laporan yang hanya dapat melihat kolom agregat yang diperlukan.",
+      "Menilai kesiapan kerja dari banyaknya akun yang memperoleh akses penuh.",
+      "Menganggap view selalu mencegah akses tabel asal meski hak akun belum diperiksa."
+    ],
+    "key": [
+      "T",
+      "F",
+      "F"
+    ],
+    "why": "Tujuan kejuruan mencakup penguasaan teknik sekaligus penggunaannya secara bertanggung jawab. Hak akun perlu diuji, bukan diasumsikan dari keberadaan view.",
+    "explanations": [
+      "Pembatasan akses menghubungkan keterampilan teknis dan tanggung jawab pengguna.",
+      "Jumlah akses penuh bukan bukti tanggung jawab profesional.",
+      "View saja tidak menjamin pembatasan hak terhadap tabel asal."
+    ]
+  },
+  {
+    "id": 11,
+    "uid": "p2-011",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.2",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Basis Data",
+    "case_focus": "impor CSV",
+    "stem": "Saat impor CSV, sebagian murid menemukan nama kolom bergeser karena koma di dalam alamat. Mereka sudah memahami tabel, tetapi belum aturan pemisah dan tanda kutip. Dukungan paling tepat adalah ...",
+    "options": [
+      "Memberikan contoh CSV dengan lebih banyak kolom tetapi semua nilainya tanpa koma.",
+      "Mengganti semua alamat menjadi nomor urut.",
+      "Membandingkan satu baris CSV yang dikutip benar dan yang keliru.",
+      "Meminta murid menghafal semua nama format pertukaran data."
+    ],
+    "key": "C",
+    "why": "Dukungan menanggapi bukti kebutuhan yang spesifik: koma dalam nilai harus dibedakan dari pemisah kolom sesuai aturan CSV yang digunakan.",
+    "explanations": [
+      "Contoh itu menambah kolom tetapi tidak menguji kasus koma di dalam nilai yang menjadi kesulitan.",
+      "Perubahan itu menghindari kebutuhan membaca struktur CSV.",
+      "Contoh kecil menargetkan prasyarat pemisah dan pengutipan.",
+      "Daftar format tidak mengatasi kesulitan parsing yang ditemukan."
+    ]
+  },
+  {
+    "id": 12,
+    "uid": "p2-012",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.4",
+    "type": "MCMA",
+    "difficulty": "sedang",
+    "cp_element": "Basis Data",
+    "case_focus": "retensi data",
+    "stem": "Unit basis data sebelumnya hanya meminta murid menambah data. Guru menyusun unit lanjutan tentang pengelolaan data sepanjang penggunaannya. Pilih semua penyesuaian kurikulum yang selaras.",
+    "options": [
+      "Menambahkan tujuan memilih masa simpan berdasarkan kebutuhan kasus.",
+      "Meminta rancangan prosedur arsip dan penghapusan beserta uji pada data tiruan.",
+      "Menambah daftar perintah administrasi sebagai satu-satunya ukuran capaian.",
+      "Menyelaraskan rubrik dengan alasan retensi dan kemampuan menjalankan prosedur."
+    ],
+    "key": [
+      "A",
+      "B",
+      "D"
+    ],
+    "why": "Adaptasi unit mempertahankan materi basis data sekaligus mengaitkan tujuan, kegiatan, dan asesmen dengan kebutuhan pengelolaan data nyata.",
+    "explanations": [
+      "Masa simpan memperluas pengelolaan data sesuai kebutuhan pengguna.",
+      "Kegiatan dan bukti kerja mendukung tujuan pengelolaan siklus data.",
+      "Hafalan perintah belum menilai keputusan pengelolaan data.",
+      "Rubrik mengukur alasan dan penerapan yang ditargetkan."
+    ]
+  },
+  {
+    "id": 13,
+    "uid": "p2-013",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.5",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Basis Data",
+    "case_focus": "desain data survei",
+    "stem": "Guru menduga formulir survei dengan pilihan bertingkat mengurangi data tidak konsisten. Ia ingin memperbaiki praktik pembelajaran desain data. Langkah paling dapat dipertanggungjawabkan adalah ...",
+    "options": [
+      "Membandingkan jenis kesalahan pada dua rancangan setara dan menelaah alasan murid.",
+      "Memilih rancangan yang paling cepat selesai dibuat.",
+      "Membandingkan jumlah pertanyaan pada dua formulir sebagai ukuran konsistensi.",
+      "Memakai kesukaan guru terhadap tampilan sebagai dasar keputusan."
+    ],
+    "key": "A",
+    "why": "Perbaikan praktik membutuhkan bukti yang terkait dugaan, dengan tugas sebanding dan keterbatasan perbandingan yang diakui.",
+    "explanations": [
+      "Bukti kesalahan dan alasan membantu menilai manfaat rancangan pada pembelajaran.",
+      "Kecepatan pembuatan belum menunjukkan pengurangan kesalahan data.",
+      "Banyak pertanyaan tidak langsung menunjukkan apakah makna isian dipahami dan diisi konsisten.",
+      "Preferensi tampilan belum menguji dugaan tentang konsistensi."
+    ]
+  },
+  {
+    "id": 14,
+    "uid": "p2-014",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.1",
+    "type": "Kategori",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "polimorfisme",
+    "stem": "Murid mengira method yang dipanggil dari referensi bertipe induk selalu menjalankan versi induk, meski object turunannya melakukan override. Nilai kegiatan pembelajaran berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Membandingkan keluaran dua object turunan melalui referensi induk.",
+      "Meminta prediksi keluaran sebelum eksekusi dan revisi alasannya.",
+      "Mengganti contoh override dengan dua nama method berbeda untuk membuktikan polimorfisme."
+    ],
+    "key": [
+      "T",
+      "T",
+      "F"
+    ],
+    "why": "Contoh harus benar-benar menggunakan override dengan pemanggilan yang mendukung dispatch dinamis pada bahasa yang dipakai. Dua nama method berbeda tidak menguji dugaan awal.",
+    "explanations": [
+      "Perbandingan memperlihatkan pemilihan implementasi saat dijalankan.",
+      "Prediksi dan revisi mengungkap model mental dispatch.",
+      "Nama berbeda menghindari mekanisme override yang sedang dipelajari."
+    ]
+  },
+  {
+    "id": 15,
+    "uid": "p2-015",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.6",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "event GUI",
+    "stem": "Tombol GUI menjalankan aksi dua kali. Murid menduga event handler terpasang dua kali. Bukti yang paling membantu guru menilai diagnosisnya adalah ...",
+    "options": [
+      "Membandingkan label tombol sebelum dan sesudah layar dibuka ulang.",
+      "Ukuran file executable sebelum dan sesudah perubahan.",
+      "Tampilan tombol setelah warna diubah.",
+      "Merekam pendaftaran handler dan pemanggilannya per klik."
+    ],
+    "key": "D",
+    "why": "Asesmen diagnosis meminta bukti yang dapat membedakan penyebab, bukan hanya menunjukkan aplikasi tampak normal.",
+    "explanations": [
+      "Label tidak menunjukkan berapa kali handler didaftarkan atau dijalankan.",
+      "Ukuran file bukan bukti jumlah pemanggilan event.",
+      "Warna tidak menguji sumber aksi ganda.",
+      "Log menautkan dugaan pendaftaran ganda dengan gejala."
+    ]
+  },
+  {
+    "id": 16,
+    "uid": "p2-016",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.2",
+    "type": "MCMA",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "koordinat gambar",
+    "stem": "Gambar pada canvas bergeser saat posisi klik dipakai langsung, karena koordinat layar berbeda dari koordinat canvas. Guru ingin murid menjelaskan perbaikannya. Pilih semua kegiatan yang tepat.",
+    "options": [
+      "Menandai titik asal kedua koordinat lalu menghitung posisi relatif klik.",
+      "Menggeser gambar dengan angka tetap sampai satu contoh terlihat pas.",
+      "Memindahkan canvas dan meminta murid memprediksi posisi relatif yang sama.",
+      "Menaikkan resolusi gambar untuk mengubah titik asal klik."
+    ],
+    "key": [
+      "A",
+      "C"
+    ],
+    "why": "Perbaikan harus menjelaskan transformasi dari satu sistem koordinat ke sistem lain. Penyesuaian angka kebetulan tidak menjamin hasil pada posisi baru.",
+    "explanations": [
+      "Hubungan titik asal menjelaskan transformasi koordinat.",
+      "Koreksi satu contoh belum berlaku ketika posisi canvas berubah.",
+      "Prediksi pada posisi baru menguji pemahaman transformasi.",
+      "Resolusi aset tidak menyelesaikan perbedaan titik asal koordinat."
+    ]
+  },
+  {
+    "id": 17,
+    "uid": "p2-017",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.1",
+    "type": "PG",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "animasi berbasis waktu",
+    "stem": "Animasi bergerak lebih cepat pada komputer dengan frame rate tinggi. Murid menambah posisi sebesar 5 setiap frame. Langkah pembelajaran terbaik adalah ...",
+    "options": [
+      "Menyamakan ukuran jendela kedua komputer.",
+      "Menguji perpindahan per detik dengan selang antarframe.",
+      "Membandingkan kelancaran visual animasi pada kedua komputer.",
+      "Membatasi tugas pada satu komputer agar hasilnya tetap."
+    ],
+    "key": "B",
+    "why": "Gerak per detik dapat dimodelkan sebagai kecepatan dikali selang waktu. Murid perlu membedakannya dari pertambahan tetap per frame.",
+    "explanations": [
+      "Ukuran jendela tidak langsung menentukan waktu gerak.",
+      "Perbandingan menghubungkan kecepatan dengan selang waktu.",
+      "Gerak tampak halus belum menjamin jarak yang ditempuh per detik sama.",
+      "Satu perangkat menyembunyikan ketergantungan terhadap frame rate."
+    ]
+  },
+  {
+    "id": 18,
+    "uid": "p2-018",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.4",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "pemisahan model tampilan",
+    "stem": "Guru merancang unit GUI agar murid dapat mengubah tampilan tanpa mengubah aturan perhitungan. Nilai keputusan kurikuler berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Menetapkan tujuan hanya dari jumlah jenis widget yang digunakan.",
+      "Meminta model perhitungan yang dapat diuji terpisah dari tampilan.",
+      "Menilai apakah dua tampilan memakai aturan perhitungan yang sama."
+    ],
+    "key": [
+      "F",
+      "T",
+      "T"
+    ],
+    "why": "Tujuan, tugas, dan asesmen perlu mengukur pemisahan aturan dari antarmuka. Daftar widget tidak cukup membuktikan kemampuan tersebut.",
+    "explanations": [
+      "Banyak widget tidak menunjukkan pemisahan tanggung jawab.",
+      "Model terpisah mendukung tujuan perubahan antarmuka.",
+      "Dua tampilan memberi bukti penerapan pemisahan yang ditargetkan."
+    ]
+  },
+  {
+    "id": 19,
+    "uid": "p2-019",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.3",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "rekursi",
+    "stem": "Sebelum mengajar rekursi, guru menemukan murid dapat menelusuri pemanggilan fungsi tetapi menganggap semua pemanggilan berbagi variabel lokal yang sama. Langkah awal terbaik adalah ...",
+    "options": [
+      "Memulai contoh pohon direktori yang sangat besar.",
+      "Mengulang definisi fungsi murni sebagai hafalan.",
+      "Memodelkan dua catatan pemanggilan dan variabel lokalnya.",
+      "Mengganti rekursi dengan materi pewarisan selama satu semester."
+    ],
+    "key": "C",
+    "why": "Kebutuhan belajar terletak pada model keadaan pemanggilan. Contoh dangkal dua tingkat cukup untuk membedakan variabel lokal sebelum rekursi bertingkat.",
+    "explanations": [
+      "Ukuran kasus menambah beban sebelum model pemanggilan terbentuk.",
+      "Hafalan definisi belum menanggapi dugaan tentang variabel lokal.",
+      "Representasi ini menargetkan prasyarat keadaan tiap pemanggilan.",
+      "Penggantian materi tidak membantu membangun prasyarat rekursi."
+    ]
+  },
+  {
+    "id": 20,
+    "uid": "p2-020",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.2",
+    "type": "MCMA",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "mutabilitas koleksi",
+    "stem": "Dalam kerja berpasangan, satu murid memahami referensi object, temannya masih mengira penyalinan list selalu menyalin seluruh object di dalamnya. Pilih dukungan yang tepat.",
+    "options": [
+      "Memberi pasangan tugas visual yang sama sekali tidak memakai list.",
+      "Memakai diagram referensi dan uji perubahan satu object pada dua list.",
+      "Meminta murid yang paham mengubah semua kode pasangannya.",
+      "Meminta tiap murid menjelaskan kapan perlu salinan dangkal atau mendalam."
+    ],
+    "key": [
+      "B",
+      "D"
+    ],
+    "why": "Dukungan menghubungkan representasi referensi dengan perilaku perubahan, sambil tetap meminta bukti pemahaman dari setiap murid.",
+    "explanations": [
+      "Tugas itu tidak menargetkan kesenjangan pemahaman referensi.",
+      "Diagram dan uji memperlihatkan object yang masih dibagi.",
+      "Pengambilalihan pekerjaan tidak menunjukkan perubahan pemahaman teman.",
+      "Penjelasan individu mempertahankan tantangan sesuai kesiapan."
+    ]
+  },
+  {
+    "id": 21,
+    "uid": "p2-021",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.5",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "aset transparan",
+    "stem": "Guru mengajak murid membuat papan informasi budaya setempat. Logo harus tampil di atas beberapa warna latar. Sumber belajar paling sesuai untuk membahas transparansi gambar adalah ...",
+    "options": [
+      "Kumpulan foto dengan latar putih yang sama.",
+      "Foto logo yang sudah menempel pada papan berlatar putih.",
+      "Contoh logo yang sudah menyatu dengan poster akhir.",
+      "Menguji logo dengan dan tanpa alpha pada beberapa latar."
+    ],
+    "key": "D",
+    "why": "Sumber lokal dipakai untuk menguji kebutuhan nyata penempatan logo, bukan sekadar menghias tugas. Perbandingan perlu mengisolasi ada-tidaknya transparansi.",
+    "explanations": [
+      "Latar seragam tidak memperlihatkan kebutuhan transparansi.",
+      "Foto dapat memperlihatkan bentuk logo, tetapi tidak menyediakan aset terpisah untuk menguji transparansi.",
+      "Aset menyatu tidak memperlihatkan perilaku pada latar baru.",
+      "Perbandingan aset lokal menunjukkan fungsi transparansi."
+    ]
+  },
+  {
+    "id": 22,
+    "uid": "p2-022",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.4",
+    "type": "Kategori",
+    "difficulty": "dasar",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "pustaka dan dependensi",
+    "stem": "Guru menggunakan pengelola dependensi untuk proyek GUI. Murid mengira versi terbaru pustaka selalu cocok dengan proyek lama. Nilai kegiatan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Membandingkan kebutuhan versi proyek dengan dokumentasi pustaka dan mencoba pada salinan proyek.",
+      "Menghapus catatan versi agar instalasi selalu memilih yang terbaru.",
+      "Menilai pemahaman dari jumlah pustaka yang berhasil diinstal."
+    ],
+    "key": [
+      "T",
+      "F",
+      "F"
+    ],
+    "why": "Penggunaan alat secara kritis mencakup kompatibilitas dan reproduksibilitas, bukan mengejar versi atau jumlah pustaka.",
+    "explanations": [
+      "Kegiatan melatih pemilihan alat berdasarkan bukti kompatibilitas.",
+      "Hilangnya catatan mengurangi kemampuan mereproduksi lingkungan.",
+      "Jumlah instalasi tidak menunjukkan kecocokan pustaka dengan kebutuhan."
+    ]
+  },
+  {
+    "id": 23,
+    "uid": "p2-023",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.6",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "exception spesifik",
+    "stem": "Program pembaca file berhenti karena file tidak ditemukan. Murid mengusulkan menangkap semua exception lalu menampilkan hasil kosong. Umpan balik paling berguna adalah ...",
+    "options": [
+      "Bedakan file tidak ditemukan dan file rusak; tunjukkan respons yang diperlukan pengguna untuk keduanya.",
+      "Tambahkan pesan sukses agar pengguna tidak khawatir.",
+      "Meminta daftar semua exception yang tersedia dalam bahasa tersebut.",
+      "Pindahkan seluruh kode ke satu fungsi agar singkat."
+    ],
+    "key": "A",
+    "why": "Umpan balik mengarahkan murid membedakan jenis kegagalan dan respons aplikasi, bukan sekadar membuat error menghilang.",
+    "explanations": [
+      "Dua kondisi menguji apakah penanganan mempertahankan informasi kegagalan.",
+      "Pesan sukses menyembunyikan kegagalan yang perlu ditangani.",
+      "Daftar luas belum menunjukkan respons yang tepat pada dua kegagalan pembacaan file.",
+      "Pemindahan kode tidak menjamin penanganan tiap kegagalan tepat."
+    ]
+  },
+  {
+    "id": 24,
+    "uid": "p2-024",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.5",
+    "type": "MCMA",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "profiling",
+    "stem": "Guru ingin memperbaiki cara mengajar optimasi setelah murid mengubah bagian program yang ternyata jarang berjalan. Pilih langkah pengembangan praktik yang beralasan.",
+    "options": [
+      "Menggunakan profil eksekusi untuk memilih contoh bagian yang paling banyak memakai waktu.",
+      "Memilih contoh yang kodenya paling panjang sebagai satu-satunya prioritas.",
+      "Membandingkan alasan pemilihan optimasi sebelum dan sesudah penggunaan profil.",
+      "Mencatat jenis tugas dan perangkat saat menafsirkan hasilnya."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Pengembangan praktik berfokus pada kemampuan murid memakai bukti biaya, bukan sekadar menghasilkan program lebih cepat pada satu contoh.",
+    "explanations": [
+      "Profil membantu mengaitkan contoh ajar dengan sumber biaya nyata.",
+      "Panjang kode tidak menunjukkan biaya eksekusi.",
+      "Perubahan alasan memberi bukti dampak strategi pembelajaran.",
+      "Konteks memengaruhi hasil pengukuran dan jangkauan temuan."
+    ]
+  },
+  {
+    "id": 25,
+    "uid": "p2-025",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.3",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "state diagram",
+    "stem": "Saat memodelkan pemutar audio, kelas berdebat apakah tombol jeda boleh bekerja dari keadaan berhenti. Guru ingin diskusi fokus dan bermakna. Respons terbaik adalah ...",
+    "options": [
+      "Memutuskan berdasarkan suara terbanyak sebelum membaca kebutuhan.",
+      "Mengganti diskusi dengan lomba menggambar diagram tercepat.",
+      "Menguji transisi diagram terhadap skenario pengguna.",
+      "Memilih diagram dengan jumlah keadaan paling sedikit agar mudah dibaca."
+    ],
+    "key": "C",
+    "why": "Diskusi bermakna memakai kebutuhan dan skenario sebagai acuan. Guru memberi ruang perbedaan sambil menjaga alasan teknis yang dapat diperiksa.",
+    "explanations": [
+      "Popularitas pendapat bukan dasar perilaku sistem yang diminta.",
+      "Kecepatan gambar tidak menyelesaikan perbedaan aturan transisi.",
+      "Skenario memberi dasar bersama untuk membandingkan gagasan.",
+      "Kesederhanaan berguna, tetapi diagram harus tetap memuat perilaku yang diperlukan pengguna."
+    ]
+  },
+  {
+    "id": 26,
+    "uid": "p2-026",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.1",
+    "type": "Kategori",
+    "difficulty": "dasar",
+    "cp_element": "Pemrograman Berbasis Teks, Grafis, dan Multimedia",
+    "case_focus": "integrasi audio",
+    "stem": "Dalam proyek panduan audio museum sekolah, guru menargetkan kesiapan kerja murid SMK, bukan hanya audio berhasil diputar. Nilai rancangan penilaian berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Murid menjelaskan pemilihan aset audio dan batas izin penggunaannya.",
+      "Murid menyerahkan panduan menjalankan aplikasi beserta hasil uji suara.",
+      "Nilai akhir ditentukan dari volume suara paling keras."
+    ],
+    "key": [
+      "T",
+      "T",
+      "F"
+    ],
+    "why": "Kesiapan kerja mencakup keputusan aset, pengujian, dan penyerahan hasil yang dapat digunakan pihak lain.",
+    "explanations": [
+      "Keputusan aset menghubungkan teknik dan tanggung jawab profesional.",
+      "Dokumentasi dan uji membantu orang lain menggunakan hasil kerja.",
+      "Volume tertinggi tidak mewakili mutu, kegunaan, atau tanggung jawab kerja."
+    ]
+  },
+  {
+    "id": 27,
+    "uid": "p2-027",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.1",
+    "type": "PG",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "CSS cascade",
+    "stem": "Dua aturan CSS menargetkan elemen yang sama; murid mengira aturan terakhir selalu menang. Guru ingin memperbaiki model mentalnya. Contoh pembanding terbaik adalah ...",
+    "options": [
+      "Dua aturan dengan selector dan nilai yang sama persis.",
+      "Menukar urutan dua selector yang specificity-nya berbeda.",
+      "Halaman dengan semua gaya ditulis inline.",
+      "Membandingkan dua aturan dengan selector sama yang diletakkan bergantian."
+    ],
+    "key": "B",
+    "why": "Pada kondisi asal dan kepentingan aturan yang sama, specificity dapat mengalahkan urutan. Contoh perlu mengendalikan faktor lain agar dugaan terakhir-selalu-menang dapat diuji.",
+    "explanations": [
+      "Keluaran yang sama tidak membedakan dugaan murid.",
+      "Pertukaran urutan menguji pengaruh specificity secara terpisah.",
+      "Satu sumber gaya tidak memperlihatkan kompetisi aturan.",
+      "Kasus specificity sama hanya menguatkan pengaruh urutan dan tidak menguji batas dugaan murid."
+    ]
+  },
+  {
+    "id": 28,
+    "uid": "p2-028",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.2",
+    "type": "MCMA",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "box model",
+    "stem": "Lebar kartu melampaui ruang setelah padding ditambah. Guru meminta murid memeriksa box model, dengan margin dianggap nol. Pilih kegiatan yang mendukung diagnosis.",
+    "options": [
+      "Menghitung content, padding, dan border pada mode content-box.",
+      "Mengubah jenis font sampai kartu tampak lebih sempit.",
+      "Meminta screenshot ukuran layar saja.",
+      "Membandingkan hasil ukuran pada content-box dan border-box."
+    ],
+    "key": [
+      "A",
+      "D"
+    ],
+    "why": "Penjelasan perlu menghubungkan ukuran yang dinyatakan dan ukuran luar elemen. Percobaan terkontrol lebih kuat daripada penyesuaian tampilan kebetulan.",
+    "explanations": [
+      "Perhitungan menunjukkan komponen yang menambah lebar luar.",
+      "Perubahan font tidak langsung menjelaskan perhitungan box.",
+      "Ukuran layar saja tidak menunjukkan komponen lebar elemen.",
+      "Dua mode menguji apakah padding termasuk dalam lebar yang ditetapkan."
+    ]
+  },
+  {
+    "id": 29,
+    "uid": "p2-029",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.2",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "HTML semantik",
+    "stem": "Murid terbiasa memakai div untuk semua elemen. Sebagian belum memahami perbedaan peran tombol dan tautan. Guru ingin semua dapat memilih elemen berdasarkan fungsi. Strategi paling tepat adalah ...",
+    "options": [
+      "Memberi skenario navigasi dan aksi, lalu meminta pilihan elemen beserta uji perilakunya.",
+      "Membagi murid ke kelompok mahir tetap berdasarkan banyaknya tag yang hafal.",
+      "Memilih elemen berdasarkan kemudahan menyamakan tampilannya dengan rancangan.",
+      "Memulai dengan daftar panjang atribut ARIA untuk dihafalkan."
+    ],
+    "key": "A",
+    "why": "Dukungan dimulai dari perbedaan fungsi yang belum dipahami. Pengujian perilaku membantu murid melampaui pemilihan elemen berdasarkan tampilan.",
+    "explanations": [
+      "Skenario dan uji membantu murid mengaitkan semantik dengan fungsi.",
+      "Jumlah tag tidak cukup menjadi dasar pengelompokan permanen.",
+      "Kemudahan styling belum menjamin elemen memiliki peran dan perilaku yang sesuai.",
+      "Daftar atribut menambah beban sebelum fungsi elemen dipahami."
+    ]
+  },
+  {
+    "id": 30,
+    "uid": "p2-030",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.6",
+    "type": "Kategori",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "event bubbling",
+    "stem": "Klik tombol hapus di dalam kartu juga membuka detail karena handler kartu ikut menerima event. Guru menilai diagnosis murid. Nilai bukti berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Murid menyimpulkan masalah selesai karena ikon hapus diganti.",
+      "Murid menggambar jalur event dan menunjukkan handler yang dijalankan.",
+      "Murid menjelaskan perbedaan menghentikan propagasi dan mencegah aksi bawaan."
+    ],
+    "key": [
+      "F",
+      "T",
+      "T"
+    ],
+    "why": "Bukti pemahaman harus menjelaskan alur event dan pilihan penanganannya. preventDefault tidak identik dengan menghentikan propagasi.",
+    "explanations": [
+      "Perubahan ikon tidak membuktikan alur event berubah.",
+      "Jalur event memperlihatkan hubungan klik dengan aksi ganda.",
+      "Dua mekanisme menangani persoalan berbeda sehingga perlu dibedakan."
+    ]
+  },
+  {
+    "id": 31,
+    "uid": "p2-031",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.4",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "cache aset",
+    "stem": "Setelah deployment, beberapa browser menampilkan CSS lama. Guru menggunakan panel Network agar murid memahami cache. Aktivitas paling tepat adalah ...",
+    "options": [
+      "Menghapus seluruh riwayat setiap kali membuka halaman.",
+      "Membandingkan ukuran tampilan halaman lama dan baru setelah deployment.",
+      "Menambah ukuran file CSS agar dianggap versi baru.",
+      "Membaca URL, header cache, dan respons saat muat ulang."
+    ],
+    "key": "D",
+    "why": "Alat digunakan untuk menelusuri bukti pemuatan aset. Nama atau versi aset dan kebijakan cache perlu dikaitkan dengan perilaku browser.",
+    "explanations": [
+      "Kebiasaan ini menghindari penjelasan asal aset yang dipakai.",
+      "Tampilan dapat memperlihatkan gejala, tetapi belum menelusuri sumber aset dan kebijakan cache.",
+      "Ukuran file bukan mekanisme penamaan versi yang dapat diandalkan.",
+      "Bukti permintaan membantu membedakan aset tersimpan dari aset baru."
+    ]
+  },
+  {
+    "id": 32,
+    "uid": "p2-032",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.1",
+    "type": "MCMA",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "balapan response",
+    "stem": "Pencarian web mengirim request untuk kata pendek lalu kata panjang. Response lama tiba paling akhir dan menimpa hasil terbaru. Guru ingin murid menalar urutan asinkron. Pilih kegiatan yang tepat.",
+    "options": [
+      "Menganggap response terakhir tiba pasti berasal dari input terakhir.",
+      "Menyusun garis waktu input, request, dan response dari log.",
+      "Menguji pemeriksaan identitas request sebelum memperbarui tampilan.",
+      "Menambah animasi tunggu dengan durasi tetap sebagai jaminan urutan."
+    ],
+    "key": [
+      "B",
+      "C"
+    ],
+    "why": "Kasus menguji perbedaan urutan pengiriman dan penyelesaian. Tampilan perlu menerima hasil yang masih relevan dengan input saat ini.",
+    "explanations": [
+      "Urutan selesai tidak menjamin urutan request.",
+      "Garis waktu memperlihatkan sumber hasil yang menimpa.",
+      "Pemeriksaan dapat mencegah hasil usang mengganti hasil terbaru.",
+      "Durasi tetap tidak menjamin urutan penyelesaian jaringan."
+    ]
+  },
+  {
+    "id": 33,
+    "uid": "p2-033",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.3",
+    "type": "PG",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "Pengodean nilai parameter URL",
+    "stem": "Murid dapat menyusun tautan pencarian untuk satu kata, tetapi nilai A&B terpecah menjadi dua parameter. Sebelum membahas pembentukan URL dinamis, dukungan awal terbaik adalah ...",
+    "options": [
+      "Menambah jumlah tautan yang harus disalin.",
+      "Mengganti semua istilah pencarian menjadi angka.",
+      "Menguji pengodean nilai parameter URL.",
+      "Meminta murid menghafal seluruh status HTTP."
+    ],
+    "key": "C",
+    "why": "Kebutuhan belajar terletak pada pembedaan struktur URL dan nilai parameter. Pengodean nilai menjaga karakter khusus tetap menjadi bagian data, bukan pemisah parameter.",
+    "explanations": [
+      "Salinan tambahan tidak menjelaskan peran karakter khusus.",
+      "Penggantian data menghindari kebutuhan merepresentasikan nilai asli.",
+      "Perbandingan menargetkan prasyarat pemisahan struktur URL dan isi parameter.",
+      "Status HTTP tidak menjelaskan pembentukan parameter URL."
+    ]
+  },
+  {
+    "id": 34,
+    "uid": "p2-034",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.6",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "session timeout",
+    "stem": "Sesi web habis saat murid mengisi formulir panjang. Tujuan belajar ialah merancang respons aplikasi yang menjaga pekerjaan pengguna dan menjelaskan status autentikasi. Nilai bukti berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Murid mendemonstrasikan penyimpanan draf yang sesuai dan alur login ulang pada data uji.",
+      "Murid hanya menunjukkan formulir berhasil dikirim saat sesi masih aktif.",
+      "Murid menjelaskan data yang boleh dipertahankan serta batas penyimpanannya."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Asesmen harus memunculkan kondisi yang menjadi tujuan desain. Keberhasilan saat sesi aktif tidak cukup membuktikan penanganan sesi habis.",
+    "explanations": [
+      "Demonstrasi menguji pemulihan pekerjaan saat sesi habis.",
+      "Kondisi normal belum menguji skenario habis sesi.",
+      "Penjelasan menghubungkan pemulihan dengan pengelolaan data pengguna."
+    ]
+  },
+  {
+    "id": 35,
+    "uid": "p2-035",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.2",
+    "type": "PG",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "pengodean keluaran",
+    "stem": "Teks komentar pengguna dirender sebagai HTML sehingga tag ikut dijalankan. Guru ingin murid memahami penyajian teks yang aman. Demonstrasi paling tepat adalah ...",
+    "options": [
+      "Menghapus komentar yang panjangnya melebihi satu baris.",
+      "Menguji penyisipan contoh sebagai teks dan sebagai HTML.",
+      "Memvalidasi bahwa kolom komentar terisi sebelum data disimpan.",
+      "Membatasi warna huruf yang boleh dipilih pengguna."
+    ],
+    "key": "B",
+    "why": "Guru perlu menunjukkan bagaimana konteks penyajian memengaruhi interpretasi data. Pengodean keluaran yang sesuai konteks berbeda dari sekadar membatasi panjang atau tampilan.",
+    "explanations": [
+      "Panjang teks bukan penentu apakah isi ditafsirkan sebagai markup.",
+      "Perbandingan memperlihatkan perbedaan data teks dan markup yang dieksekusi.",
+      "Keterisian tidak mengatur apakah data ditampilkan sebagai teks atau ditafsirkan sebagai markup.",
+      "Pilihan warna tidak menangani interpretasi tag dari data."
+    ]
+  },
+  {
+    "id": 36,
+    "uid": "p2-036",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.5",
+    "type": "MCMA",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "deployment path",
+    "stem": "Situs informasi wisata desa bekerja di komputer murid, tetapi aset gagal saat dipasang dalam subfolder server mitra. Guru ingin memakai lingkungan setempat sebagai sumber belajar deployment. Pilih kegiatan yang tepat.",
+    "options": [
+      "Memetakan URL halaman dan aset pada struktur subfolder mitra.",
+      "Mengganti semua gambar dengan resolusi lebih rendah.",
+      "Menguji path relatif dan path dari root pada struktur tersebut.",
+      "Memindahkan proyek ke root lalu menganggap semua kebutuhan mitra terpenuhi."
+    ],
+    "key": [
+      "A",
+      "C"
+    ],
+    "why": "Konteks deployment lokal memberi alasan mempelajari path. Solusi dinilai terhadap struktur tujuan, bukan hanya keberhasilan pada komputer sendiri.",
+    "explanations": [
+      "Struktur nyata membantu menelusuri perbedaan alamat.",
+      "Resolusi tidak menyelesaikan alamat aset yang keliru.",
+      "Perbandingan menjelaskan konsekuensi pemilihan path.",
+      "Pemindahan menghindari kondisi pemasangan yang diminta mitra."
+    ]
+  },
+  {
+    "id": 37,
+    "uid": "p2-037",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.4",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "dokumentasi endpoint",
+    "stem": "Guru menyusun unit API web agar hasil kerja kelompok dapat dipakai kelompok lain. Targetnya memahami kontrak endpoint, bukan menghafal alat dokumentasi. Asesmen paling selaras adalah ...",
+    "options": [
+      "Kelompok lain mencoba endpoint dari dokumentasi lalu melaporkan ketidakcocokan request-response.",
+      "Menghitung jumlah halaman dokumentasi yang dibuat.",
+      "Memberi kuis nama menu aplikasi dokumentasi.",
+      "Menilai kelengkapan daftar endpoint dari jumlah alamat yang dicantumkan."
+    ],
+    "key": "A",
+    "why": "Kurikulum menghubungkan tujuan dokumentasi dengan kegiatan penggunaan dan bukti keterpakaian, bukan penguasaan merek alat.",
+    "explanations": [
+      "Pemakaian lintas kelompok menguji kelengkapan kontrak yang ditulis.",
+      "Jumlah halaman tidak menjamin kontrak dapat digunakan.",
+      "Nama menu tidak mengukur kemampuan menjelaskan endpoint.",
+      "Alamat saja belum menjelaskan parameter, bentuk response, dan kondisi yang dibutuhkan pemakai."
+    ]
+  },
+  {
+    "id": 38,
+    "uid": "p2-038",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.5",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Web",
+    "case_focus": "uji akses keyboard",
+    "stem": "Guru mencoba pendekatan audit keyboard pada pembelajaran web karena murid hanya menguji dengan mouse. Nilai tindakan pengembangan praktik berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Mengumpulkan rekaman urutan fokus sebelum dan sesudah kegiatan audit.",
+      "Menganalisis alasan murid memilih urutan dan label kontrol.",
+      "Menyimpulkan semua pengguna pasti terbantu setelah satu halaman berhasil diuji."
+    ],
+    "key": [
+      "T",
+      "T",
+      "F"
+    ],
+    "why": "Perbaikan praktik membutuhkan bukti proses dan hasil beserta batas cakupannya. Audit keyboard menambah bukti, bukan menjamin seluruh aksesibilitas.",
+    "explanations": [
+      "Urutan fokus memberi bukti perubahan keterujian navigasi.",
+      "Alasan membantu menilai perubahan pemahaman aksesibilitas.",
+      "Satu halaman dan satu cara akses tidak mewakili semua kebutuhan pengguna."
+    ]
+  },
+  {
+    "id": 39,
+    "uid": "p2-039",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.1",
+    "type": "PG",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "rotasi layar",
+    "stem": "Setelah ponsel diputar, form mobile kembali kosong. Murid menyangka perubahan orientasi hanya mengubah ukuran gambar. Langkah guru terbaik adalah ...",
+    "options": [
+      "Mengunci semua orientasi sebagai penjelasan utama lifecycle.",
+      "Menguji hanya perubahan lebar komponen setelah orientasi berganti.",
+      "Menambah delay sebelum menampilkan form.",
+      "Melacak lifecycle dan tempat state disimpan."
+    ],
+    "key": "D",
+    "why": "Pada platform yang membuat ulang layar ketika konfigurasi berubah, state lokal dapat hilang. Murid perlu menguji lifecycle dan strategi pemulihannya, bukan menganggap rotasi sekadar perubahan gambar.",
+    "explanations": [
+      "Penguncian dapat menutupi gejala, bukan menjelaskan pembuatan ulang layar.",
+      "Lebar menguji tata letak, tetapi belum menjelaskan hilangnya state akibat lifecycle.",
+      "Penundaan tidak menjamin state disimpan dan dipulihkan.",
+      "Log dan state menghubungkan perubahan orientasi dengan pembuatan ulang komponen."
+    ]
+  },
+  {
+    "id": 40,
+    "uid": "p2-040",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.2",
+    "type": "MCMA",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "izin lokasi",
+    "stem": "Murid merancang aplikasi peta jalur sekolah. Sebagian belum memahami bahwa izin lokasi dapat ditolak pengguna. Guru menyiapkan dukungan sesuai kesiapan. Pilih langkah yang tepat.",
+    "options": [
+      "Memberi diagram alur izin diberikan atau ditolak sebelum implementasi.",
+      "Meminta murid yang siap merancang pemilihan lokasi manual sebagai alternatif.",
+      "Menyamakan penolakan izin dengan kerusakan perangkat.",
+      "Mengecek tiap murid dapat menjelaskan tampilan ketika izin ditolak."
+    ],
+    "key": [
+      "A",
+      "B",
+      "D"
+    ],
+    "why": "Dukungan mempertimbangkan kesiapan dalam menalar cabang izin. Alternatif manual menjaga fungsi yang sesuai ketika akses lokasi tidak diberikan.",
+    "explanations": [
+      "Diagram membantu murid menyiapkan dua kondisi pengguna.",
+      "Tantangan memperdalam solusi sambil menjaga fungsi inti.",
+      "Penolakan merupakan pilihan pengguna yang sah, bukan bukti perangkat rusak.",
+      "Penjelasan individu memastikan prasyarat kondisi pengguna dipahami."
+    ]
+  },
+  {
+    "id": 41,
+    "uid": "p2-041",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.6",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "latar belakang",
+    "stem": "Pemutar audio mobile berhenti ketika aplikasi masuk latar belakang. Tujuan asesmen ialah murid dapat menjelaskan perilaku yang sesuai kebutuhan pengguna dan batas platform. Bukti terbaik adalah ...",
+    "options": [
+      "Video aplikasi dipakai terus dalam keadaan foreground.",
+      "Menguji perpindahan status dengan log dan alasan desain.",
+      "Membandingkan format audio pada dua file yang berhasil diputar saat layar aktif.",
+      "Tangkapan layar izin penyimpanan saja."
+    ],
+    "key": "B",
+    "why": "Asesmen menilai keputusan desain berdasarkan skenario penggunaan. Tidak semua aplikasi harus terus memutar audio; keputusan harus dijelaskan terhadap kebutuhan dan kemampuan platform.",
+    "explanations": [
+      "Kondisi itu belum menguji perpindahan ke latar belakang.",
+      "Bukti menautkan perilaku aktual, kebutuhan, dan lifecycle.",
+      "Format dapat memengaruhi kompatibilitas, tetapi belum menguji perpindahan status aplikasi.",
+      "Izin penyimpanan bukan keseluruhan bukti perilaku pemutaran."
+    ]
+  },
+  {
+    "id": 42,
+    "uid": "p2-042",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.3",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "thread UI",
+    "stem": "Murid memahami pemanggilan fungsi berurutan, tetapi mengira mengambil data jaringan pada thread UI tidak memengaruhi sentuhan. Guru memetakan kebutuhan sebelum praktik mobile. Nilai tindakan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Menganggap kelancaran pada jaringan cepat sudah membuktikan pemahaman responsivitas.",
+      "Meminta murid memprediksi respons tombol saat request sengaja diperlambat.",
+      "Memberi model antrean kerja UI sebelum meminta tugas asinkron."
+    ],
+    "key": [
+      "F",
+      "T",
+      "T"
+    ],
+    "why": "Kebutuhan murid terletak pada model penjadwalan kerja dan respons UI. Penundaan terkontrol membantu menampakkan masalah yang tersembunyi pada koneksi cepat.",
+    "explanations": [
+      "Jaringan cepat dapat menyembunyikan penundaan yang menghalangi UI.",
+      "Prediksi mengungkap hubungan tugas panjang dengan thread UI.",
+      "Model antrean menanggapi prasyarat penalaran yang belum terbentuk."
+    ]
+  },
+  {
+    "id": 43,
+    "uid": "p2-043",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.5",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "offline sync",
+    "stem": "Petugas posyandu setempat sering mencatat saat sinyal putus. Guru menjadikan kebutuhan itu konteks pembelajaran penyimpanan lokal mobile. Kegiatan paling sesuai adalah ...",
+    "options": [
+      "Meminta semua petugas menunggu sinyal untuk mulai mencatat.",
+      "Menggunakan contoh aplikasi yang selalu terhubung sebagai satu-satunya bahan.",
+      "Mensimulasikan catatan luring, antrean kirim, dan status sinkronisasi.",
+      "Meminta murid memperkecil ukuran paket request pada koneksi yang masih tersedia."
+    ],
+    "key": "C",
+    "why": "Sumber kebutuhan setempat dipakai untuk mempelajari penyimpanan lokal dan proses pengiriman yang dapat diperiksa. Data latihan harus tiruan, bukan rekam kesehatan asli.",
+    "explanations": [
+      "Kegiatan itu tidak menanggapi kebutuhan pencatatan saat luring.",
+      "Contoh selalu daring menghindari kondisi sumber lokal.",
+      "Skenario lokal memberi alasan mempelajari persistensi dan sinkronisasi.",
+      "Paket kecil dapat membantu koneksi lambat, tetapi tidak menggantikan pencatatan saat sama sekali luring."
+    ]
+  },
+  {
+    "id": 44,
+    "uid": "p2-044",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.2",
+    "type": "MCMA",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "konflik versi",
+    "stem": "Dua perangkat mengubah catatan yang sama saat luring. Ketika tersambung, perubahan terakhir yang tiba menimpa perubahan lain. Guru ingin murid menilai strategi konflik. Pilih kegiatan yang tepat.",
+    "options": [
+      "Menjadikan waktu tiba di server sebagai bukti tunggal bahwa isi paling benar.",
+      "Membandingkan nomor versi asal dan perubahan yang dikirim tiap perangkat.",
+      "Meminta murid menguji kebijakan penyelesaian konflik terhadap skenario pengguna.",
+      "Menghapus salinan lokal segera setelah tombol kirim ditekan."
+    ],
+    "key": [
+      "B",
+      "C"
+    ],
+    "why": "Konflik memerlukan deteksi dan kebijakan yang dijelaskan. Tidak ada aturan penimpaan tunggal yang otomatis benar untuk semua kebutuhan.",
+    "explanations": [
+      "Urutan tiba bukan jaminan ketepatan isi perubahan.",
+      "Versi asal membantu mendeteksi perubahan bersamaan.",
+      "Kebijakan perlu memenuhi kebutuhan, bukan sekadar menghilangkan pesan konflik.",
+      "Pengiriman belum tentu berhasil sehingga data dapat hilang."
+    ]
+  },
+  {
+    "id": 45,
+    "uid": "p2-045",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.6",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "daur hidup listener",
+    "stem": "Setelah beberapa kali membuka layar mobile, satu perubahan data memicu banyak pembaruan tampilan. Guru ingin menilai pemahaman pemasangan dan pelepasan listener. Bukti paling tepat adalah ...",
+    "options": [
+      "Log jumlah listener aktif saat masuk dan keluar layar, beserta penjelasan pelepasannya.",
+      "Mengamati jumlah baris yang terlihat setelah layar dibuka berulang kali.",
+      "Warna indikator saat data berubah.",
+      "Ukuran ikon aplikasi yang terpasang."
+    ],
+    "key": "A",
+    "why": "Penilaian memerlukan jejak lifecycle dan callback. Gejala berulang tidak cukup dijelaskan dengan jumlah komponen visual.",
+    "explanations": [
+      "Log langsung menguji dugaan listener menumpuk sepanjang lifecycle.",
+      "Jumlah baris tidak menunjukkan apakah listener yang lama sudah dilepas.",
+      "Warna tidak menjelaskan berapa callback yang dijalankan.",
+      "Ukuran ikon tidak terkait pelepasan listener."
+    ]
+  },
+  {
+    "id": 46,
+    "uid": "p2-046",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.4",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "density layar",
+    "stem": "Guru memakai emulator untuk membahas ukuran antarmuka mobile. Murid menyimpulkan tombol 48 piksel fisik selalu sama besar pada setiap layar. Nilai penggunaan alat berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Membandingkan ukuran tombol pada emulator dengan density berbeda.",
+      "Menganggap satu screenshot cukup membuktikan kenyamanan sentuh pada semua perangkat.",
+      "Menghubungkan hasil emulator dengan pengujian sentuh pada perangkat yang tersedia."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Alat digital dipakai untuk menguji asumsi ukuran, bukan menggantikan seluruh bukti penggunaan. Satuan logis membantu konsistensi ukuran antarmuka lintas density.",
+    "explanations": [
+      "Perbandingan mengungkap beda piksel fisik dan satuan logis.",
+      "Screenshot tunggal tidak menunjukkan ukuran fisik dan interaksi beragam perangkat.",
+      "Perangkat nyata melengkapi bukti yang tidak diberikan emulator."
+    ]
+  },
+  {
+    "id": 47,
+    "uid": "p2-047",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.1",
+    "type": "PG",
+    "difficulty": "menantang",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "daftar daur ulang",
+    "stem": "Checkbox pada daftar mobile tampak mencentang item lain setelah digulir. Komponen baris dipakai ulang dan state hanya disimpan pada tampilannya. Langkah pembelajaran terbaik adalah ...",
+    "options": [
+      "Memperkecil font agar lebih banyak baris terlihat sekaligus.",
+      "Menghapus checkbox setiap kali daftar dibuka.",
+      "Mengurutkan daftar berdasarkan panjang label.",
+      "Melacak identitas item dan state saat baris didaur ulang."
+    ],
+    "key": "D",
+    "why": "Model mental perlu memisahkan data item dan baris yang didaur ulang. Uji gulir bolak-balik memperlihatkan apakah state benar-benar mengikuti item.",
+    "explanations": [
+      "Perubahan font mengurangi guliran tetapi tidak memperbaiki kepemilikan state.",
+      "Penghapusan menghindari kebutuhan mempertahankan pilihan pengguna.",
+      "Urutan label tidak menjelaskan daur ulang komponen.",
+      "Pelacakan membedakan state item dari komponen tampilan sementara."
+    ]
+  },
+  {
+    "id": 48,
+    "uid": "p2-048",
+    "package": 2,
+    "section": "PCK",
+    "code": "P.3",
+    "type": "MCMA",
+    "difficulty": "sedang",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "status HTTP",
+    "stem": "Dalam tantangan mobile, kelompok berlomba menampilkan pesan dari API. Ada yang menganggap setiap response HTTP berarti permintaan berhasil. Guru ingin kegiatan tetap menantang dan bermakna. Pilih langkah yang tepat.",
+    "options": [
+      "Memberi misi membedakan hasil 200, 404, dan kegagalan koneksi pada skenario uji.",
+      "Menetapkan pemenang hanya dari kecepatan memunculkan pesan apa pun.",
+      "Meminta kelompok menjelaskan keputusan tampilan sebelum bertukar skenario uji.",
+      "Menghentikan pembahasan ketika satu request berhasil."
+    ],
+    "key": [
+      "A",
+      "C"
+    ],
+    "why": "Kegembiraan kegiatan berasal dari tantangan yang punya tujuan jelas. Response HTTP dapat berisi status gagal; kegagalan koneksi berbeda dari response server.",
+    "explanations": [
+      "Variasi kondisi mengarahkan tantangan pada penalaran status.",
+      "Pesan yang muncul belum membuktikan penafsiran hasil benar.",
+      "Penjelasan dan pertukaran menjaga tantangan sekaligus refleksi.",
+      "Satu keberhasilan tidak menguji pemahaman kondisi lain."
+    ]
+  },
+  {
+    "id": 49,
+    "uid": "p2-049",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.4",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "notifikasi",
+    "stem": "Guru menyusun unit mobile tentang pengingat kegiatan. Platform menyediakan mekanisme notifikasi, tetapi murid cenderung hanya menyalin kode jadwal. Tujuan pembelajaran yang paling tepat adalah ...",
+    "options": [
+      "Menyebut nama semua kelas notifikasi dari dokumentasi.",
+      "Merancang pengingat, menangani izin, dan menguji jadwal.",
+      "Menghasilkan sebanyak mungkin notifikasi dalam satu menit.",
+      "Menyamakan rancangan ikon dan bunyi pengingat pada seluruh aplikasi kelas."
+    ],
+    "key": "B",
+    "why": "Tujuan kurikuler diturunkan dari kemampuan aplikasi yang dibutuhkan. API merupakan sarana, bukan daftar sintaks yang menjadi tujuan akhir.",
+    "explanations": [
+      "Hafalan nama belum mengukur perancangan perilaku pengingat.",
+      "Tujuan mencakup keputusan dan penerapan pada kondisi penggunaan.",
+      "Jumlah notifikasi bukan ukuran ketercapaian kebutuhan.",
+      "Keseragaman tampilan belum mengukur pengelolaan izin dan perubahan jadwal."
+    ]
+  },
+  {
+    "id": 50,
+    "uid": "p2-050",
+    "package": 2,
+    "section": "PCK",
+    "code": "PF.1",
+    "type": "Kategori",
+    "difficulty": "dasar",
+    "cp_element": "Pemrograman Perangkat Bergerak",
+    "case_focus": "dokumentasi build",
+    "stem": "Dalam penyerahan aplikasi mobile SMK kepada tim lain, guru menilai tanggung jawab profesional murid. Nilai praktik berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Menyerahkan file instalasi saja karena aplikasi pernah berjalan di ponsel pembuat.",
+      "Mengganti semua peringatan build dengan catatan bahwa perangkat penerima bermasalah.",
+      "Mencatat versi alat, konfigurasi yang dibutuhkan, dan langkah build yang dapat dicoba."
+    ],
+    "key": [
+      "F",
+      "F",
+      "T"
+    ],
+    "why": "Kesiapan kerja mencakup penyerahan hasil yang dapat diteruskan. Catatan lingkungan dan build membantu pihak lain bertanggung jawab atas pekerjaan berikutnya.",
+    "explanations": [
+      "Pengalaman satu perangkat tidak cukup membantu tim lain membangun dan menguji.",
+      "Pernyataan itu belum menelusuri kebutuhan lingkungan proyek.",
+      "Dokumentasi memungkinkan penyerahan pekerjaan yang dapat direproduksi."
+    ]
+  },
+  {
+    "id": 51,
+    "uid": "p2-051",
+    "package": 2,
+    "section": "PU",
+    "code": "P.1",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "transfer rasio",
+    "stem": "Murid dapat menghitung rasio pada resep minuman, tetapi gagal saat satuan diubah dari liter ke mililiter. Guru ingin pemahaman dapat diterapkan pada situasi baru. Langkah terbaik adalah ...",
+    "options": [
+      "Meminta murid membuat tabel rasio dari resep dengan satuan tetap.",
+      "Meminta murid menghafal jawaban contoh resep.",
+      "Membandingkan resep setara dalam dua satuan beserta alasannya.",
+      "Mengganti topik menjadi membaca nama satuan."
+    ],
+    "key": "C",
+    "why": "Transfer memerlukan pemahaman hubungan yang tetap meski penyajian berubah. Perbedaan satuan menjadi bukti untuk meninjau cara murid membandingkan besaran.",
+    "explanations": [
+      "Tabel dapat membantu rasio, tetapi belum menanggapi kesulitan ketika satuannya berubah.",
+      "Jawaban contoh tidak menjelaskan hubungan besaran.",
+      "Perbandingan menguji hubungan rasio, bukan rupa angka.",
+      "Pengenalan nama belum mencapai penerapan rasio."
+    ]
+  },
+  {
+    "id": 52,
+    "uid": "p2-052",
+    "package": 2,
+    "section": "PU",
+    "code": "P.1",
+    "type": "MCMA",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "contoh dan noncontoh",
+    "stem": "Murid mengira semua bangun berempat sisi adalah persegi. Guru akan memakai contoh dan noncontoh. Pilih kegiatan yang tepat.",
+    "options": [
+      "Membandingkan persegi dengan persegi panjang yang sisinya tidak sama.",
+      "Memutar gambar persegi dan meminta alasan apakah jenis bangunnya berubah.",
+      "Menampilkan hanya persegi dengan ukuran dan warna sama.",
+      "Meminta murid mengelompokkan bangun baru memakai ciri yang mereka rumuskan."
+    ],
+    "key": [
+      "A",
+      "B",
+      "D"
+    ],
+    "why": "Contoh bervariasi dan noncontoh membantu murid menemukan ciri penentu, bukan menghafal gambar yang biasa terlihat.",
+    "explanations": [
+      "Pasangan memperlihatkan perlunya syarat tambahan selain empat sisi.",
+      "Rotasi menguji apakah murid bergantung pada orientasi gambar.",
+      "Keseragaman dapat mempertahankan pengenalan dari tampilan sempit.",
+      "Pengelompokan baru menguji penerapan ciri konseptual."
+    ]
+  },
+  {
+    "id": 53,
+    "uid": "p2-053",
+    "package": 2,
+    "section": "PU",
+    "code": "P.2",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "hambatan menulis",
+    "stem": "Dalam pelajaran sejarah, seorang murid mampu menjelaskan hubungan sebab-akibat secara lisan tetapi kesulitan menulis panjang karena hambatan motorik. Tujuan asesmen ialah penalaran sejarah. Penyesuaian terbaik adalah ...",
+    "options": [
+      "Menerima rekaman penjelasan dengan kriteria bukti dan alasan yang sama.",
+      "Mengganti seluruh tugasnya menjadi menyalin judul bab.",
+      "Memberi tambahan waktu untuk menyalin jawaban lisan menjadi tulisan panjang.",
+      "Meminta teman menyampaikan jawaban atas namanya."
+    ],
+    "key": "A",
+    "why": "Hambatan cara menyampaikan jawaban perlu dipisahkan dari kemampuan yang dinilai. Kriteria tetap, sedangkan moda respons dapat disesuaikan.",
+    "explanations": [
+      "Cara respons disesuaikan sambil mempertahankan sasaran penalaran.",
+      "Tugas itu tidak mengukur penalaran sejarah.",
+      "Tambahan waktu mungkin membantu sebagian tugas, tetapi tetap membebani hambatan motorik saat sasaran utamanya penalaran sejarah.",
+      "Jawaban teman tidak memberi bukti penalaran individu."
+    ]
+  },
+  {
+    "id": 54,
+    "uid": "p2-054",
+    "package": 2,
+    "section": "PU",
+    "code": "P.2",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "penutur bahasa baru",
+    "stem": "Murid yang baru belajar bahasa pengantar dapat mengurutkan gambar proses, tetapi belum lancar menjelaskan dengan kalimat lengkap. Tujuan kelas ialah menjelaskan urutan sebab-akibat. Nilai dukungan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Memberi kerangka kalimat yang menghubungkan urutan gambar.",
+      "Mengizinkan penjelasan bertahap dengan gambar dan kata kunci.",
+      "Menyimpulkan kemampuan bernalarnya rendah dari kelancaran bahasa saja."
+    ],
+    "key": [
+      "T",
+      "T",
+      "F"
+    ],
+    "why": "Dukungan bahasa membantu menampilkan penalaran, bukan menggantinya. Guru perlu membedakan hambatan ekspresi dan pemahaman hubungan.",
+    "explanations": [
+      "Kerangka membantu ekspresi hubungan yang sudah mulai dipahami.",
+      "Respons bertahap membuka akses pada tujuan yang sama.",
+      "Kelancaran bahasa tidak cukup mewakili penalaran proses."
+    ]
+  },
+  {
+    "id": 55,
+    "uid": "p2-055",
+    "package": 2,
+    "section": "PU",
+    "code": "P.3",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "perencanaan konsentrasi",
+    "stem": "Saat membaca teks panjang, murid cepat berpindah aktivitas dan tidak menyadari bagian yang belum dipahami. Guru ingin membangun kesadaran mengelola perhatian. Langkah terbaik adalah ...",
+    "options": [
+      "Meminta seluruh teks selesai dengan waktu yang makin pendek.",
+      "Mengganti bacaan dengan permainan yang tidak terkait isinya.",
+      "Mencatat durasi duduk tenang sebagai satu-satunya bukti kesadaran membaca.",
+      "Menentukan jeda baca untuk memeriksa pemahaman."
+    ],
+    "key": "D",
+    "why": "Kesadaran belajar melibatkan pemantauan tujuan dan proses. Jeda dipakai memeriksa pemahaman, bukan sekadar menghentikan kegiatan.",
+    "explanations": [
+      "Tekanan kecepatan belum mengajarkan pemantauan pemahaman.",
+      "Aktivitas itu menghindari tujuan pengelolaan perhatian saat membaca.",
+      "Duduk tenang belum menunjukkan murid mengenali bagian yang dipahami dan yang belum.",
+      "Perencanaan jeda membantu murid menyadari serta mengelola proses belajarnya."
+    ]
+  },
+  {
+    "id": 56,
+    "uid": "p2-056",
+    "package": 2,
+    "section": "PU",
+    "code": "P.3",
+    "type": "MCMA",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "tantangan kolaboratif",
+    "stem": "Dalam tantangan menyusun jembatan kertas, murid mulai memburu skor dan meninggalkan penjelasan mengapa desainnya kuat. Guru ingin kegiatan tetap menggembirakan dan bermakna. Pilih tindakan yang tepat.",
+    "options": [
+      "Menambah hadiah untuk kelompok yang paling cepat selesai.",
+      "Menyisipkan kesempatan memprediksi dan menjelaskan perubahan desain.",
+      "Memberi waktu mencoba ulang setelah kelompok membandingkan hasil uji.",
+      "Mengumumkan pemenang sebelum kelompok sempat menjelaskan desain."
+    ],
+    "key": [
+      "B",
+      "C"
+    ],
+    "why": "Kegiatan menarik tetap perlu menghubungkan tindakan, bukti, dan refleksi. Tantangan tidak harus dihapus, tetapi diarahkan kembali pada tujuan.",
+    "explanations": [
+      "Hadiah kecepatan memperkuat fokus yang sedang menggeser tujuan.",
+      "Prediksi mengembalikan tantangan pada penalaran.",
+      "Percobaan ulang mendukung refleksi dan rasa mampu.",
+      "Pengumuman dini menutup kesempatan mengaitkan hasil dan alasan."
+    ]
+  },
+  {
+    "id": 57,
+    "uid": "p2-057",
+    "package": 2,
+    "section": "PU",
+    "code": "P.4",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "simulasi digital",
+    "stem": "Guru memakai simulasi digital pertumbuhan populasi. Murid menganggap gambar yang tampak realistis pasti memprediksi lingkungan sebenarnya. Tindakan paling tepat adalah ...",
+    "options": [
+      "Memilih simulasi dengan warna paling menyerupai alam.",
+      "Menguji satu parameter lalu membahas asumsi model.",
+      "Meminta murid mengubah beberapa parameter sekaligus lalu memilih grafik paling menarik.",
+      "Memperbesar tampilan grafik sampai memenuhi layar."
+    ],
+    "key": "B",
+    "why": "Literasi penggunaan teknologi mencakup membaca model dan asumsi. Tampilan realistis tidak menggantikan pemeriksaan kesesuaian dengan fenomena.",
+    "explanations": [
+      "Kemiripan visual tidak menjamin ketepatan prediksi.",
+      "Percobaan dan asumsi memperlihatkan bahwa simulasi merupakan representasi terbatas.",
+      "Perubahan serentak menyulitkan penafsiran pengaruh parameter dan tidak membahas asumsi model.",
+      "Ukuran grafik tidak menentukan validitas model."
+    ]
+  },
+  {
+    "id": 58,
+    "uid": "p2-058",
+    "package": 2,
+    "section": "PU",
+    "code": "P.4",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "rekam video",
+    "stem": "Guru merekam gerak percobaan agar kelas dapat menganalisis urutannya. Nilai penggunaan rekaman berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Memutar bagian tertentu lebih lambat lalu membandingkan pengamatan murid.",
+      "Menyimpulkan kecepatan gerak nyata dari video yang sudah diperlambat tanpa faktor skala waktu.",
+      "Memilih rekaman dari efek visualnya sebagai satu-satunya dasar."
+    ],
+    "key": [
+      "T",
+      "F",
+      "F"
+    ],
+    "why": "Rekaman memberi akses pengamatan, tetapi penafsiran perlu mempertimbangkan perubahan cara penyajian waktunya.",
+    "explanations": [
+      "Kontrol waktu membantu melihat kejadian yang sukar diamati langsung.",
+      "Perubahan pemutaran harus diperhitungkan dalam penafsiran waktu.",
+      "Efek visual tidak menjamin rekaman membantu tujuan pengamatan."
+    ]
+  },
+  {
+    "id": 59,
+    "uid": "p2-059",
+    "package": 2,
+    "section": "PU",
+    "code": "P.5",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "narasumber lokal",
+    "stem": "Guru mengundang perajin lokal untuk pelajaran pengukuran. Istilah ukuran yang dipakai perajin berbeda dari satuan pada buku. Kegiatan terbaik adalah ...",
+    "options": [
+      "Meminta murid mencatat seluruh istilah ukuran lokal sebagai hasil akhir tugas.",
+      "Menerima semua ukuran lokal sebagai setara dengan satuan baku.",
+      "Membandingkan cara ukur perajin dengan alat baku.",
+      "Mengalihkan kunjungan menjadi sesi foto produk saja."
+    ],
+    "key": "C",
+    "why": "Sumber lokal dipakai untuk menghubungkan cara pengukuran setempat dengan satuan baku, dengan tetap memeriksa makna dan ketepatan hasilnya.",
+    "explanations": [
+      "Pencatatan menghargai sumber lokal, tetapi belum menghubungkan dan membandingkan sistem pengukurannya.",
+      "Kesetaraan perlu diperiksa, bukan diasumsikan.",
+      "Perbandingan menghubungkan sumber lokal dan tujuan pengukuran.",
+      "Dokumentasi produk tidak mencapai tujuan pengukuran."
+    ]
+  },
+  {
+    "id": 60,
+    "uid": "p2-060",
+    "package": 2,
+    "section": "PU",
+    "code": "P.6",
+    "type": "MCMA",
+    "difficulty": "menantang",
+    "cp_element": null,
+    "case_focus": "moderasi penilaian",
+    "stem": "Dua guru memberi nilai sangat berbeda pada jawaban esai yang sama. Mereka ingin memperbaiki konsistensi penilaian. Pilih langkah yang tepat.",
+    "options": [
+      "Membandingkan alasan pemberian skor pada beberapa jawaban contoh.",
+      "Merata-ratakan skor lalu menganggap perbedaan penafsiran selesai.",
+      "Menyepakati contoh bukti tiap tingkat rubrik lalu mencoba menilai ulang.",
+      "Menghapus semua kriteria alasan agar skor cepat diberikan."
+    ],
+    "key": [
+      "A",
+      "C"
+    ],
+    "why": "Moderasi penilaian memerlukan pemeriksaan bukti dan kriteria. Kesepakatan angka saja belum menyamakan makna tingkat capaian.",
+    "explanations": [
+      "Perbandingan mengungkap perbedaan penerapan kriteria.",
+      "Rata-rata tidak menyelesaikan sumber ketidakkonsistenan.",
+      "Contoh acuan membantu menyamakan penerapan kriteria.",
+      "Penghapusan alasan dapat menghilangkan sasaran kemampuan yang dinilai."
+    ]
+  },
+  {
+    "id": 61,
+    "uid": "p2-061",
+    "package": 2,
+    "section": "PU",
+    "code": "P.6",
+    "type": "PG",
+    "difficulty": "menantang",
+    "cp_element": null,
+    "case_focus": "bias soal",
+    "stem": "Hampir semua murid salah pada soal yang memakai konteks olahraga asing, padahal jawaban pada konteks sehari-hari menunjukkan konsep yang sama dikuasai. Tindak lanjut penilaian paling tepat adalah ...",
+    "options": [
+      "Menguji soal setara dengan konteks yang lebih dikenal.",
+      "Memberikan latihan tambahan dengan istilah olahraga yang sama sebelum menelaah soalnya.",
+      "Menghapus semua soal berkonteks dari asesmen berikutnya.",
+      "Menambah istilah olahraga agar konteks lebih rinci."
+    ],
+    "key": "A",
+    "why": "Guru perlu memeriksa apakah soal mengukur konsep atau pengalaman dengan konteks. Keputusan diambil setelah membandingkan bukti yang setara.",
+    "explanations": [
+      "Perbandingan membantu memisahkan pemahaman konsep dari hambatan konteks.",
+      "Latihan bisa memperkenalkan konteks, tetapi belum memeriksa apakah asesmen semula mengukur pengalaman konteks alih-alih konsep.",
+      "Penghapusan menyeluruh tidak didukung satu temuan.",
+      "Rincian tambahan dapat menambah hambatan yang tidak ditargetkan."
+    ]
+  },
+  {
+    "id": 62,
+    "uid": "p2-062",
+    "package": 2,
+    "section": "PU",
+    "code": "K.1",
+    "type": "Kategori",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "ketidakpastian guru",
+    "stem": "Guru menyadari penjelasannya tentang suatu fakta belum didukung sumber yang cukup. Murid meminta kepastian untuk tugas. Nilai respons berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Mempertahankan klaim karena guru harus selalu tampak yakin.",
+      "Menyatakan bagian yang belum pasti dan menjadwalkan pemeriksaan sumber.",
+      "Kembali menjelaskan hasil pemeriksaan beserta koreksi bila diperlukan."
+    ],
+    "key": [
+      "F",
+      "T",
+      "T"
+    ],
+    "why": "Keteladanan mencakup kejujuran intelektual dan pemenuhan janji memeriksa, bukan sekadar mengakui belum tahu lalu membiarkannya.",
+    "explanations": [
+      "Wibawa tidak membenarkan kepastian yang belum didukung.",
+      "Kejujuran tentang batas pengetahuan memberi teladan tanggung jawab.",
+      "Tindak lanjut menunjukkan tanggung jawab atas informasi yang diberikan."
+    ]
+  },
+  {
+    "id": 63,
+    "uid": "p2-063",
+    "package": 2,
+    "section": "PU",
+    "code": "K.1",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "keberagaman ibadah",
+    "stem": "Jadwal presentasi bertepatan dengan kegiatan keagamaan beberapa murid. Tujuan dan waktu pembelajaran masih dapat dipenuhi melalui dua jadwal setara. Keputusan guru yang paling etis adalah ...",
+    "options": [
+      "Mengurangi skor murid yang memilih kegiatan keagamaannya.",
+      "Membatalkan presentasi untuk seluruh kelas secara permanen.",
+      "Meminta murid membuktikan bahwa keyakinannya lebih penting dari tugas.",
+      "Menawarkan dua jadwal setara dengan kriteria yang sama."
+    ],
+    "key": "D",
+    "why": "Keadilan memberi kesempatan setara untuk mencapai tujuan. Penyesuaian jadwal bukan pemberian nilai tanpa bukti.",
+    "explanations": [
+      "Pengurangan itu tidak didasarkan pada bukti capaian presentasi.",
+      "Pembatalan menghilangkan kesempatan menunjukkan capaian meski alternatif tersedia.",
+      "Perbandingan itu tidak diperlukan untuk pengaturan belajar yang adil.",
+      "Penyesuaian menghormati keberagaman sambil menjaga standar capaian."
+    ]
+  },
+  {
+    "id": 64,
+    "uid": "p2-064",
+    "package": 2,
+    "section": "PU",
+    "code": "K.2",
+    "type": "MCMA",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "catatan waktu tunggu",
+    "stem": "Guru menduga ia terlalu cepat menjawab pertanyaannya sendiri sehingga murid jarang berpikir mandiri. Pilih langkah refleksi yang memberi bukti berguna.",
+    "options": [
+      "Mencatat selang waktu antara pertanyaan dan respons guru pada beberapa pelajaran.",
+      "Mencoba waktu tunggu lebih panjang dan mengamati variasi alasan murid.",
+      "Memakai jumlah slide sebagai ukuran utama refleksi.",
+      "Meminta rekan mengamati pola pertanyaan dan tindak lanjutnya."
+    ],
+    "key": [
+      "A",
+      "B",
+      "D"
+    ],
+    "why": "Refleksi diarahkan pada perilaku yang dapat diamati dan diubah. Bukti alasan murid lebih informatif daripada kesan bahwa kelas terlihat aktif.",
+    "explanations": [
+      "Catatan waktu menguji dugaan perilaku guru sendiri.",
+      "Percobaan menautkan perubahan praktik dengan bukti partisipasi berpikir.",
+      "Jumlah slide tidak memeriksa perilaku menunggu jawaban.",
+      "Observasi rekan dapat melengkapi catatan yang rentan bias diri."
+    ]
+  },
+  {
+    "id": 65,
+    "uid": "p2-065",
+    "package": 2,
+    "section": "PU",
+    "code": "K.2",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "belajar konten baru",
+    "stem": "Guru harus mengajar topik baru yang belum dikuasainya. Tersedia waktu persiapan dan rekan yang ahli. Langkah pengembangan diri terbaik adalah ...",
+    "options": [
+      "Mengumpulkan beberapa presentasi siap pakai lalu memilih yang paling menarik.",
+      "Mempelajari konsep inti, menguji pemahamannya bersama rekan, lalu menyiapkan contoh.",
+      "Menyalin seluruh presentasi rekan sebagai pengganti memahami isi.",
+      "Membatasi seluruh kegiatan pada membaca buku oleh murid."
+    ],
+    "key": "B",
+    "why": "Belajar berkelanjutan memerlukan usaha memperbaiki penguasaan dan menggunakan dukungan profesional, bukan hanya memperoleh bahan siap tayang.",
+    "explanations": [
+      "Bahan menarik belum memastikan guru menguasai konsep atau mampu menjawab pertanyaan murid.",
+      "Persiapan dan pemeriksaan pemahaman menanggapi kebutuhan kompetensi.",
+      "Salinan bahan belum membuktikan guru mampu menjelaskan konsep.",
+      "Pengalihan kegiatan tidak menyelesaikan kebutuhan belajar guru."
+    ]
+  },
+  {
+    "id": 66,
+    "uid": "p2-066",
+    "package": 2,
+    "section": "PU",
+    "code": "K.3",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "budaya meminta bantuan",
+    "stem": "Kelas menyepakati bahwa meminta bantuan harus disertai penjelasan usaha yang sudah dicoba. Guru ingin kebiasaan ini mendukung kemandirian. Nilai penerapannya sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Guru memodelkan cara menyampaikan kebuntuan dan usaha yang telah dilakukan.",
+      "Guru menolak semua permintaan bantuan agar murid terbiasa mandiri.",
+      "Guru meninjau apakah syarat meminta bantuan dapat dipahami dan dipakai murid."
+    ],
+    "key": [
+      "T",
+      "F",
+      "T"
+    ],
+    "why": "Kemandirian mencakup kemampuan mengenali kebutuhan bantuan dan menggunakannya. Konsistensi aturan tetap perlu disertai pemantauan dampak pada murid.",
+    "explanations": [
+      "Pemodelan memperjelas perilaku meminta bantuan yang diharapkan.",
+      "Penolakan menyeluruh menghambat dukungan saat usaha murid belum cukup.",
+      "Peninjauan menjaga kebiasaan tetap mendukung perkembangan, bukan sekadar aturan."
+    ]
+  },
+  {
+    "id": 67,
+    "uid": "p2-067",
+    "package": 2,
+    "section": "PU",
+    "code": "K.3",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "kebiasaan membaca",
+    "stem": "Program membaca kelas awalnya dinilai dari jumlah halaman. Murid lalu memilih buku sangat mudah untuk mengejar angka. Guru ingin membangun budaya membaca yang berkembang. Keputusan terbaik adalah ...",
+    "options": [
+      "Menaikkan target halaman sambil memperbarui daftar hadiah mingguan.",
+      "Membatasi semua murid pada satu buku dengan tingkat kesulitan sama.",
+      "Meninjau pemahaman dan pilihan bacaan secara berkala.",
+      "Menghapus seluruh kesempatan memilih buku."
+    ],
+    "key": "C",
+    "why": "Keputusan konsisten perlu mendorong tujuan budaya belajar, bukan perilaku mengejar ukuran pengganti yang mudah dimanipulasi.",
+    "explanations": [
+      "Ukuran dan hadiah tetap mendorong pengejaran jumlah, bukan pilihan tantangan serta pemahaman.",
+      "Keseragaman belum menanggapi kesiapan dan perkembangan yang berbeda.",
+      "Bukti proses dan pemahaman mengarahkan kebiasaan pada pertumbuhan.",
+      "Penghilangan pilihan belum membangun kemampuan memilih tantangan sesuai kebutuhan."
+    ]
+  },
+  {
+    "id": 68,
+    "uid": "p2-068",
+    "package": 2,
+    "section": "PU",
+    "code": "S.1",
+    "type": "MCMA",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "komunikasi instruksi",
+    "stem": "Instruksi guru berbunyi “bahas bagian penting”, tetapi tiap kelompok mengerjakan hal berbeda. Guru ingin memperbaiki komunikasi tugas. Pilih tindakan yang tepat.",
+    "options": [
+      "Menjelaskan produk yang diminta dan memberi satu contoh batas cakupannya.",
+      "Mengulang kalimat yang sama dengan suara lebih keras.",
+      "Meminta wakil kelompok menyampaikan kembali rencana pengerjaan.",
+      "Menganggap perbedaan hasil pasti berarti murid enggan mendengar."
+    ],
+    "key": [
+      "A",
+      "C"
+    ],
+    "why": "Komunikasi efektif memerlukan kejelasan dan pemeriksaan pemaknaan. Pengulangan bunyi saja tidak memperbaiki instruksi yang terlalu umum.",
+    "explanations": [
+      "Produk dan batas membantu murid menafsirkan maksud instruksi.",
+      "Volume tidak menambah kejelasan maksud tugas.",
+      "Penyampaian kembali memberi bukti apakah instruksi ditafsirkan sama.",
+      "Kesimpulan itu mengabaikan kemungkinan instruksi ambigu."
+    ]
+  },
+  {
+    "id": 69,
+    "uid": "p2-069",
+    "package": 2,
+    "section": "PU",
+    "code": "S.1",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "rapat dengan keluarga",
+    "stem": "Dalam rapat, keluarga menafsirkan istilah “belum berkembang” sebagai label tetap untuk anak. Guru bermaksud menjelaskan capaian sementara. Respons paling tepat adalah ...",
+    "options": [
+      "Menjelaskan capaian sementara dengan bukti dan contoh.",
+      "Mengulang istilah administrasi hingga keluarga menghafalnya.",
+      "Memberi daftar istilah penilaian lengkap untuk dibaca keluarga di rumah.",
+      "Menganggap keluarga menolak semua bentuk penilaian."
+    ],
+    "key": "A",
+    "why": "Guru perlu menyesuaikan bahasa kepada penerima dan memeriksa pemahaman, sambil tetap menyampaikan informasi capaian secara akurat.",
+    "explanations": [
+      "Bukti dan contoh memperjelas makna sementara istilah penilaian.",
+      "Hafalan istilah belum menyamakan pemaknaan.",
+      "Daftar dapat menjadi pendamping, tetapi belum menjernihkan pemaknaan capaian anak dalam percakapan yang sedang berlangsung.",
+      "Kesalahpahaman istilah tidak membuktikan penolakan penilaian."
+    ]
+  },
+  {
+    "id": 70,
+    "uid": "p2-070",
+    "package": 2,
+    "section": "PU",
+    "code": "S.2",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "koordinasi proyek lintas mapel",
+    "stem": "Proyek lintas mata pelajaran memberi tiga tenggat besar pada minggu yang sama. Murid kesulitan membagi waktu. Nilai keputusan kolaboratif berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Guru memetakan beban dan ketergantungan tugas bersama sebelum menyepakati tenggat.",
+      "Tim menyepakati bukti bersama yang dapat memenuhi tujuan beberapa mata pelajaran.",
+      "Setiap guru menganggap koordinasi selesai setelah mengirim jadwalnya sendiri."
+    ],
+    "key": [
+      "T",
+      "T",
+      "F"
+    ],
+    "why": "Kolaborasi membutuhkan penyesuaian bersama berdasarkan tujuan dan beban, bukan sekadar saling memberi informasi jadwal.",
+    "explanations": [
+      "Pemetaan memberi dasar koordinasi yang terkait pengalaman murid.",
+      "Bukti terintegrasi dapat mengurangi pengulangan bila tujuan tetap terpenuhi.",
+      "Pengiriman jadwal belum berarti konflik beban telah diselesaikan."
+    ]
+  },
+  {
+    "id": 71,
+    "uid": "p2-071",
+    "package": 2,
+    "section": "PU",
+    "code": "S.2",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "mitra museum",
+    "stem": "Museum daerah menawarkan kunjungan, tetapi kegiatan bakunya hanya tur bebas. Guru ingin murid membandingkan sumber sejarah. Langkah kerja sama terbaik adalah ...",
+    "options": [
+      "Menerima tur baku lalu meminta murid menulis semua benda yang dilihat.",
+      "Meminta museum memberikan jawaban seluruh tugas murid.",
+      "Mengganti tujuan menjadi hafalan nama petugas museum.",
+      "Menyepakati sumber, pertanyaan pembanding, dan peran pemandu."
+    ],
+    "key": "D",
+    "why": "Kemitraan memberi akses pada sumber dan keahlian yang mendukung tujuan. Kegiatan perlu dirancang bersama agar kunjungan tidak sekadar perpindahan tempat.",
+    "explanations": [
+      "Daftar benda memberi dokumentasi kunjungan, tetapi belum menuntun perbandingan sumber sejarah.",
+      "Jawaban jadi menghilangkan kesempatan menalar sumber.",
+      "Tujuan berubah dan tidak memanfaatkan potensi sumber sejarah.",
+      "Kesepakatan mengaitkan keahlian mitra dengan tujuan pembelajaran."
+    ]
+  },
+  {
+    "id": 72,
+    "uid": "p2-072",
+    "package": 2,
+    "section": "PU",
+    "code": "S.3",
+    "type": "MCMA",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "kontribusi komunitas",
+    "stem": "Komunitas guru hendak menyusun bank contoh pertanyaan terbuka. Anggota memiliki pengalaman berbeda. Pilih kontribusi yang mendukung pengembangan profesi bersama.",
+    "options": [
+      "Mengirim daftar soal sebanyak mungkin tanpa menjelaskan tujuan penggunaannya.",
+      "Menyertakan tujuan, contoh respons murid, dan alasan pertanyaan perlu diperbaiki.",
+      "Menelaah contoh rekan dengan kriteria yang disepakati dan memberi masukan spesifik.",
+      "Mengakhiri kegiatan setelah berkas terkumpul meski belum pernah ditelaah."
+    ],
+    "key": [
+      "B",
+      "C"
+    ],
+    "why": "Partisipasi profesional mencakup kontribusi yang dapat ditelaah dan kesediaan memperbaiki bersama, bukan hanya menyumbang jumlah soal.",
+    "explanations": [
+      "Jumlah besar belum membantu rekan memilih pertanyaan yang sesuai.",
+      "Konteks penggunaan membuat contoh dapat ditelaah rekan.",
+      "Telaah terarah membangun pengetahuan bersama.",
+      "Kumpulan berkas saja belum menunjukkan proses belajar komunitas."
+    ]
+  },
+  {
+    "id": 73,
+    "uid": "p2-073",
+    "package": 2,
+    "section": "PU",
+    "code": "PF.1",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "tujuan pendidikan dasar",
+    "stem": "Sekolah dasar menilai proyek kebun kelas. Guru ingin hasilnya sesuai tujuan pendidikan dasar, termasuk kebiasaan bernalar dan bertanggung jawab. Bukti paling kuat adalah ...",
+    "options": [
+      "Jumlah tanaman yang dibawa keluarga ke sekolah.",
+      "Catatan pengamatan murid, alasan keputusan perawatan, dan pelaksanaan tanggung jawabnya.",
+      "Menggunakan kerapian catatan sebagai pengganti penilaian alasan perawatan.",
+      "Harga alat kebun yang digunakan setiap kelompok."
+    ],
+    "key": "B",
+    "why": "Tujuan pendidikan dasar perlu diterjemahkan menjadi bukti perkembangan murid, bukan kualitas sumber daya keluarga atau keseragaman produk.",
+    "explanations": [
+      "Jumlah sumbangan tidak mewakili hasil belajar murid.",
+      "Bukti mencakup penalaran dasar dan perilaku bertanggung jawab.",
+      "Kerapian membantu komunikasi, tetapi bukan bukti penalaran dan pelaksanaan tanggung jawab.",
+      "Harga alat mencerminkan sumber daya, bukan capaian belajar."
+    ]
+  },
+  {
+    "id": 74,
+    "uid": "p2-074",
+    "package": 2,
+    "section": "PU",
+    "code": "PF.3",
+    "type": "Kategori",
+    "difficulty": "menantang",
+    "cp_element": null,
+    "case_focus": "prasyarat interpretasi grafik",
+    "stem": "Sebelum tugas interpretasi grafik, guru menemukan murid mampu membaca angka tetapi menyamakan tinggi batang dengan besar perubahan. Nilai pemetaan kebutuhan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Guru menyimpulkan seluruh materi aritmetika harus diulang dari awal.",
+      "Guru memeriksa pemahaman nilai awal dan selisih melalui dua grafik sederhana.",
+      "Guru menyiapkan contoh yang membedakan nilai akhir besar dan kenaikan besar."
+    ],
+    "key": [
+      "F",
+      "T",
+      "T"
+    ],
+    "why": "Kebutuhan belajar ditentukan dari hubungan kemampuan awal dan tuntutan interpretasi. Mengulang seluruh hitungan belum tentu menanggapi miskonsepsi grafik.",
+    "explanations": [
+      "Bukti menunjukkan masalah interpretasi, bukan seluruh kemampuan hitung.",
+      "Pemeriksaan menargetkan prasyarat perubahan yang diperlukan.",
+      "Contoh menanggapi karakteristik materi serta kebutuhan yang ditemukan."
+    ]
+  },
+  {
+    "id": 75,
+    "uid": "p2-075",
+    "package": 2,
+    "section": "PU",
+    "code": "PF.4",
+    "type": "PG",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "adaptasi urutan kurikulum",
+    "stem": "Sekolah mengubah urutan unit karena kegiatan lapangan musiman hanya dapat dilakukan bulan ini. Guru ingin adaptasi tetap menjaga perkembangan kompetensi. Langkah paling tepat adalah ...",
+    "options": [
+      "Memindahkan tanggal kegiatan lapangan saja sementara urutan dan asesmen tetap.",
+      "Mengikuti kesempatan lapangan dengan menghapus tujuan yang sulit dicapai.",
+      "Memetakan prasyarat sebelum menyesuaikan urutan dan asesmen.",
+      "Menjalankan jadwal lama meskipun sumber lapangan tidak tersedia lagi."
+    ],
+    "key": "C",
+    "why": "Kurikulum adaptif bukan sekadar memindahkan kegiatan. Prasyarat, tujuan, pengalaman, dan asesmen perlu tetap saling mendukung.",
+    "explanations": [
+      "Perubahan tanggal belum memeriksa apakah murid sudah memiliki prasyarat untuk kegiatan yang dimajukan.",
+      "Penghapusan tujuan tidak dibenarkan hanya oleh perubahan jadwal.",
+      "Adaptasi mempertimbangkan kesempatan lokal dan kesinambungan kompetensi.",
+      "Kekakuan jadwal mengabaikan kesempatan kontekstual yang dapat direncanakan."
+    ]
+  },
+  {
+    "id": 76,
+    "uid": "p2-076",
+    "package": 2,
+    "section": "PU",
+    "code": "PF.5",
+    "type": "MCMA",
+    "difficulty": "menantang",
+    "cp_element": null,
+    "case_focus": "uji praktik pembelajaran",
+    "stem": "Guru mencoba diskusi berpasangan sebelum jawaban kelas untuk memperbaiki alasan berbasis bukti. Hasil awal tampak lebih baik, tetapi tugas kedua lebih mudah. Pilih langkah pengembangan praktik yang tepat.",
+    "options": [
+      "Mencatat perbedaan kesulitan tugas sebagai keterbatasan penafsiran.",
+      "Menyimpulkan metode pasti efektif untuk semua materi.",
+      "Menghitung hanya jumlah murid yang menyukai diskusi sebagai bukti pemahaman.",
+      "Menguji kembali dengan tugas sebanding dan kriteria alasan yang sama."
+    ],
+    "key": [
+      "A",
+      "D"
+    ],
+    "why": "Pengembangan praktik memerlukan pemeriksaan penjelasan alternatif. Temuan awal layak ditindaklanjuti, bukan langsung dijadikan kesimpulan sebab-akibat.",
+    "explanations": [
+      "Kesulitan tugas merupakan penjelasan alternatif hasil.",
+      "Bukti terbatas tidak mendukung generalisasi universal.",
+      "Kesukaan tidak identik dengan kualitas alasan berbasis bukti.",
+      "Perbandingan lebih setara membantu menilai dugaan perbaikan."
+    ]
+  },
+  {
+    "id": 77,
+    "uid": "p2-077",
+    "package": 2,
+    "section": "PU",
+    "code": "P.6",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "asesmen teman sebaya",
+    "stem": "Dalam penilaian teman sebaya, murid memberi skor tinggi kepada teman dekat meski alasan jawaban lemah. Guru ingin memperbaiki fungsi asesmen. Tindak lanjut terbaik adalah ...",
+    "options": [
+      "Melatih penilaian jawaban anonim dengan alasan berbasis rubrik.",
+      "Memakai seluruh skor teman langsung sebagai nilai akhir.",
+      "Meminta penilai menambahkan komentar pujian pada setiap skor tinggi.",
+      "Menambah banyak penilai tanpa membahas dasar skornya."
+    ],
+    "key": "A",
+    "why": "Penilaian teman sebaya perlu dukungan agar umpan balik dan skor mengacu pada bukti. Guru tetap bertanggung jawab memeriksa kualitas penilaian.",
+    "explanations": [
+      "Latihan memusatkan penilaian pada bukti, bukan kedekatan.",
+      "Skor yang belum dapat dipercaya tidak layak langsung menentukan hasil akhir.",
+      "Pujian tidak menjamin skor dan komentar mengacu pada kualitas bukti serta alasan.",
+      "Jumlah penilai tidak otomatis memperbaiki bias kriteria."
+    ]
+  },
+  {
+    "id": 78,
+    "uid": "p2-078",
+    "package": 2,
+    "section": "PU",
+    "code": "P.1",
+    "type": "Kategori",
+    "difficulty": "sedang",
+    "cp_element": null,
+    "case_focus": "generalisasi contoh",
+    "stem": "Murid menyimpulkan semua benda berat pasti tenggelam setelah mengamati sebuah batu. Guru ingin memperluas cara membangun penjelasan. Nilai kegiatan berikut sebagai Tepat atau Tidak tepat.",
+    "options": [
+      "Membandingkan benda dengan massa dan volume berbeda lalu meminta revisi dugaan.",
+      "Menambah sepuluh batu sejenis sebagai satu-satunya bukti simpulan umum.",
+      "Mengganti dugaan murid dengan kalimat hafalan tanpa pengamatan pembanding."
+    ],
+    "key": [
+      "T",
+      "F",
+      "F"
+    ],
+    "why": "Murid perlu memeriksa batas generalisasi melalui contoh pembanding. Fokusnya cara menilai bukti, bukan jumlah contoh yang semuanya mendukung dugaan semula.",
+    "explanations": [
+      "Variasi bukti dapat menantang generalisasi dari satu contoh.",
+      "Pengulangan contoh serupa tidak menguji batas dugaan.",
+      "Penggantian jawaban tidak memperlihatkan alasan perubahan konsep."
+    ]
+  },
+  {
+    "id": 79,
+    "uid": "p2-079",
+    "package": 2,
+    "section": "PU",
+    "code": "S.3",
+    "type": "PG",
+    "difficulty": "dasar",
+    "cp_element": null,
+    "case_focus": "pemanfaatan komunitas",
+    "stem": "Seusai pelatihan komunitas, guru mencoba satu teknik bertanya dan menemukan beberapa kondisi yang tidak cocok. Tindak lanjut ke komunitas paling bermanfaat adalah ...",
+    "options": [
+      "Menyimpan hasil karena hanya keberhasilan yang layak dibagikan.",
+      "Menganjurkan anggota berhenti memakai teknik itu di semua kelas.",
+      "Membagikan bahan pelatihan yang sama lagi sebagai satu-satunya tindak lanjut.",
+      "Membahas kondisi uji, respons murid, dan batas penerapan."
+    ],
+    "key": "D",
+    "why": "Partisipasi berkelanjutan membawa pengalaman penerapan kembali ke komunitas. Batas keberhasilan sama pentingnya dengan cerita keberhasilan untuk pengembangan profesi.",
+    "explanations": [
+      "Temuan ketidakcocokan juga dapat menjadi sumber belajar bersama.",
+      "Satu pengalaman tidak mendukung penolakan di seluruh konteks.",
+      "Bahan awal belum membawa pengalaman ketidakcocokan ke pembahasan profesional bersama.",
+      "Bukti berkonteks membantu komunitas menyempurnakan pemahaman praktik."
+    ]
+  },
+  {
+    "id": 80,
+    "uid": "p2-080",
+    "package": 2,
+    "section": "PU",
+    "code": "PF.4",
+    "type": "MCMA",
+    "difficulty": "menantang",
+    "cp_element": null,
+    "case_focus": "integrasi kurikulum",
+    "stem": "Tim kurikulum ingin menggabungkan dua tugas yang sama-sama meminta laporan pengamatan. Tujuan tiap mata pelajaran sebagian berbeda. Pilih keputusan yang menjaga keselarasan kurikulum.",
+    "options": [
+      "Memetakan bukti yang dapat dipakai bersama dan bukti yang tetap perlu dibedakan.",
+      "Memberikan satu nilai identik untuk semua tujuan karena produknya satu.",
+      "Menyusun kriteria sesuai tujuan masing-masing meski artefaknya sama.",
+      "Menjelaskan kepada murid bagian laporan yang memenuhi tiap tujuan."
+    ],
+    "key": [
+      "A",
+      "C",
+      "D"
+    ],
+    "why": "Integrasi dapat mengurangi pengulangan kerja, tetapi tidak menyamakan seluruh konstruk penilaian. Tujuan dan bukti tetap perlu ditelusuri.",
+    "explanations": [
+      "Pemetaan menjaga agar penggabungan tidak menghilangkan tujuan khusus.",
+      "Produk tunggal dapat menunjukkan capaian berbeda pada tujuan berbeda.",
+      "Kriteria menjaga penafsiran capaian setiap mata pelajaran.",
+      "Kejelasan hubungan tugas dan tujuan membantu pengerjaan serta refleksi."
+    ]
+  }
+]

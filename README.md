@@ -1,6 +1,6 @@
 # Drill UTBK UKPPPG 2026 — PPLG/RPL
 
-Latihan orisinal, bukan soal resmi/bocoran. Satu simulasi selalu **80 soal: 50 PCK + 30 PU**, meliputi PG, PGK Kategori, MCMA, dan 17 subkompetensi. Hanya **Paket 1**, versi `2026-11-18.6`, yang tersedia. Paket 2 belum dibuat.
+Latihan orisinal, bukan soal resmi/bocoran. Satu simulasi selalu **80 soal: 50 PCK + 30 PU**, meliputi PG, PGK Kategori, MCMA, dan 17 subkompetensi. Tersedia **Paket 1** versi `2026-11-18.6` (dibekukan) dan **Paket 2** versi `2026-11-18.1`. Lihat [laporan Paket 2](docs/PAKET_2_SIAP.md).
 
 ## Cara memakai
 
@@ -59,12 +59,12 @@ node tests/browser-edge.cjs
 
 Tes memakai profil browser terisolasi dan tidak menyentuh progres profil belajar. Screenshot ada di `test-results/`.
 
-## Menambah Paket 2
+## Menambah paket berikutnya
 
-Kirim `PROMPT_TAMBAH_PAKET.md` saat membutuhkan 80 soal baru. Agent harus:
+Paket 2 sudah tersedia. Kirim `PROMPT_TAMBAH_PAKET.md` untuk Paket 3 dan seterusnya. Gunakan nomor serta jalur baru; jangan menimpa paket yang tersedia. Contoh langkah Paket 3:
 
-1. Membaca paket lama dan rujukan, menulis `data/paket_2.json`: 80 butir baru, 50/30, tiga bentuk, 17 kode. Tiap butir memuat `package: 2`, `id: 1..80`, UID `p2-001` dst., `code`, `section`, `type`, `stem`, `options`, `key`, `why`, dan `explanations` satu alasan per opsi.
-2. Menambahkan entri katalog ID 2 dengan judul, versi, file tersebut, dan `reviewFile: references/Paket_2_dan_Pembahasan.md`. Jalur review wajib unik, `.md`, dan di luar arsip. Jangan menimpa Paket 1.
+1. Membaca paket lama dan rujukan, menulis `data/paket_3.json`: 80 butir baru, 50/30, tiga bentuk, 17 kode. Tiap butir memuat `package: 3`, `id: 1..80`, UID `p3-001` dst., `code`, `section`, `type`, `difficulty`, `cp_element`, `stem`, `options`, `key`, `why`, dan `explanations` satu alasan per opsi.
+2. Menambahkan entri katalog ID 3 dengan judul, versi, file tersebut, dan `reviewFile: references/Paket_3_dan_Pembahasan.md`. Jalur review wajib unik, `.md`, dan di luar arsip. Jangan menimpa Paket 1 atau Paket 2.
 3. Mengaudit kunci, indikator utama, pengecoh, pembahasan, dan kemiripan makna dengan seluruh paket lama. Validator mendeteksi duplikasi teks yang dinormalisasi; kemiripan substansi perlu telaah manual.
 4. Menjalankan build, tes, dan alur paket baru di browser. Mesin ujian membaca katalog sehingga tidak perlu diubah. Simpan JSON, katalog, registry versi, bundle, dan Markdown bersama.
 
