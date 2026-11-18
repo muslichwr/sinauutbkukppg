@@ -43,3 +43,7 @@ Saat PDF tidak dapat dibaca oleh tooling, nyatakan keterbatasan dan jangan menga
 5. Laporkan singkat temuan, perubahan, pengujian faktual (bukan klaim tanpa tes), keterbatasan dan cara menambah Paket 2.
 
 Jangan memodifikasi proyek lain atau mempublikasikan sesuatu tanpa diminta.
+
+## Pembekuan Paket 1 setelah finalisasi
+
+Paket 1 versi `2026-11-18.6` dibekukan. Jangan melakukan penyuntingan tambahan untuk preferensi gaya atau mengulang audit tanpa masalah substansial yang teridentifikasi. Koreksi substansial harus dicatat alasannya, memakai versi bank baru, dan mempertahankan snapshot riwayat. Penambahan Paket 2 tidak boleh mengubah Paket 1. Lihat `docs/FINALISASI_PAKET_1.md`.

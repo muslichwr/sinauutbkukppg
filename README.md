@@ -1,6 +1,6 @@
 # Drill UTBK UKPPPG 2026 — PPLG/RPL
 
-Latihan orisinal, bukan soal resmi/bocoran. Satu simulasi selalu **80 soal: 50 PCK + 30 PU**, meliputi PG, PGK Kategori, MCMA, dan 17 subkompetensi. Hanya **Paket 1**, versi `2026-11-18.4`, yang tersedia. Paket 2 belum dibuat.
+Latihan orisinal, bukan soal resmi/bocoran. Satu simulasi selalu **80 soal: 50 PCK + 30 PU**, meliputi PG, PGK Kategori, MCMA, dan 17 subkompetensi. Hanya **Paket 1**, versi `2026-11-18.6`, yang tersedia. Paket 2 belum dibuat.
 
 ## Cara memakai
 
@@ -67,3 +67,5 @@ Kirim `PROMPT_TAMBAH_PAKET.md` saat membutuhkan 80 soal baru. Agent harus:
 2. Menambahkan entri katalog ID 2 dengan judul, versi, file tersebut, dan `reviewFile: references/Paket_2_dan_Pembahasan.md`. Jalur review wajib unik, `.md`, dan di luar arsip. Jangan menimpa Paket 1.
 3. Mengaudit kunci, indikator utama, pengecoh, pembahasan, dan kemiripan makna dengan seluruh paket lama. Validator mendeteksi duplikasi teks yang dinormalisasi; kemiripan substansi perlu telaah manual.
 4. Menjalankan build, tes, dan alur paket baru di browser. Mesin ujian membaca katalog sehingga tidak perlu diubah. Simpan JSON, katalog, registry versi, bundle, dan Markdown bersama.
+
+Paket 1 versi 2026-11-18.6 dibekukan setelah tindak lanjut audit akademik. Jangan menyuntingnya lagi kecuali ada masalah substansial yang teridentifikasi; setiap koreksi harus memakai versi baru dan menjaga snapshot riwayat. Lihat docs/FINALISASI_PAKET_1.md.

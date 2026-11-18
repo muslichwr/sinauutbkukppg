@@ -55,11 +55,11 @@
     "id": 3,
     "code": "P.1",
     "type": "PG",
-    "stem": "Murid membuat formulir Laravel yang bisa dikirim walaupun kolom email kosong. Mereka menyimpulkan atribut required di HTML saja pasti cukup menjaga validitas data. Cara paling tepat meluruskan konsep adalah ...",
+    "stem": "Setelah menambahkan atribut required pada formulir Laravel, murid menganggap validasi di server tidak diperlukan. Cara paling tepat meluruskan pemahaman itu adalah ...",
     "options": [
       "Mengandalkan required browser untuk semua request.",
       "Menambahkan pemeriksaan JavaScript yang menampilkan pesan sebelum submit tanpa pemeriksaan di server.",
-      "Menguji request yang melewati browser, lalu membimbing validasi required dan format email di server.",
+      "Menguji permintaan langsung ke server yang tidak melalui validasi browser, lalu membimbing validasi required dan format email di server.",
       "Memberi peringatan visual ketika email kosong sambil tetap menerima request yang dikirim ke server."
     ],
     "key": "C",
@@ -107,7 +107,7 @@
     "options": [
       "Menelusuri dua instans dari satu class dan membandingkan perubahan atributnya.",
       "Menghafalkan deklarasi class tanpa membuat instans.",
-      "Memakai satu variabel global sebagai dua object.",
+      "Menggambarkan dua objek sebagai satu keadaan global yang selalu sama.",
       "Mengenalkan hierarki pewarisan lebih dahulu sebelum menguji apakah murid membedakan rancangan dan instans."
     ],
     "key": "A",
@@ -124,7 +124,7 @@
   },
   {
     "id": 6,
-    "code": "P.1",
+    "code": "P.6",
     "type": "MCMA",
     "stem": "Kelompok belajar kolaborasi Git pada proyek website kelas. Bukti pemahaman alur kerja yang layak diminta guru adalah ... Pilih semua yang tepat.",
     "options": [
@@ -139,7 +139,7 @@
       "B",
       "D"
     ],
-    "why": "Commit, branch/merge, dan diff merupakan bukti proses version control; satu file ZIP atau satu akun bersama menghilangkan jejak kontribusi.",
+    "why": "Commit, penjelasan merge, dan diff memberi bukti proses serta pemahaman kolaborasi Git. ZIP akhir hanya menunjukkan produk; akun bersama mengaburkan kontribusi individu.",
     "section": "PCK",
     "package": 1,
     "uid": "p1-006",
@@ -155,7 +155,7 @@
     "id": 7,
     "code": "P.1",
     "type": "PG",
-    "stem": "Pada kasus transaksi koperasi sekolah, setiap transaksi bisa berisi banyak jenis barang. Murid membuat satu kolom barang1, barang2, barang3 pada tabel transaksi. Pertanyaan pemantik terbaik adalah ...",
+    "stem": "Pada kasus transaksi koperasi sekolah, setiap transaksi bisa berisi banyak jenis barang. Murid membuat satu kolom barang1, barang2, barang3 pada tabel transaksi. Langkah pemantik pembelajaran yang paling tepat adalah ...",
     "options": [
       "Menambah kolom barang hingga jumlah terbesar saat ini.",
       "Menyatukan daftar barang dan jumlah menjadi satu teks.",
@@ -194,7 +194,7 @@
     "package": 1,
     "uid": "p1-008",
     "explanations": [
-      "Nilai awal memengaruhi hasil iterasi pertama dan seluruh keadaan berikutnya; mengabaikannya membuat pelacakan tidak sah.",
+      "Nilai awal diperlukan untuk menelusuri program secara lengkap; mengabaikannya dapat menyebabkan langkah pertama dan hasil pelacakan keliru.",
       "Selisih pelacakan dan eksekusi menjadi bukti untuk meninjau langkah yang salah.",
       "Keluaran saja dapat kebetulan benar dan menyembunyikan penalaran yang keliru."
     ]
@@ -226,9 +226,9 @@
     "id": 10,
     "code": "P.2",
     "type": "Kategori",
-    "stem": "Di laboratorium, empat murid belum mendapat komputer. Nilai keputusan guru sebagai Tepat atau Tidak tepat.",
+    "stem": "Guru ingin semua murid dapat menguji query SQL. Empat murid belum mendapat komputer. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.",
     "options": [
-      "Memberikan penilaian keterampilan komputer hanya kepada murid yang kebagian perangkat.",
+      "Menetapkan nilai akhir keterampilan hanya dari murid yang mendapat komputer, tanpa memberi kesempatan asesmen setara kepada murid lain.",
       "Menyiapkan tugas prediksi query atau rancangan ERD saat menunggu giliran praktik.",
       "Menyusun giliran operator, penguji, dan pencatat sehingga semua berperan dan berganti peran."
     ],
@@ -242,7 +242,7 @@
     "package": 1,
     "uid": "p1-010",
     "explanations": [
-      "Murid tanpa perangkat belum memperoleh kesempatan yang setara untuk menunjukkan keterampilan.",
+      "Nilai akhir itu mengecualikan murid yang belum mendapat kesempatan menunjukkan keterampilan; ini berbeda dari asesmen bergiliran.",
       "Prediksi query dan ERD menjaga aktivitas berpikir saat menunggu praktik.",
       "Rotasi memastikan akses ke praktik dan tanggung jawab dibagi."
     ]
@@ -251,11 +251,11 @@
     "id": 11,
     "code": "P.2",
     "type": "MCMA",
-    "stem": "Salah satu murid memiliki kendala penglihatan dan kesulitan membaca tangkapan layar kode yang kecil. Penyesuaian apa yang tepat? Pilih semua.",
+    "stem": "Murid diminta menelusuri percabangan untuk masukan tertentu. Seorang murid kesulitan membaca tangkapan layar kode yang kecil karena hambatan penglihatan. Pilih semua penyesuaian yang tepat.",
     "options": [
-      "Mengurangi target menjadi hanya menonton teman tanpa kontribusi.",
+      "Memperbesar judul slide sementara kode tetap disajikan sebagai tangkapan layar kecil.",
       "Memastikan kontras dan keterbacaan bahan praktik.",
-      "Mengizinkan alternatif cara menjelaskan logika program selama mengukur tujuan yang sama.",
+      "Mengizinkan murid menjelaskan jalur percabangan secara lisan atau tertulis untuk masukan yang sama.",
       "Mengecualikan murid dari asesmen agar tidak kesulitan.",
       "Menyediakan teks kode yang dapat diperbesar atau dibaca pembaca layar."
     ],
@@ -269,9 +269,9 @@
     "package": 1,
     "uid": "p1-011",
     "explanations": [
-      "Menonton saja mengurangi kesempatan mencapai keterampilan yang ditargetkan.",
+      "Perubahan judul tidak mengatasi hambatan membaca kode yang diperlukan untuk menelusuri percabangan.",
       "Kontras dan keterbacaan mengurangi hambatan visual pada bahan.",
-      "Cara menjelaskan boleh disesuaikan bila tujuan kompetensi tetap terukur.",
+      "Cara menyampaikan jawaban dapat disesuaikan sambil tetap meminta penalaran jalur percabangan untuk masukan yang sama.",
       "Pengecualian asesmen menghilangkan bukti capaian alih-alih memperbaiki aksesnya.",
       "Kode berbentuk teks memungkinkan pembesaran dan teknologi bantu."
     ]
@@ -307,7 +307,7 @@
     "options": [
       "Menegur kurang fokus sebelum memeriksa hambatan akses.",
       "Memperkeras suara tanpa mengecek pemahaman.",
-      "Memberi instruksi tertulis/visual dan mengecek akses serta pemahaman secara pribadi.",
+      "Memberi instruksi tertulis dan ERD berlabel, lalu mengecek secara pribadi apakah murid dapat menjelaskan relasinya.",
       "Membebaskan murid dari penjelasan hubungan entitas dan hanya meminta salinan gambar agar tugasnya lebih ringan."
     ],
     "key": "C",
@@ -316,9 +316,9 @@
     "package": 1,
     "uid": "p1-013",
     "explanations": [
-      "Teguran publik menstigma tanpa mengurangi kebisingan atau hambatan komunikasi.",
+      "Teguran sebelum memeriksa hambatan akses tidak mengatasi kesulitan mengikuti penjelasan di ruang bising.",
       "Volume saja tidak menjamin instruksi terbaca atau dipahami.",
-      "Instruksi visual dan cek pribadi menanggapi hambatan spesifik tanpa menurunkan tujuan.",
+      "Instruksi tertulis dan label membantu akses penjelasan; murid tetap diminta menjelaskan hubungan entitas.",
       "Pembebasan tujuan menghilangkan kesempatan belajar padahal akses dapat diperbaiki."
     ]
   },
@@ -374,9 +374,9 @@
     "id": 16,
     "code": "P.3",
     "type": "MCMA",
-    "stem": "Guru ingin suasana diskusi kode menyenangkan tetapi tetap menantang. Pilih praktik yang tepat.",
+    "stem": "Dua kelompok memakai cara pencarian berbeda yang sama-sama lolos uji. Sebagian murid enggan menjelaskan caranya karena takut diejek. Pilih praktik guru yang mendukung diskusi aman dan menantang.",
     "options": [
-      "Menyebut kode murid tertentu “paling bodoh” sebagai humor.",
+      "Menutup pembahasan alternatif setelah satu kode berhasil dijalankan.",
       "Memberi kriteria keberhasilan yang jelas dan kesempatan memperbaiki produk.",
       "Memuji proses pengujian dan argumentasi, bukan hanya jawaban tercepat.",
       "Mewajibkan semua murid meniru satu cara tanpa berdiskusi.",
@@ -392,7 +392,7 @@
     "package": 1,
     "uid": "p1-016",
     "explanations": [
-      "Penghinaan merusak rasa aman meskipun disebut humor.",
+      "Keberhasilan satu kode tidak menghilangkan manfaat membandingkan alasan dan hasil pengujian solusi lain.",
       "Kriteria dan kesempatan revisi menjaga tantangan sekaligus memberi arah perbaikan.",
       "Pengujian dan argumentasi merupakan proses belajar yang layak dihargai.",
       "Satu cara wajib tanpa diskusi menutup kesempatan menalar alternatif yang sah.",
@@ -429,7 +429,7 @@
     "stem": "Murid menggunakan AI untuk membuat kode autentikasi dan menganggap hasilnya pasti aman. Guru sebaiknya ...",
     "options": [
       "Melarang pembahasan AI tanpa memeriksa kode murid.",
-      "Meminta uji dan penjelasan kode serta peninjauan sandi, input, dan batas keluaran AI.",
+      "Menguji kode bersama murid, memeriksa penyimpanan kata sandi dan validasi masukan, lalu membahas keterbatasan AI.",
       "Memberi nilai penuh setelah kode berjalan dan menunda pemeriksaan keamanan karena autentikasi sudah tampak berhasil.",
       "Mengunggah kredensial server sekolah ke layanan AI agar perbaikan dapat disesuaikan langsung dengan sistem sebenarnya."
     ],
@@ -449,25 +449,25 @@
     "id": 19,
     "code": "P.4",
     "type": "Kategori",
-    "stem": "Guru memakai platform daring untuk penugasan RPL. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.",
+    "stem": "Guru memakai platform daring agar murid membandingkan validasi formulir di browser dan server. Sebagian murid hanya dapat belajar luring. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.",
     "options": [
-      "Memilih alat terutama dari jumlah fitur lalu menyesuaikan tujuan agar semua fitur dipakai.",
+      "Memilih platform dari banyaknya fitur dan mengubah tujuan agar seluruh fitur dipakai.",
       "Mengunggah data identitas siswa asli ke layanan publik agar contoh terlihat realistis.",
-      "Menyiapkan alternatif akses saat jaringan atau perangkat murid terbatas."
+      "Menyediakan contoh formulir dan server lokal yang dapat diuji saat akses daring terbatas."
     ],
     "key": [
       "F",
       "F",
       "T"
     ],
-    "why": "Penggunaan TIK perlu mempertimbangkan akses, privasi, dan kesesuaian tujuan, bukan semata fitur.",
+    "why": "Pemilihan platform harus mendukung pengujian validasi, menjaga privasi, dan menyediakan akses yang sesuai kondisi murid. Banyak fitur atau data identitas asli tidak menjamin tujuan itu tercapai.",
     "section": "PCK",
     "package": 1,
     "uid": "p1-019",
     "explanations": [
-      "Tujuan belajar harus mengarahkan pilihan alat; banyak fitur belum membuktikan manfaat.",
+      "Jumlah fitur tidak menunjukkan apakah platform membantu murid memahami perbedaan validasi browser dan server.",
       "Identitas asli di layanan publik tidak diperlukan dan melanggar prinsip privasi.",
-      "Alternatif akses menjaga kesempatan belajar saat sarana berbeda."
+      "Contoh lokal mempertahankan kesempatan membandingkan validasi browser dan server tanpa bergantung pada jaringan luar."
     ]
   },
   {
@@ -511,7 +511,7 @@
       "Mengutamakan hasil digital dalam nilai meskipun ERD kertas memiliki hubungan dan alasan yang lebih tepat."
     ],
     "key": "C",
-    "why": "Teknologi alat, bukan tujuan. Pilihan didasarkan pada nilai tambah pedagogis dan kondisi akses.",
+    "why": "Alat dipilih jika membantu murid menguji dan merevisi relasi pada ERD; kertas tetap dapat dipakai bila tujuan itu tercapai.",
     "section": "PCK",
     "package": 1,
     "uid": "p1-021",
@@ -572,9 +572,9 @@
     "id": 24,
     "code": "P.5",
     "type": "Kategori",
-    "stem": "Guru mengadaptasi studi kasus untuk SMK. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.",
+    "stem": "Guru memilih kasus koperasi setempat untuk pembelajaran entitas dan relasi di SMK. Pengalaman murid tentang koperasi beragam. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.",
     "options": [
-      "Memakai contoh proses koperasi setempat tanpa menganggap semua murid memiliki pengalaman yang sama.",
+      "Menggunakan transaksi tiruan untuk mengenali entitas dan relasi sambil menjelaskan proses koperasi yang belum dikenal murid.",
       "Memilih konteks hanya karena tren walaupun tidak mendukung kompetensi yang dinilai.",
       "Meminta murid yang belum mengenal koperasi menunggu tanpa aktivitas sampai teman lain selesai."
     ],
@@ -588,7 +588,7 @@
     "package": 1,
     "uid": "p1-024",
     "explanations": [
-      "Konteks koperasi dapat membantu jika guru tidak menyeragamkan pengalaman murid.",
+      "Transaksi setempat menjadi sumber belajar pemodelan data; penjelasan proses membantu murid dengan pengalaman awal berbeda.",
       "Tren tanpa hubungan dengan kompetensi tidak memberi alasan pedagogis pemilihan kasus.",
       "Perbedaan pengalaman perlu dukungan atau konteks setara, bukan penghentian kesempatan belajar."
     ]
@@ -626,12 +626,12 @@
     "id": 26,
     "code": "P.5",
     "type": "PG",
-    "stem": "Kelompok hendak memakai data asli pelanggan usaha keluarga siswa untuk praktik. Respons paling tepat adalah ...",
+    "stem": "Guru ingin murid memodelkan data produk dan transaksi dari usaha keluarga yang mereka kenal. Kelompok hendak memakai data pelanggan asli. Respons paling tepat adalah ...",
     "options": [
       "Menghapus nama tetapi tetap membagikan nomor telepon.",
       "Membuat dataset sintetis yang mempertahankan kebutuhan usaha lokal serta membahas perlindungan data.",
       "Menaruh data asli di akun bersama agar seluruh kelompok dan guru dapat memeriksa hasil praktik dengan mudah.",
-      "Membuang konteks usaha dan memakai tabel tanpa kebutuhan pengguna meski data sintetis dapat mempertahankan konteksnya."
+      "Meminta murid menyalin tabel contoh umum sebagai rancangan akhir untuk usaha tersebut."
     ],
     "key": "B",
     "why": "Kasus lokal tetap dapat dipakai tanpa membuka data pribadi; tujuan pembelajaran terletak pada model dan logika data.",
@@ -642,7 +642,7 @@
       "Nomor telepon tetap dapat mengidentifikasi pelanggan; menghapus nama saja belum menghilangkan paparan.",
       "Dataset sintetis mempertahankan proses usaha sebagai sumber belajar tanpa mengekspos pelanggan.",
       "Akun bersama memperluas akses ke data yang tidak diperlukan untuk tujuan model basis data.",
-      "Konteks lokal yang relevan tidak perlu dibuang jika dapat digunakan dengan data sintetis."
+      "Tabel contoh dapat menjadi bantuan awal, tetapi salinannya belum membuktikan rancangan sesuai kebutuhan usaha yang sedang dipelajari."
     ]
   },
   {
@@ -751,7 +751,7 @@
     "type": "PG",
     "stem": "Setelah kuis JOIN, 70% murid salah membedakan INNER dan LEFT JOIN. Langkah selanjutnya paling tepat adalah ...",
     "options": [
-      "Mengulang penjelasan sintaks yang sama tanpa membedakan apakah sumber salah terletak pada data atau jenis JOIN.",
+      "Memberikan contoh INNER JOIN dan LEFT JOIN yang seluruh barisnya memiliki pasangan.",
       "Menganalisis kesalahan, mengajar ulang memakai baris tanpa pasangan, lalu mengecek penalaran.",
       "Mengulang kuis sampai nilai naik tanpa membahas alasan salah, dengan asumsi pengulangan otomatis membentuk konsep.",
       "Mengajarkan rumus LEFT JOIN selalu sama banyak dengan tabel kiri tanpa memeriksa kemungkinan beberapa pasangan."
@@ -762,7 +762,7 @@
     "package": 1,
     "uid": "p1-031",
     "explanations": [
-      "Ceramah sama tanpa analisis kesalahan belum menanggapi bukti asesmen.",
+      "Data dengan semua baris berpasangan belum memperlihatkan perbedaan yang menjadi kesulitan kelas; B menargetkan baris tanpa pasangan dan mengecek ulang penalaran.",
       "Baris tanpa pasangan memperlihatkan perbedaan INNER dan LEFT JOIN secara konkret.",
       "Kuis berulang tanpa umpan balik tidak menargetkan penyebab salah.",
       "LEFT JOIN dapat menghasilkan lebih banyak baris kiri jika ada banyak pasangan; rumus itu keliru."
@@ -803,10 +803,10 @@
     "type": "PG",
     "stem": "Tujuan belajar ialah murid mampu memecah program kasir menjadi fungsi dengan tanggung jawab jelas dan menjelaskan aliran datanya. Asesmen paling selaras adalah ...",
     "options": [
-      "Meminta definisi fungsi tanpa penerapan pada kasir.",
+      "Meminta murid menandai deklarasi dan pemanggilan fungsi pada program yang sudah dipecah.",
       "Memberi skor semakin tinggi untuk semakin banyak fungsi tanpa memeriksa tanggung jawab serta aliran datanya.",
       "Meminta murid menyalin hasil refaktor guru tanpa menjelaskan pemilihan parameter dan hasil setiap fungsi.",
-      "Meminta refaktor, penjelasan kontrak fungsi, dan uji kesetaraan perilaku program."
+      "Meminta refaktor, penjelasan masukan-keluaran tiap fungsi, dan uji kesetaraan perilaku program."
     ],
     "key": "D",
     "why": "Refaktor beralasan disertai pengujian mengukur pembagian tanggung jawab dan aliran data, bukan jumlah fungsi atau hafalan definisi.",
@@ -814,21 +814,21 @@
     "package": 1,
     "uid": "p1-033",
     "explanations": [
-      "Definisi saja tidak mengukur kemampuan membagi program kasir.",
+      "Menandai fungsi mengukur pengenalan struktur, belum kemampuan membagi tanggung jawab dan menjelaskan aliran data.",
       "Banyak fungsi belum menjamin tanggung jawab jelas atau data mengalir benar.",
       "Menyalin hasil refaktor tidak mengungkap alasan pemisahan.",
-      "Refaktor, penjelasan kontrak fungsi, dan uji perilaku menilai tujuan secara langsung."
+      "Refaktor, penjelasan masukan-keluaran tiap fungsi, dan pengujian perilaku mengukur pembagian tanggung jawab serta aliran data secara langsung."
     ]
   },
   {
     "id": 34,
     "code": "P.6",
     "type": "Kategori",
-    "stem": "Nilai tindakan umpan balik berikut sebagai Tepat atau Tidak tepat.",
+    "stem": "Query murid untuk menampilkan semua siswa tidak memunculkan siswa tanpa peminjaman. Guru ingin murid memahami penyebabnya dan merevisi query. Nilai umpan balik berikut sebagai Tepat atau Tidak tepat.",
     "options": [
-      "Guru mempublikasikan peringkat murid paling banyak salah untuk mempermalukan mereka.",
+      "Memberi query benar untuk disalin sebagai perbaikan akhir.",
       "Guru meminta murid memperbaiki hasilnya lalu menjelaskan perubahan dan alasan revisi.",
-      "Guru menyebut bagian query yang sudah benar dan memberi petunjuk pada kondisi yang perlu diperiksa."
+      "Menunjukkan bagian query yang sudah benar, lalu meminta murid memeriksa hasil untuk siswa tanpa pasangan peminjaman."
     ],
     "key": [
       "F",
@@ -840,9 +840,9 @@
     "package": 1,
     "uid": "p1-034",
     "explanations": [
-      "Peringkat untuk mempermalukan merusak rasa aman dan bukan petunjuk teknis.",
+      "Salinan query dapat memperbaiki keluaran, tetapi belum menunjukkan murid memahami penyebab hilangnya baris.",
       "Penjelasan revisi membantu memastikan murid memahami perubahannya.",
-      "Petunjuk lokasi dan bagian yang benar membuat revisi dapat dilakukan."
+      "Petunjuk ini menghubungkan hasil yang hilang dengan perilaku penggabungan tabel tanpa langsung memberikan seluruh solusi."
     ]
   },
   {
@@ -863,7 +863,7 @@
     "uid": "p1-035",
     "explanations": [
       "Keputusan teknis, tanggung jawab, dan evaluasi pengguna menilai kecakapan kejuruan secara utuh.",
-      "Estetika saja tidak mengukur fungsi, penalaran, atau tanggung jawab.",
+      "Kerapian halaman belum cukup membuktikan fungsi, penalaran teknis, dan tanggung jawab kerja yang menjadi tujuan kejuruan.",
       "Peniruan tampilan tidak menunjukkan kemampuan memenuhi kebutuhan.",
       "Kecepatan mengetik bukan pengganti kualitas solusi dan etika kerja."
     ]
@@ -1031,14 +1031,14 @@
       "A",
       "D"
     ],
-    "why": "Spesifikasi menentukan oracle uji: kemunculan pertama serta kondisi tidak ditemukan termasuk array kosong perlu dibedakan; hasil aktual bukan definisi hasil benar.",
+    "why": "Spesifikasi menentukan hasil acuan pengujian: kemunculan pertama dan kondisi tidak ditemukan, termasuk array kosong, perlu dibedakan. Keluaran program bukan penentu hasil yang seharusnya benar.",
     "section": "PCK",
     "package": 1,
     "uid": "p1-042",
     "explanations": [
       "Kedua input harus menghasilkan -1 sesuai kontrak tidak ditemukan.",
       "Nilai -1 sengaja menjadi penanda tidak ditemukan dan bukan indeks elemen.",
-      "Expected harus berasal dari spesifikasi agar tes dapat mendeteksi kesalahan program.",
+      "Hasil yang diharapkan harus berasal dari spesifikasi agar tes dapat mendeteksi kesalahan program.",
       "Target berulang menguji syarat indeks pertama dalam spesifikasi.",
       "Satu contoh awal tidak mencakup data berulang, kosong, atau target tidak ada."
     ]
@@ -1049,18 +1049,18 @@
     "type": "PG",
     "stem": "Sebagian siswa memahami logika program tetapi kesulitan membaca instruksi teks panjang. Guru ingin mengukur logika seleksi kondisi. Penyesuaian terbaik adalah ...",
     "options": [
-      "Memakai diagram alir dan contoh input-output untuk menjelaskan atau menerapkan logika yang sama.",
+      "Memberi instruksi ringkas dan contoh masukan-keluaran, lalu meminta murid menyusun logika untuk kasus baru.",
       "Mengganti asesmen logika dengan hafalan istilah.",
       "Menurunkan target karena kesulitan membaca.",
       "Menetapkan kerapian tulisan jawaban sebagai ukuran utama meskipun sasaran yang diminta ialah logika seleksi."
     ],
     "key": "A",
-    "why": "Representasi visual dan contoh mengurangi hambatan bahasa tanpa menghilangkan tuntutan logika seleksi.",
+    "why": "Dukungan mengurangi hambatan bahasa sambil mempertahankan tuntutan menyusun logika seleksi. Hafalan istilah, penurunan target, dan penilaian tulisan tangan tidak mengukur tujuan yang sama.",
     "section": "PCK",
     "package": 1,
     "uid": "p1-043",
     "explanations": [
-      "Diagram dan contoh menurunkan hambatan membaca sambil tetap mengukur logika.",
+      "Instruksi ringkas mengurangi hambatan membaca; murid tetap harus menyusun logika, bukan menyalin diagram solusi yang sudah lengkap.",
       "Hafalan istilah mengganti kompetensi seleksi kondisi.",
       "Hambatan bahasa tidak membuktikan ketidakmampuan logika.",
       "Tulisan tangan bukan sasaran pemrograman yang diukur."
@@ -1224,13 +1224,13 @@
     "id": 50,
     "code": "PF.5",
     "type": "MCMA",
-    "stem": "Setelah proyek website, guru mengembangkan praktik melalui komunitas guru RPL. Tindakan yang etis dan bermanfaat adalah ... Pilih semua.",
+    "stem": "Setelah proyek web, guru menemukan murid belum menguji formulir dengan masukan kosong. Guru meminta masukan komunitas RPL untuk memperbaiki pembelajaran pengujian. Pilih tindakan yang etis dan bermanfaat.",
     "options": [
-      "Membagikan contoh rubrik dan data hasil belajar yang telah dianonimkan untuk mendapat masukan.",
+      "Membagikan rubrik pengujian formulir dan hasil belajar anonim untuk mendapat masukan.",
       "Menyebarkan nilai beserta nomor telepon siswa kepada publik.",
-      "Menguji masukan rekan pada kelas dan mengamati dampaknya.",
+      "Menguji saran rekan pada pembelajaran kasus masukan kosong dan mengamati perubahan hasil kerja murid.",
       "Mendokumentasikan keterbatasan uji coba agar tidak mengklaim pasti berhasil.",
-      "Mengklaim satu percobaan kecil membuktikan semua metode lain salah."
+      "Menetapkan saran rekan sebagai standar seluruh kelas sebelum menilai kecocokannya dengan masalah murid."
     ],
     "key": [
       "A",
@@ -1242,11 +1242,11 @@
     "package": 1,
     "uid": "p1-050",
     "explanations": [
-      "Data anonim dan rubrik memungkinkan masukan profesional sambil menjaga identitas.",
+      "Rubrik dan hasil anonim membantu rekan menelaah masalah pembelajaran pengujian tanpa membuka identitas murid.",
       "Nilai dan kontak publik melampaui kebutuhan telaah praktik.",
-      "Masukan yang diuji menghasilkan bukti relevansi pada kelas sendiri.",
+      "Uji pada kesulitan yang ditemukan memberi bukti apakah saran membantu murid merancang dan menjelaskan pengujian.",
       "Keterbatasan membantu menilai jangkauan temuan secara proporsional.",
-      "Satu percobaan kecil tidak membandingkan seluruh metode atau konteks."
+      "Saran perlu ditelaah dan diuji dalam konteks kelas; penerapan langsung belum memberi dasar bahwa masalah pembelajaran tertangani."
     ]
   },
   {
@@ -1353,9 +1353,9 @@
     "id": 55,
     "code": "P.2",
     "type": "Kategori",
-    "stem": "Kelas terdiri atas siswa dari beragam latar bahasa. Nilai tindakan berikut sebagai Tepat atau Tidak tepat.",
+    "stem": "Dalam diskusi untuk memahami gagasan utama bacaan, siswa memiliki latar bahasa beragam. Nilai tindakan berikut sebagai Tepat atau Tidak tepat.",
     "options": [
-      "Menyamakan aksen semua murid sebagai syarat sebelum gagasan mereka boleh didiskusikan.",
+      "Menghentikan penjelasan gagasan untuk membetulkan setiap pelafalan yang sebenarnya sudah dipahami kelas.",
       "Guru menganggap aksen berbeda sebagai tanda kemampuan berpikir rendah.",
       "Guru memastikan istilah penting dipahami melalui contoh tanpa merendahkan bahasa rumah siswa."
     ],
@@ -1369,7 +1369,7 @@
     "package": 1,
     "uid": "p1-055",
     "explanations": [
-      "Keseragaman aksen bukan prasyarat bernalar; syarat ini menghalangi partisipasi.",
+      "Koreksi setiap pelafalan menghambat penyampaian gagasan yang sudah dapat dipahami, sementara tujuan diskusi bukan latihan pelafalan.",
       "Aksen tidak menunjukkan tingkat kemampuan berpikir.",
       "Contoh istilah membantu akses tanpa merendahkan bahasa rumah."
     ]
@@ -1412,10 +1412,10 @@
       "Menyamakan tugas tanpa memeriksa prasyarat.",
       "Mensyaratkan hafalan seluruh istilah sebelum diskusi.",
       "Meminta teman menyelesaikan semua tugasnya.",
-      "Mengecek prasyarat, memberi glosarium/contoh, dan meninjau dukungan dari kemajuannya."
+      "Mengecek istilah yang belum dipahami melalui contoh singkat."
     ],
     "key": "D",
-    "why": "Dukungan spesifik berdasarkan prasyarat lebih efektif daripada stigma atau tuntutan tanpa bantuan.",
+    "why": "Langkah awal ialah memetakan kesulitan istilah, bukan langsung menyamakan tugas, mensyaratkan seluruh hafalan, atau menyerahkan pekerjaan kepada teman. Dukungan dipilih setelah kebutuhan diketahui.",
     "section": "PU",
     "package": 1,
     "uid": "p1-057",
@@ -1423,7 +1423,7 @@
       "Kesetaraan kesempatan memerlukan dukungan terhadap prasyarat yang belum dikenal.",
       "Hafalan menyeluruh sebagai syarat partisipasi menghambat bantuan bertahap yang diperlukan.",
       "Pengambilalihan tugas tidak memberi kesempatan atau bukti pemahaman murid pindahan.",
-      "Diagnosis dan dukungan ringkas menanggapi kebutuhan awal dan dapat disesuaikan dari kemajuan."
+      "Pemeriksaan awal memetakan istilah atau prasyarat yang perlu didukung; hasilnya menjadi dasar memilih glosarium dan bantuan berikutnya."
     ]
   },
   {
@@ -1481,7 +1481,7 @@
     "stem": "Guru ingin siswa memakai AI untuk membuat rangkuman materi. Risiko utamanya ialah jawaban AI bisa keliru dan data siswa dapat terbuka. Langkah tepat adalah ...",
     "options": [
       "Memilih rangkuman dari kelancaran bahasa saja.",
-      "Memeriksa sumber, membatasi data pribadi, dan meminta penjelasan dengan bahasa sendiri.",
+      "Mencocokkan klaim rangkuman dengan sumber tepercaya, membatasi data pribadi, dan meminta penjelasan dengan bahasa sendiri.",
       "Menghapus nama saja lalu mengizinkan unggahan cerita keluarga yang masih dapat dikenali dari rincian kejadiannya.",
       "Meminta dua layanan AI menghasilkan jawaban serupa dan menganggap kesepakatan itu telah cukup memverifikasi isi."
     ],
@@ -1503,7 +1503,7 @@
     "type": "MCMA",
     "stem": "Guru memilih media pembelajaran digital untuk kelas dengan akses beragam. Pertimbangan yang tepat adalah ... Pilih semua.",
     "options": [
-      "Tampilan dan petunjuk mudah diakses dengan kebutuhan murid yang beragam.",
+      "Tampilan dan petunjuk dapat diakses oleh murid dengan beragam kebutuhan.",
       "Selalu mewajibkan gawai spesifikasi tinggi walau banyak murid tidak memiliki.",
       "Data murid yang diperlukan dibatasi sesuai tujuan.",
       "Memilih media hanya karena sedang populer.",
@@ -1530,7 +1530,7 @@
     "id": 62,
     "code": "P.5",
     "type": "PG",
-    "stem": "Guru akan mengajar perbandingan dengan contoh kehidupan sekitar. Sebagian siswa belum familiar dengan konteks pasar tradisional. Pilihan terbaik adalah ...",
+    "stem": "Guru akan mengajar perbandingan dengan contoh kehidupan sekitar. Sebagian siswa belum akrab dengan konteks pasar tradisional. Pilihan terbaik adalah ...",
     "options": [
       "Menambah soal pasar tanpa menjelaskan istilah.",
       "Menghapus seluruh konteks nyata dari pembelajaran.",
@@ -1703,8 +1703,8 @@
     "type": "Kategori",
     "stem": "Guru mendapati penilaiannya keliru dan mendapat permintaan menaikkan nilai kerabat tanpa bukti tugas tambahan. Nilai respons berikut sebagai Tepat atau Tidak tepat.",
     "options": [
-      "Guru menyampaikan kriteria penilaian sebelum tugas dan menerapkannya konsisten.",
-      "Guru mengakui kekeliruan penjelasannya lalu memperbaiki di depan kelas secara profesional.",
+      "Guru meninjau kembali nilai memakai kriteria yang sudah disampaikan sebelum tugas.",
+      "Guru mengakui kekeliruan penilaian, memperbaikinya berdasarkan bukti, dan menyampaikan koreksi kepada pihak terkait.",
       "Guru menaikkan nilai murid tertentu karena kedekatan pribadi tanpa bukti belajar."
     ],
     "key": [
@@ -1717,8 +1717,8 @@
     "package": 1,
     "uid": "p1-069",
     "explanations": [
-      "Kriteria yang diketahui dan konsisten menunjukkan keadilan penilaian.",
-      "Mengakui dan memperbaiki kekeliruan mencontohkan integritas serta tanggung jawab.",
+      "Peninjauan memakai kriteria yang sama menjaga keadilan saat memperbaiki kesalahan penilaian.",
+      "Koreksi berbasis bukti dan komunikasi kepada pihak terkait menunjukkan integritas serta tanggung jawab atas penilaian.",
       "Kedekatan pribadi tidak menjadi bukti capaian belajar."
     ]
   },
@@ -1791,8 +1791,8 @@
     "package": 1,
     "uid": "p1-072",
     "explanations": [
-      "Label pendiam menghakimi tanpa membuka ruang kontribusi.",
-      "Pemanggilan dengan ancaman malu mengurangi rasa aman.",
+      "Pelabelan dari frekuensi bicara mengabaikan kesempatan dan hambatan murid untuk berpartisipasi.",
+      "Menegur ketidaksiapan sebelum memberi waktu berpikir belum mengatasi hambatan partisipasi.",
       "Dominasi tetap tidak memberi kesempatan berkembang bagi yang lain.",
       "Waktu berpikir dan giliran aman membangun partisipasi yang konsisten."
     ]
@@ -1804,7 +1804,7 @@
     "stem": "Dalam satu semester, beberapa murid berhenti mencoba setelah mendapat peringkat rendah. Guru ingin membangun kebiasaan perbaikan yang konsisten. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.",
     "options": [
       "Menetapkan kelompok ranking rendah tetap selama setahun agar dukungan tidak perlu ditinjau lagi.",
-      "Guru menjadikan ranking publik sebagai identitas kemampuan yang tidak dapat berubah.",
+      "Menilai perkembangan hanya dari perubahan peringkat meskipun capaian kriteria belajar murid meningkat.",
       "Guru memberi kesempatan revisi tugas berdasarkan kriteria yang jelas."
     ],
     "key": [
@@ -1818,7 +1818,7 @@
     "uid": "p1-073",
     "explanations": [
       "Kelompok tetap dari ranking mengabaikan kemajuan dan kebutuhan yang berubah.",
-      "Ranking sebagai identitas tetap menutup pandangan tentang kemajuan.",
+      "Peringkat menunjukkan posisi relatif; peringkat yang tetap tidak meniadakan peningkatan capaian kriteria belajar.",
       "Revisi dengan kriteria memberi jalur nyata untuk memperbaiki capaian."
     ]
   },
@@ -1852,7 +1852,7 @@
     "stem": "Guru memberi umpan balik kepada siswa yang berbeda latar bahasa dan gaya komunikasi. Cara yang tepat adalah ... Pilih semua.",
     "options": [
       "Menggunakan kalimat jelas dan contoh spesifik.",
-      "Memastikan siswa memahami tindak lanjut dengan kesempatan bertanya.",
+      "Meminta murid menjelaskan kembali langkah perbaikan dan memberi kesempatan bertanya.",
       "Mengejek pengucapan bahasa siswa.",
       "Menyediakan saluran tertulis/visual bila membantu komunikasi.",
       "Memotong penjelasan siswa karena lambat menyampaikan ide."
@@ -1868,7 +1868,7 @@
     "uid": "p1-075",
     "explanations": [
       "Kalimat dan contoh spesifik memperjelas pesan perbaikan.",
-      "Kesempatan bertanya mengecek apakah pesan dapat ditindaklanjuti.",
+      "Penjelasan kembali memberi bukti apakah murid memahami langkah perbaikan; kesempatan bertanya membantu mengklarifikasi bagian yang belum jelas.",
       "Ejekan pengucapan menstigma latar bahasa.",
       "Saluran visual atau tertulis membantu kebutuhan komunikasi tertentu.",
       "Memotong penjelasan menghilangkan informasi dan partisipasi murid."
@@ -1882,7 +1882,7 @@
     "options": [
       "Meminta tugas selesai sebelum mencari sebab absen.",
       "Mengirim rincian masalah ke seluruh wali murid agar memperoleh dukungan luas meskipun kebutuhannya belum dipetakan.",
-      "Berkoordinasi dengan wali/BK secara proporsional, mendengar murid dan keluarga, lalu menyusun dukungan.",
+      "Berkoordinasi dengan wali kelas dan/atau guru BK secara proporsional, mendengar murid dan keluarga, lalu menyusun dukungan.",
       "Menetapkan nilai nol untuk seluruh tugas tertinggal dan menutup kesempatan perbaikan sebelum alasan absen diketahui."
     ],
     "key": "C",
@@ -1940,7 +1940,7 @@
     "uid": "p1-078",
     "explanations": [
       "Kontribusi bukti dan tindak lanjut menjadikan komunitas tempat belajar profesional bersama.",
-      "Kecepatan diskusi tidak membenarkan penghilangan atribusi karya rekan.",
+      "Materi rekan perlu dibagikan dengan atribusi yang sesuai; penghilangan atribusi tidak menunjukkan kontribusi profesional yang bertanggung jawab.",
       "Satu konteks tidak cukup mendukung penerapan universal.",
       "Daftar aktivitas tanpa bukti dan refleksi sulit dipakai untuk menilai atau memperbaiki praktik."
     ]
@@ -1951,10 +1951,10 @@
     "type": "PG",
     "stem": "Guru menilai proyek lintas mata pelajaran. Hasil belajar paling menggambarkan tujuan pendidikan yang luas adalah ...",
     "options": [
-      "Meniru produk tanpa dapat menjelaskan keputusan.",
+      "Menghasilkan produk sesuai contoh dan menjelaskan langkah kerja, tetapi belum menerapkannya pada masalah baru.",
       "Mencapai angka tinggi tanpa bukti penerapan.",
       "Menyelesaikan cepat tanpa alasan dan tanggung jawab.",
-      "Murid menalar, bekerja sama secara etis, dan menerapkan pengetahuan pada masalah bermakna."
+      "Menalar, bekerja sama secara etis, dan menerapkan pengetahuan pada masalah bermakna."
     ],
     "key": "D",
     "why": "Tujuan pendidikan mencakup penguasaan pengetahuan, karakter, kolaborasi, dan penerapan yang bertanggung jawab.",
@@ -1962,7 +1962,7 @@
     "package": 1,
     "uid": "p1-079",
     "explanations": [
-      "Kemiripan produk tanpa alasan belum menunjukkan penguasaan atau kemandirian berpikir.",
+      "Produk dan penjelasan langkah menunjukkan sebagian capaian, tetapi belum menunjukkan penerapan pada masalah baru sebagaimana tujuan pendidikan yang lebih luas.",
       "Angka saja belum memberi bukti penerapan pengetahuan, karakter, dan kolaborasi.",
       "Kecepatan tanpa penalaran dan tanggung jawab belum menunjukkan tujuan pendidikan secara utuh.",
       "Penalaran, etika, kolaborasi, dan penerapan memberi bukti hasil pendidikan yang lebih lengkap."
@@ -1970,9 +1970,9 @@
   },
   {
     "id": 80,
-    "code": "PF.3",
+    "code": "P.5",
     "type": "MCMA",
-    "stem": "Dalam proyek sains lingkungan, sekolah memiliki keterbatasan alat dan kondisi lingkungan yang berbeda. Adaptasi yang tetap menjaga kompetensi adalah ... Pilih semua.",
+    "stem": "Dalam proyek lingkungan, murid harus mencatat pengamatan, membandingkan data, dan menarik simpulan. Alat sekolah terbatas. Pilih adaptasi sumber belajar yang tetap mendukung tujuan tersebut.",
     "options": [
       "Menggunakan pengamatan lingkungan setempat dengan prosedur aman dan data yang dapat dicatat.",
       "Menyediakan format pencatatan sederhana dan contoh analisis data.",
@@ -1985,7 +1985,7 @@
       "B",
       "D"
     ],
-    "why": "Konteks lokal dapat menggantikan media mahal jika tujuan dan penalaran tetap dipertahankan secara aman.",
+    "why": "Pengamatan setempat yang aman menyediakan sumber data; format pencatatan dan contoh analisis membantu mengolahnya. Membandingkan hasil dengan konsep serta membahas keterbatasan menjaga ketepatan simpulan. Tujuan analisis tidak dihapus karena alat terbatas.",
     "section": "PU",
     "package": 1,
     "uid": "p1-080",

@@ -1,6 +1,6 @@
 # Paket 1 — latihan UTBK UKPPPG PPLG/RPL
 
-Versi: 2026-11-18.4. Dihasilkan oleh `python scripts/build.py` dari `bank_soal_80.json`; jangan edit hasil build.
+Versi: 2026-11-18.6. Dihasilkan oleh `python scripts/build.py` dari `bank_soal_80.json`; jangan edit hasil build.
 
 Latihan orisinal, bukan soal resmi/bocoran. Rujukan utama: Juknis yang disediakan, halaman 7 dan 47. Panduan pendamping hanya inspirasi mutu kasus.
 
@@ -10,12 +10,12 @@ Skor latihan: 1 poin jika seluruh respons pada butir tepat; selain itu 0. Bukan 
 
 | Kode utama | Subkompetensi (Juknis hal. 47) | PCK | PU |
 |---|---|---:|---:|
-| P.1 | Merancang dan memfasilitasi pengalaman belajar Murid yang mendorong pemahaman konseptual, penerapan kontekstual, dan refleksi bermakna terhadap proses pembelajaran | 8 | 3 |
+| P.1 | Merancang dan memfasilitasi pengalaman belajar Murid yang mendorong pemahaman konseptual, penerapan kontekstual, dan refleksi bermakna terhadap proses pembelajaran | 7 | 3 |
 | P.2 | Melaksanakan pembelajaran yang responsif terhadap keragaman latar belakang, kebutuhan, dan potensi Murid melalui berbagai model pembelajaran | 5 | 4 |
 | P.3 | Menciptakan proses pembelajaran yang berkesadaran, bermakna, dan menggembirakan | 4 | 2 |
 | P.4 | Mengintegrasikan teknologi informasi dan komunikasi secara kritis dan kreatif dalam pembelajaran untuk memperluas akses, memperdalam pemahaman, dan mendukung literasi digital Murid | 5 | 2 |
-| P.5 | Menerapkan strategi pembelajaran atau pembimbingan yang sesuai karakteristik Murid dengan memanfaatkan sumber belajar dan mempertimbangkan potensi lingkungan dan kearifan lokal | 4 | 2 |
-| P.6 | Melaksanakan asesmen untuk mengetahui kebutuhan belajar, memberikan umpan balik, dan mengukur hasil belajar Murid secara berkesinambungan dan reflektif | 8 | 4 |
+| P.5 | Menerapkan strategi pembelajaran atau pembimbingan yang sesuai karakteristik Murid dengan memanfaatkan sumber belajar dan mempertimbangkan potensi lingkungan dan kearifan lokal | 4 | 3 |
+| P.6 | Melaksanakan asesmen untuk mengetahui kebutuhan belajar, memberikan umpan balik, dan mengukur hasil belajar Murid secara berkesinambungan dan reflektif | 9 | 4 |
 | K.1 | Menampilkan perilaku etis dan keteladanan yang mencerminkan kematangan spiritual, moral, dan emosional berdasarkan Ketuhanan Yang Maha Esa dan nilai-nilai keberagaman | 0 | 2 |
 | K.2 | Melakukan refleksi diri secara berkesinambungan, mengembangkan pola pikir bertumbuh, serta belajar sepanjang hayat untuk peningkatan kualitas diri | 0 | 2 |
 | K.3 | Mengambil keputusan dan bertindak secara konsisten dalam mengembangkan potensi dan budaya belajar Murid | 0 | 2 |
@@ -24,7 +24,7 @@ Skor latihan: 1 poin jika seluruh respons pada butir tepat; selain itu 0. Bukan 
 | S.3 | Berpartisipasi aktif dalam organisasi profesi dan komunitas pembelajaran untuk pengembangan keprofesian berkelanjutan | 0 | 1 |
 | PF.1 | Menguasai tujuan pendidikan terutama pada Satuan Pendidikan yang diampu | 2 | 1 |
 | PF.2 | Menguasai disiplin ilmu sesuai dengan materi/muatan pembelajaran atau pembimbingan | 6 | 0 |
-| PF.3 | Memahami potensi dan kebutuhan belajar Murid berdasarkan karakteristik materi pembelajaran atau pembimbingan dan konteks lokal | 3 | 1 |
+| PF.3 | Memahami potensi dan kebutuhan belajar Murid berdasarkan karakteristik materi pembelajaran atau pembimbingan dan konteks lokal | 3 | 0 |
 | PF.4 | Memahami, menerapkan, dan mengembangkan kurikulum secara adaptif dan kontekstual sesuai perkembangan zaman | 3 | 0 |
 | PF.5 | Mengembangkan praktik profesional pendidikan secara konseptual, empiris, kreatif, dan inovatif | 2 | 0 |
 
@@ -53,11 +53,11 @@ E. Membuat contoh satu siswa yang memiliki beberapa peminjaman.
 
 ### 3. [p1-003 • PCK • P.1 • PG]
 
-Murid membuat formulir Laravel yang bisa dikirim walaupun kolom email kosong. Mereka menyimpulkan atribut required di HTML saja pasti cukup menjaga validitas data. Cara paling tepat meluruskan konsep adalah ...
+Setelah menambahkan atribut required pada formulir Laravel, murid menganggap validasi di server tidak diperlukan. Cara paling tepat meluruskan pemahaman itu adalah ...
 
 A. Mengandalkan required browser untuk semua request.
 B. Menambahkan pemeriksaan JavaScript yang menampilkan pesan sebelum submit tanpa pemeriksaan di server.
-C. Menguji request yang melewati browser, lalu membimbing validasi required dan format email di server.
+C. Menguji permintaan langsung ke server yang tidak melalui validasi browser, lalu membimbing validasi required dan format email di server.
 D. Memberi peringatan visual ketika email kosong sambil tetap menerima request yang dikirim ke server.
 
 ### 4. [p1-004 • PCK • P.1 • Kategori]
@@ -74,10 +74,10 @@ Saat mengenalkan objek dalam pemrograman berorientasi objek, murid menyamakan cl
 
 A. Menelusuri dua instans dari satu class dan membandingkan perubahan atributnya.
 B. Menghafalkan deklarasi class tanpa membuat instans.
-C. Memakai satu variabel global sebagai dua object.
+C. Menggambarkan dua objek sebagai satu keadaan global yang selalu sama.
 D. Mengenalkan hierarki pewarisan lebih dahulu sebelum menguji apakah murid membedakan rancangan dan instans.
 
-### 6. [p1-006 • PCK • P.1 • MCMA]
+### 6. [p1-006 • PCK • P.6 • MCMA]
 
 Kelompok belajar kolaborasi Git pada proyek website kelas. Bukti pemahaman alur kerja yang layak diminta guru adalah ... Pilih semua yang tepat.
 
@@ -89,7 +89,7 @@ E. Mengumpulkan satu file ZIP terakhir tanpa riwayat perubahan.
 
 ### 7. [p1-007 • PCK • P.1 • PG]
 
-Pada kasus transaksi koperasi sekolah, setiap transaksi bisa berisi banyak jenis barang. Murid membuat satu kolom barang1, barang2, barang3 pada tabel transaksi. Pertanyaan pemantik terbaik adalah ...
+Pada kasus transaksi koperasi sekolah, setiap transaksi bisa berisi banyak jenis barang. Murid membuat satu kolom barang1, barang2, barang3 pada tabel transaksi. Langkah pemantik pembelajaran yang paling tepat adalah ...
 
 A. Menambah kolom barang hingga jumlah terbesar saat ini.
 B. Menyatukan daftar barang dan jumlah menjadi satu teks.
@@ -115,19 +115,19 @@ D. Meminta murid mahir menyelesaikan query teman yang kesulitan agar keluaran se
 
 ### 10. [p1-010 • PCK • P.2 • Kategori]
 
-Di laboratorium, empat murid belum mendapat komputer. Nilai keputusan guru sebagai Tepat atau Tidak tepat.
+Guru ingin semua murid dapat menguji query SQL. Empat murid belum mendapat komputer. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.
 
-1. Memberikan penilaian keterampilan komputer hanya kepada murid yang kebagian perangkat.
+1. Menetapkan nilai akhir keterampilan hanya dari murid yang mendapat komputer, tanpa memberi kesempatan asesmen setara kepada murid lain.
 2. Menyiapkan tugas prediksi query atau rancangan ERD saat menunggu giliran praktik.
 3. Menyusun giliran operator, penguji, dan pencatat sehingga semua berperan dan berganti peran.
 
 ### 11. [p1-011 • PCK • P.2 • MCMA]
 
-Salah satu murid memiliki kendala penglihatan dan kesulitan membaca tangkapan layar kode yang kecil. Penyesuaian apa yang tepat? Pilih semua.
+Murid diminta menelusuri percabangan untuk masukan tertentu. Seorang murid kesulitan membaca tangkapan layar kode yang kecil karena hambatan penglihatan. Pilih semua penyesuaian yang tepat.
 
-A. Mengurangi target menjadi hanya menonton teman tanpa kontribusi.
+A. Memperbesar judul slide sementara kode tetap disajikan sebagai tangkapan layar kecil.
 B. Memastikan kontras dan keterbacaan bahan praktik.
-C. Mengizinkan alternatif cara menjelaskan logika program selama mengukur tujuan yang sama.
+C. Mengizinkan murid menjelaskan jalur percabangan secara lisan atau tertulis untuk masukan yang sama.
 D. Mengecualikan murid dari asesmen agar tidak kesulitan.
 E. Menyediakan teks kode yang dapat diperbesar atau dibaca pembaca layar.
 
@@ -146,7 +146,7 @@ Dalam diskusi ERD ada murid yang sulit mengikuti penjelasan lisan di ruang bisin
 
 A. Menegur kurang fokus sebelum memeriksa hambatan akses.
 B. Memperkeras suara tanpa mengecek pemahaman.
-C. Memberi instruksi tertulis/visual dan mengecek akses serta pemahaman secara pribadi.
+C. Memberi instruksi tertulis dan ERD berlabel, lalu mengecek secara pribadi apakah murid dapat menjelaskan relasinya.
 D. Membebaskan murid dari penjelasan hubungan entitas dan hanya meminta salinan gambar agar tugasnya lebih ringan.
 
 ### 14. [p1-014 • PCK • P.3 • PG]
@@ -168,9 +168,9 @@ Dalam proyek penjadwalan piket lab, murid dapat menyusun urutan tugas tetapi bel
 
 ### 16. [p1-016 • PCK • P.3 • MCMA]
 
-Guru ingin suasana diskusi kode menyenangkan tetapi tetap menantang. Pilih praktik yang tepat.
+Dua kelompok memakai cara pencarian berbeda yang sama-sama lolos uji. Sebagian murid enggan menjelaskan caranya karena takut diejek. Pilih praktik guru yang mendukung diskusi aman dan menantang.
 
-A. Menyebut kode murid tertentu “paling bodoh” sebagai humor.
+A. Menutup pembahasan alternatif setelah satu kode berhasil dijalankan.
 B. Memberi kriteria keberhasilan yang jelas dan kesempatan memperbaiki produk.
 C. Memuji proses pengujian dan argumentasi, bukan hanya jawaban tercepat.
 D. Mewajibkan semua murid meniru satu cara tanpa berdiskusi.
@@ -190,17 +190,17 @@ D. Menguji target yang tidak ada lewat kartu array, lalu meminta revisi pemahama
 Murid menggunakan AI untuk membuat kode autentikasi dan menganggap hasilnya pasti aman. Guru sebaiknya ...
 
 A. Melarang pembahasan AI tanpa memeriksa kode murid.
-B. Meminta uji dan penjelasan kode serta peninjauan sandi, input, dan batas keluaran AI.
+B. Menguji kode bersama murid, memeriksa penyimpanan kata sandi dan validasi masukan, lalu membahas keterbatasan AI.
 C. Memberi nilai penuh setelah kode berjalan dan menunda pemeriksaan keamanan karena autentikasi sudah tampak berhasil.
 D. Mengunggah kredensial server sekolah ke layanan AI agar perbaikan dapat disesuaikan langsung dengan sistem sebenarnya.
 
 ### 19. [p1-019 • PCK • P.4 • Kategori]
 
-Guru memakai platform daring untuk penugasan RPL. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.
+Guru memakai platform daring agar murid membandingkan validasi formulir di browser dan server. Sebagian murid hanya dapat belajar luring. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.
 
-1. Memilih alat terutama dari jumlah fitur lalu menyesuaikan tujuan agar semua fitur dipakai.
+1. Memilih platform dari banyaknya fitur dan mengubah tujuan agar seluruh fitur dipakai.
 2. Mengunggah data identitas siswa asli ke layanan publik agar contoh terlihat realistis.
-3. Menyiapkan alternatif akses saat jaringan atau perangkat murid terbatas.
+3. Menyediakan contoh formulir dan server lokal yang dapat diuji saat akses daring terbatas.
 
 ### 20. [p1-020 • PCK • P.4 • MCMA]
 
@@ -241,9 +241,9 @@ D. Mengobservasi alur peminjaman, memodelkan relasi, lalu menguji dengan transak
 
 ### 24. [p1-024 • PCK • P.5 • Kategori]
 
-Guru mengadaptasi studi kasus untuk SMK. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.
+Guru memilih kasus koperasi setempat untuk pembelajaran entitas dan relasi di SMK. Pengalaman murid tentang koperasi beragam. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.
 
-1. Memakai contoh proses koperasi setempat tanpa menganggap semua murid memiliki pengalaman yang sama.
+1. Menggunakan transaksi tiruan untuk mengenali entitas dan relasi sambil menjelaskan proses koperasi yang belum dikenal murid.
 2. Memilih konteks hanya karena tren walaupun tidak mendukung kompetensi yang dinilai.
 3. Meminta murid yang belum mengenal koperasi menunggu tanpa aktivitas sampai teman lain selesai.
 
@@ -259,12 +259,12 @@ E. Menyamakan FIFO dengan selalu melayani permintaan yang paling singkat tanpa m
 
 ### 26. [p1-026 • PCK • P.5 • PG]
 
-Kelompok hendak memakai data asli pelanggan usaha keluarga siswa untuk praktik. Respons paling tepat adalah ...
+Guru ingin murid memodelkan data produk dan transaksi dari usaha keluarga yang mereka kenal. Kelompok hendak memakai data pelanggan asli. Respons paling tepat adalah ...
 
 A. Menghapus nama tetapi tetap membagikan nomor telepon.
 B. Membuat dataset sintetis yang mempertahankan kebutuhan usaha lokal serta membahas perlindungan data.
 C. Menaruh data asli di akun bersama agar seluruh kelompok dan guru dapat memeriksa hasil praktik dengan mudah.
-D. Membuang konteks usaha dan memakai tabel tanpa kebutuhan pengguna meski data sintetis dapat mempertahankan konteksnya.
+D. Meminta murid menyalin tabel contoh umum sebagai rancangan akhir untuk usaha tersebut.
 
 ### 27. [p1-027 • PCK • P.6 • PG]
 
@@ -306,7 +306,7 @@ D. Menyalin gambar kunci tanpa menjelaskan kardinalitas.
 
 Setelah kuis JOIN, 70% murid salah membedakan INNER dan LEFT JOIN. Langkah selanjutnya paling tepat adalah ...
 
-A. Mengulang penjelasan sintaks yang sama tanpa membedakan apakah sumber salah terletak pada data atau jenis JOIN.
+A. Memberikan contoh INNER JOIN dan LEFT JOIN yang seluruh barisnya memiliki pasangan.
 B. Menganalisis kesalahan, mengajar ulang memakai baris tanpa pasangan, lalu mengecek penalaran.
 C. Mengulang kuis sampai nilai naik tanpa membahas alasan salah, dengan asumsi pengulangan otomatis membentuk konsep.
 D. Mengajarkan rumus LEFT JOIN selalu sama banyak dengan tabel kiri tanpa memeriksa kemungkinan beberapa pasangan.
@@ -325,18 +325,18 @@ E. Tangkapan layar editor tanpa input dan hasil eksekusi.
 
 Tujuan belajar ialah murid mampu memecah program kasir menjadi fungsi dengan tanggung jawab jelas dan menjelaskan aliran datanya. Asesmen paling selaras adalah ...
 
-A. Meminta definisi fungsi tanpa penerapan pada kasir.
+A. Meminta murid menandai deklarasi dan pemanggilan fungsi pada program yang sudah dipecah.
 B. Memberi skor semakin tinggi untuk semakin banyak fungsi tanpa memeriksa tanggung jawab serta aliran datanya.
 C. Meminta murid menyalin hasil refaktor guru tanpa menjelaskan pemilihan parameter dan hasil setiap fungsi.
-D. Meminta refaktor, penjelasan kontrak fungsi, dan uji kesetaraan perilaku program.
+D. Meminta refaktor, penjelasan masukan-keluaran tiap fungsi, dan uji kesetaraan perilaku program.
 
 ### 34. [p1-034 • PCK • P.6 • Kategori]
 
-Nilai tindakan umpan balik berikut sebagai Tepat atau Tidak tepat.
+Query murid untuk menampilkan semua siswa tidak memunculkan siswa tanpa peminjaman. Guru ingin murid memahami penyebabnya dan merevisi query. Nilai umpan balik berikut sebagai Tepat atau Tidak tepat.
 
-1. Guru mempublikasikan peringkat murid paling banyak salah untuk mempermalukan mereka.
+1. Memberi query benar untuk disalin sebagai perbaikan akhir.
 2. Guru meminta murid memperbaiki hasilnya lalu menjelaskan perubahan dan alasan revisi.
-3. Guru menyebut bagian query yang sudah benar dan memberi petunjuk pada kondisi yang perlu diperiksa.
+3. Menunjukkan bagian query yang sudah benar, lalu meminta murid memeriksa hasil untuk siswa tanpa pasangan peminjaman.
 
 ### 35. [p1-035 • PCK • PF.1 • PG]
 
@@ -414,7 +414,7 @@ E. Menyatakan satu contoh target di posisi awal sudah membuktikan seluruh kemung
 
 Sebagian siswa memahami logika program tetapi kesulitan membaca instruksi teks panjang. Guru ingin mengukur logika seleksi kondisi. Penyesuaian terbaik adalah ...
 
-A. Memakai diagram alir dan contoh input-output untuk menjelaskan atau menerapkan logika yang sama.
+A. Memberi instruksi ringkas dan contoh masukan-keluaran, lalu meminta murid menyusun logika untuk kasus baru.
 B. Mengganti asesmen logika dengan hafalan istilah.
 C. Menurunkan target karena kesulitan membaca.
 D. Menetapkan kerapian tulisan jawaban sebagai ukuran utama meskipun sasaran yang diminta ialah logika seleksi.
@@ -475,13 +475,13 @@ D. Memakai soal akhir yang sudah dihafal sebagai satu-satunya bukti bahwa interv
 
 ### 50. [p1-050 • PCK • PF.5 • MCMA]
 
-Setelah proyek website, guru mengembangkan praktik melalui komunitas guru RPL. Tindakan yang etis dan bermanfaat adalah ... Pilih semua.
+Setelah proyek web, guru menemukan murid belum menguji formulir dengan masukan kosong. Guru meminta masukan komunitas RPL untuk memperbaiki pembelajaran pengujian. Pilih tindakan yang etis dan bermanfaat.
 
-A. Membagikan contoh rubrik dan data hasil belajar yang telah dianonimkan untuk mendapat masukan.
+A. Membagikan rubrik pengujian formulir dan hasil belajar anonim untuk mendapat masukan.
 B. Menyebarkan nilai beserta nomor telepon siswa kepada publik.
-C. Menguji masukan rekan pada kelas dan mengamati dampaknya.
+C. Menguji saran rekan pada pembelajaran kasus masukan kosong dan mengamati perubahan hasil kerja murid.
 D. Mendokumentasikan keterbatasan uji coba agar tidak mengklaim pasti berhasil.
-E. Mengklaim satu percobaan kecil membuktikan semua metode lain salah.
+E. Menetapkan saran rekan sebagai standar seluruh kelas sebelum menilai kecocokannya dengan masalah murid.
 
 ### 51. [p1-051 • PU • P.1 • PG]
 
@@ -521,9 +521,9 @@ D. Membagikan ringkasan berisi jawaban lalu menganggap salinan ringkasan sebagai
 
 ### 55. [p1-055 • PU • P.2 • Kategori]
 
-Kelas terdiri atas siswa dari beragam latar bahasa. Nilai tindakan berikut sebagai Tepat atau Tidak tepat.
+Dalam diskusi untuk memahami gagasan utama bacaan, siswa memiliki latar bahasa beragam. Nilai tindakan berikut sebagai Tepat atau Tidak tepat.
 
-1. Menyamakan aksen semua murid sebagai syarat sebelum gagasan mereka boleh didiskusikan.
+1. Menghentikan penjelasan gagasan untuk membetulkan setiap pelafalan yang sebenarnya sudah dipahami kelas.
 2. Guru menganggap aksen berbeda sebagai tanda kemampuan berpikir rendah.
 3. Guru memastikan istilah penting dipahami melalui contoh tanpa merendahkan bahasa rumah siswa.
 
@@ -544,7 +544,7 @@ Siswa pindahan belum mengenal istilah teknis yang telah dipelajari kelas. Langka
 A. Menyamakan tugas tanpa memeriksa prasyarat.
 B. Mensyaratkan hafalan seluruh istilah sebelum diskusi.
 C. Meminta teman menyelesaikan semua tugasnya.
-D. Mengecek prasyarat, memberi glosarium/contoh, dan meninjau dukungan dari kemajuannya.
+D. Mengecek istilah yang belum dipahami melalui contoh singkat.
 
 ### 58. [p1-058 • PU • P.3 • PG]
 
@@ -568,7 +568,7 @@ Murid mengeluhkan permainan kuis sangat seru tetapi tidak mengetahui tujuan bela
 Guru ingin siswa memakai AI untuk membuat rangkuman materi. Risiko utamanya ialah jawaban AI bisa keliru dan data siswa dapat terbuka. Langkah tepat adalah ...
 
 A. Memilih rangkuman dari kelancaran bahasa saja.
-B. Memeriksa sumber, membatasi data pribadi, dan meminta penjelasan dengan bahasa sendiri.
+B. Mencocokkan klaim rangkuman dengan sumber tepercaya, membatasi data pribadi, dan meminta penjelasan dengan bahasa sendiri.
 C. Menghapus nama saja lalu mengizinkan unggahan cerita keluarga yang masih dapat dikenali dari rincian kejadiannya.
 D. Meminta dua layanan AI menghasilkan jawaban serupa dan menganggap kesepakatan itu telah cukup memverifikasi isi.
 
@@ -576,7 +576,7 @@ D. Meminta dua layanan AI menghasilkan jawaban serupa dan menganggap kesepakatan
 
 Guru memilih media pembelajaran digital untuk kelas dengan akses beragam. Pertimbangan yang tepat adalah ... Pilih semua.
 
-A. Tampilan dan petunjuk mudah diakses dengan kebutuhan murid yang beragam.
+A. Tampilan dan petunjuk dapat diakses oleh murid dengan beragam kebutuhan.
 B. Selalu mewajibkan gawai spesifikasi tinggi walau banyak murid tidak memiliki.
 C. Data murid yang diperlukan dibatasi sesuai tujuan.
 D. Memilih media hanya karena sedang populer.
@@ -584,7 +584,7 @@ E. Tersedia versi berukuran ringan atau alternatif luring.
 
 ### 62. [p1-062 • PU • P.5 • PG]
 
-Guru akan mengajar perbandingan dengan contoh kehidupan sekitar. Sebagian siswa belum familiar dengan konteks pasar tradisional. Pilihan terbaik adalah ...
+Guru akan mengajar perbandingan dengan contoh kehidupan sekitar. Sebagian siswa belum akrab dengan konteks pasar tradisional. Pilihan terbaik adalah ...
 
 A. Menambah soal pasar tanpa menjelaskan istilah.
 B. Menghapus seluruh konteks nyata dari pembelajaran.
@@ -648,8 +648,8 @@ D. Menjanjikan kerahasiaan mutlak dan mengabaikan tanda bahaya karena murid memi
 
 Guru mendapati penilaiannya keliru dan mendapat permintaan menaikkan nilai kerabat tanpa bukti tugas tambahan. Nilai respons berikut sebagai Tepat atau Tidak tepat.
 
-1. Guru menyampaikan kriteria penilaian sebelum tugas dan menerapkannya konsisten.
-2. Guru mengakui kekeliruan penjelasannya lalu memperbaiki di depan kelas secara profesional.
+1. Guru meninjau kembali nilai memakai kriteria yang sudah disampaikan sebelum tugas.
+2. Guru mengakui kekeliruan penilaian, memperbaikinya berdasarkan bukti, dan menyampaikan koreksi kepada pihak terkait.
 3. Guru menaikkan nilai murid tertentu karena kedekatan pribadi tanpa bukti belajar.
 
 ### 70. [p1-070 • PU • K.2 • PG]
@@ -685,7 +685,7 @@ D. Menyepakati aturan diskusi, waktu berpikir, dan giliran berbagi yang aman.
 Dalam satu semester, beberapa murid berhenti mencoba setelah mendapat peringkat rendah. Guru ingin membangun kebiasaan perbaikan yang konsisten. Nilai keputusan berikut sebagai Tepat atau Tidak tepat.
 
 1. Menetapkan kelompok ranking rendah tetap selama setahun agar dukungan tidak perlu ditinjau lagi.
-2. Guru menjadikan ranking publik sebagai identitas kemampuan yang tidak dapat berubah.
+2. Menilai perkembangan hanya dari perubahan peringkat meskipun capaian kriteria belajar murid meningkat.
 3. Guru memberi kesempatan revisi tugas berdasarkan kriteria yang jelas.
 
 ### 74. [p1-074 • PU • S.1 • PG]
@@ -702,7 +702,7 @@ D. Menjanjikan perubahan nilai anak untuk meredakan keberatan sebelum memeriksa 
 Guru memberi umpan balik kepada siswa yang berbeda latar bahasa dan gaya komunikasi. Cara yang tepat adalah ... Pilih semua.
 
 A. Menggunakan kalimat jelas dan contoh spesifik.
-B. Memastikan siswa memahami tindak lanjut dengan kesempatan bertanya.
+B. Meminta murid menjelaskan kembali langkah perbaikan dan memberi kesempatan bertanya.
 C. Mengejek pengucapan bahasa siswa.
 D. Menyediakan saluran tertulis/visual bila membantu komunikasi.
 E. Memotong penjelasan siswa karena lambat menyampaikan ide.
@@ -713,7 +713,7 @@ Seorang siswa sering absen sehingga tertinggal tugas. Guru mata pelajaran belum 
 
 A. Meminta tugas selesai sebelum mencari sebab absen.
 B. Mengirim rincian masalah ke seluruh wali murid agar memperoleh dukungan luas meskipun kebutuhannya belum dipetakan.
-C. Berkoordinasi dengan wali/BK secara proporsional, mendengar murid dan keluarga, lalu menyusun dukungan.
+C. Berkoordinasi dengan wali kelas dan/atau guru BK secara proporsional, mendengar murid dan keluarga, lalu menyusun dukungan.
 D. Menetapkan nilai nol untuk seluruh tugas tertinggal dan menutup kesempatan perbaikan sebelum alasan absen diketahui.
 
 ### 77. [p1-077 • PU • S.2 • Kategori]
@@ -737,14 +737,14 @@ D. Mengirim daftar kegiatan tanpa bukti hasil dan menolak peninjauan masukan kar
 
 Guru menilai proyek lintas mata pelajaran. Hasil belajar paling menggambarkan tujuan pendidikan yang luas adalah ...
 
-A. Meniru produk tanpa dapat menjelaskan keputusan.
+A. Menghasilkan produk sesuai contoh dan menjelaskan langkah kerja, tetapi belum menerapkannya pada masalah baru.
 B. Mencapai angka tinggi tanpa bukti penerapan.
 C. Menyelesaikan cepat tanpa alasan dan tanggung jawab.
-D. Murid menalar, bekerja sama secara etis, dan menerapkan pengetahuan pada masalah bermakna.
+D. Menalar, bekerja sama secara etis, dan menerapkan pengetahuan pada masalah bermakna.
 
-### 80. [p1-080 • PU • PF.3 • MCMA]
+### 80. [p1-080 • PU • P.5 • MCMA]
 
-Dalam proyek sains lingkungan, sekolah memiliki keterbatasan alat dan kondisi lingkungan yang berbeda. Adaptasi yang tetap menjaga kompetensi adalah ... Pilih semua.
+Dalam proyek lingkungan, murid harus mencatat pengamatan, membandingkan data, dan menarik simpulan. Alat sekolah terbatas. Pilih adaptasi sumber belajar yang tetap mendukung tujuan tersebut.
 
 A. Menggunakan pengamatan lingkungan setempat dengan prosedur aman dan data yang dapat dicatat.
 B. Menyediakan format pencatatan sederhana dan contoh analisis data.
@@ -801,7 +801,7 @@ Contoh dua objek dari satu class membedakan cetak biru dan instans sambil memper
 
 ### 6. p1-006 — A, B, D
 
-Commit, branch/merge, dan diff merupakan bukti proses version control; satu file ZIP atau satu akun bersama menghilangkan jejak kontribusi.
+Commit, penjelasan merge, dan diff memberi bukti proses serta pemahaman kolaborasi Git. ZIP akhir hanya menunjukkan produk; akun bersama mengaburkan kontribusi individu.
 
 - A: Commit bermakna memperlihatkan unit perubahan dan alasan pengerjaannya.
 - B: Penjelasan merge dan konflik menunjukkan pemahaman penggabungan pekerjaan.
@@ -822,7 +822,7 @@ Kasus enam barang menonjolkan keterbatasan kolom berulang dan kebutuhan tabel de
 
 Trace table membantu menjelaskan keadaan program, bukan hanya hasil akhir. Membandingkan hasil merupakan kesempatan refleksi.
 
-- 1: Nilai awal memengaruhi hasil iterasi pertama dan seluruh keadaan berikutnya; mengabaikannya membuat pelacakan tidak sah.
+- 1: Nilai awal diperlukan untuk menelusuri program secara lengkap; mengabaikannya dapat menyebabkan langkah pertama dan hasil pelacakan keliru.
 - 2: Selisih pelacakan dan eksekusi menjadi bukti untuk meninjau langkah yang salah.
 - 3: Keluaran saja dapat kebetulan benar dan menyembunyikan penalaran yang keliru.
 
@@ -839,7 +839,7 @@ Diferensiasi menyesuaikan jalan menuju tujuan yang sama berdasarkan kebutuhan ny
 
 Rotasi dan tugas tanpa perangkat menjaga partisipasi serta kesempatan menunjukkan capaian. Penilaian harus adil terhadap akses.
 
-- 1: Murid tanpa perangkat belum memperoleh kesempatan yang setara untuk menunjukkan keterampilan.
+- 1: Nilai akhir itu mengecualikan murid yang belum mendapat kesempatan menunjukkan keterampilan; ini berbeda dari asesmen bergiliran.
 - 2: Prediksi query dan ERD menjaga aktivitas berpikir saat menunggu praktik.
 - 3: Rotasi memastikan akses ke praktik dan tanggung jawab dibagi.
 
@@ -847,9 +847,9 @@ Rotasi dan tugas tanpa perangkat menjaga partisipasi serta kesempatan menunjukka
 
 Penyesuaian akses dan cara respons dapat menjaga target kompetensi. Menghapus kesempatan praktik atau asesmen bukan pilihan inklusif.
 
-- A: Menonton saja mengurangi kesempatan mencapai keterampilan yang ditargetkan.
+- A: Perubahan judul tidak mengatasi hambatan membaca kode yang diperlukan untuk menelusuri percabangan.
 - B: Kontras dan keterbacaan mengurangi hambatan visual pada bahan.
-- C: Cara menjelaskan boleh disesuaikan bila tujuan kompetensi tetap terukur.
+- C: Cara menyampaikan jawaban dapat disesuaikan sambil tetap meminta penalaran jalur percabangan untuk masukan yang sama.
 - D: Pengecualian asesmen menghilangkan bukti capaian alih-alih memperbaiki aksesnya.
 - E: Kode berbentuk teks memungkinkan pembesaran dan teknologi bantu.
 
@@ -866,9 +866,9 @@ Tantangan pengayaan dan scaffolding disesuaikan kesiapan. Tutor sebaya boleh mem
 
 Akses multimodal dan pengecekan pemahaman membuat murid dapat ikut tanpa distigma.
 
-- A: Teguran publik menstigma tanpa mengurangi kebisingan atau hambatan komunikasi.
+- A: Teguran sebelum memeriksa hambatan akses tidak mengatasi kesulitan mengikuti penjelasan di ruang bising.
 - B: Volume saja tidak menjamin instruksi terbaca atau dipahami.
-- C: Instruksi visual dan cek pribadi menanggapi hambatan spesifik tanpa menurunkan tujuan.
+- C: Instruksi tertulis dan label membantu akses penjelasan; murid tetap diminta menjelaskan hubungan entitas.
 - D: Pembebasan tujuan menghilangkan kesempatan belajar padahal akses dapat diperbaiki.
 
 ### 14. p1-014 — B
@@ -892,7 +892,7 @@ Masalah penjadwalan nyata, tujuan yang disadari, dan refleksi dampak menghubungk
 
 Keamanan psikologis, kesempatan revisi, dan penghargaan atas alasan membangun keterlibatan tanpa menurunkan standar.
 
-- A: Penghinaan merusak rasa aman meskipun disebut humor.
+- A: Keberhasilan satu kode tidak menghilangkan manfaat membandingkan alasan dan hasil pengujian solusi lain.
 - B: Kriteria dan kesempatan revisi menjaga tantangan sekaligus memberi arah perbaikan.
 - C: Pengujian dan argumentasi merupakan proses belajar yang layak dihargai.
 - D: Satu cara wajib tanpa diskusi menutup kesempatan menalar alternatif yang sah.
@@ -918,11 +918,11 @@ Literasi AI mencakup verifikasi fungsi, keamanan, sumber data, dan tanggung jawa
 
 ### 19. p1-019 — Tidak tepat / Tidak tepat / Tepat
 
-Penggunaan TIK perlu mempertimbangkan akses, privasi, dan kesesuaian tujuan, bukan semata fitur.
+Pemilihan platform harus mendukung pengujian validasi, menjaga privasi, dan menyediakan akses yang sesuai kondisi murid. Banyak fitur atau data identitas asli tidak menjamin tujuan itu tercapai.
 
-- 1: Tujuan belajar harus mengarahkan pilihan alat; banyak fitur belum membuktikan manfaat.
+- 1: Jumlah fitur tidak menunjukkan apakah platform membantu murid memahami perbedaan validasi browser dan server.
 - 2: Identitas asli di layanan publik tidak diperlukan dan melanggar prinsip privasi.
-- 3: Alternatif akses menjaga kesempatan belajar saat sarana berbeda.
+- 3: Contoh lokal mempertahankan kesempatan membandingkan validasi browser dan server tanpa bergantung pada jaringan luar.
 
 ### 20. p1-020 — A, C, D
 
@@ -936,7 +936,7 @@ Representasi pesan, simulasi lokal, dan prediksi-uji mempertahankan tujuan API k
 
 ### 21. p1-021 — C
 
-Teknologi alat, bukan tujuan. Pilihan didasarkan pada nilai tambah pedagogis dan kondisi akses.
+Alat dipilih jika membantu murid menguji dan merevisi relasi pada ERD; kertas tetap dapat dipakai bila tujuan itu tercapai.
 
 - A: Popularitas tidak membuktikan manfaat atau akses yang sesuai kelas.
 - B: Registrasi yang menyita waktu tanpa manfaat dapat menghambat tujuan.
@@ -965,7 +965,7 @@ Kebutuhan lokal yang konkret dapat menghubungkan konsep ERD, relasi, dan validas
 
 Konteks lokal membantu jika relevan dan membuka beragam pengalaman; guru tidak boleh berasumsi semua murid sama.
 
-- 1: Konteks koperasi dapat membantu jika guru tidak menyeragamkan pengalaman murid.
+- 1: Transaksi setempat menjadi sumber belajar pemodelan data; penjelasan proses membantu murid dengan pengalaman awal berbeda.
 - 2: Tren tanpa hubungan dengan kompetensi tidak memberi alasan pedagogis pemilihan kasus.
 - 3: Perbedaan pengalaman perlu dukungan atau konteks setara, bukan penghentian kesempatan belajar.
 
@@ -986,7 +986,7 @@ Kasus lokal tetap dapat dipakai tanpa membuka data pribadi; tujuan pembelajaran 
 - A: Nomor telepon tetap dapat mengidentifikasi pelanggan; menghapus nama saja belum menghilangkan paparan.
 - B: Dataset sintetis mempertahankan proses usaha sebagai sumber belajar tanpa mengekspos pelanggan.
 - C: Akun bersama memperluas akses ke data yang tidak diperlukan untuk tujuan model basis data.
-- D: Konteks lokal yang relevan tidak perlu dibuang jika dapat digunakan dengan data sintetis.
+- D: Tabel contoh dapat menjadi bantuan awal, tetapi salinannya belum membuktikan rancangan sesuai kebutuhan usaha yang sedang dipelajari.
 
 ### 27. p1-027 — A
 
@@ -1028,7 +1028,7 @@ Umpan balik spesifik memicu pengujian model terhadap kasus sehingga siswa memaha
 
 Hasil asesmen harus dipakai untuk mengubah pengajaran. Data tanpa pasangan memberi bukti konkret perbedaan jenis JOIN.
 
-- A: Ceramah sama tanpa analisis kesalahan belum menanggapi bukti asesmen.
+- A: Data dengan semua baris berpasangan belum memperlihatkan perbedaan yang menjadi kesulitan kelas; B menargetkan baris tanpa pasangan dan mengecek ulang penalaran.
 - B: Baris tanpa pasangan memperlihatkan perbedaan INNER dan LEFT JOIN secara konkret.
 - C: Kuis berulang tanpa umpan balik tidak menargetkan penyebab salah.
 - D: LEFT JOIN dapat menghasilkan lebih banyak baris kiri jika ada banyak pasangan; rumus itu keliru.
@@ -1047,25 +1047,25 @@ Input batas, perbandingan expected-actual, dan alasan pemilihan kasus menunjukka
 
 Refaktor beralasan disertai pengujian mengukur pembagian tanggung jawab dan aliran data, bukan jumlah fungsi atau hafalan definisi.
 
-- A: Definisi saja tidak mengukur kemampuan membagi program kasir.
+- A: Menandai fungsi mengukur pengenalan struktur, belum kemampuan membagi tanggung jawab dan menjelaskan aliran data.
 - B: Banyak fungsi belum menjamin tanggung jawab jelas atau data mengalir benar.
 - C: Menyalin hasil refaktor tidak mengungkap alasan pemisahan.
-- D: Refaktor, penjelasan kontrak fungsi, dan uji perilaku menilai tujuan secara langsung.
+- D: Refaktor, penjelasan masukan-keluaran tiap fungsi, dan pengujian perilaku mengukur pembagian tanggung jawab serta aliran data secara langsung.
 
 ### 34. p1-034 — Tidak tepat / Tepat / Tepat
 
 Umpan balik harus spesifik, aman, dan dapat ditindaklanjuti; revisi menunjukkan belajar dari asesmen.
 
-- 1: Peringkat untuk mempermalukan merusak rasa aman dan bukan petunjuk teknis.
+- 1: Salinan query dapat memperbaiki keluaran, tetapi belum menunjukkan murid memahami penyebab hilangnya baris.
 - 2: Penjelasan revisi membantu memastikan murid memahami perubahannya.
-- 3: Petunjuk lokasi dan bagian yang benar membuat revisi dapat dilakukan.
+- 3: Petunjuk ini menghubungkan hasil yang hilang dengan perilaku penggabungan tabel tanpa langsung memberikan seluruh solusi.
 
 ### 35. p1-035 — A
 
 Kompetensi SMK mengaitkan penguasaan teknis, penalaran, kerja sama, etika, dan kemampuan beradaptasi.
 
 - A: Keputusan teknis, tanggung jawab, dan evaluasi pengguna menilai kecakapan kejuruan secara utuh.
-- B: Estetika saja tidak mengukur fungsi, penalaran, atau tanggung jawab.
+- B: Kerapian halaman belum cukup membuktikan fungsi, penalaran teknis, dan tanggung jawab kerja yang menjadi tujuan kejuruan.
 - C: Peniruan tampilan tidak menunjukkan kemampuan memenuhi kebutuhan.
 - D: Kecepatan mengetik bukan pengganti kualitas solusi dan etika kerja.
 
@@ -1124,19 +1124,19 @@ Kasus batas 74, 75, 76 secara langsung menampakkan efek operator perbandingan.
 
 ### 42. p1-042 — A, D
 
-Spesifikasi menentukan oracle uji: kemunculan pertama serta kondisi tidak ditemukan termasuk array kosong perlu dibedakan; hasil aktual bukan definisi hasil benar.
+Spesifikasi menentukan hasil acuan pengujian: kemunculan pertama dan kondisi tidak ditemukan, termasuk array kosong, perlu dibedakan. Keluaran program bukan penentu hasil yang seharusnya benar.
 
 - A: Kedua input harus menghasilkan -1 sesuai kontrak tidak ditemukan.
 - B: Nilai -1 sengaja menjadi penanda tidak ditemukan dan bukan indeks elemen.
-- C: Expected harus berasal dari spesifikasi agar tes dapat mendeteksi kesalahan program.
+- C: Hasil yang diharapkan harus berasal dari spesifikasi agar tes dapat mendeteksi kesalahan program.
 - D: Target berulang menguji syarat indeks pertama dalam spesifikasi.
 - E: Satu contoh awal tidak mencakup data berulang, kosong, atau target tidak ada.
 
 ### 43. p1-043 — A
 
-Representasi visual dan contoh mengurangi hambatan bahasa tanpa menghilangkan tuntutan logika seleksi.
+Dukungan mengurangi hambatan bahasa sambil mempertahankan tuntutan menyusun logika seleksi. Hafalan istilah, penurunan target, dan penilaian tulisan tangan tidak mengukur tujuan yang sama.
 
-- A: Diagram dan contoh menurunkan hambatan membaca sambil tetap mengukur logika.
+- A: Instruksi ringkas mengurangi hambatan membaca; murid tetap harus menyusun logika, bukan menyalin diagram solusi yang sudah lengkap.
 - B: Hafalan istilah mengganti kompetensi seleksi kondisi.
 - C: Hambatan bahasa tidak membuktikan ketidakmampuan logika.
 - D: Tulisan tangan bukan sasaran pemrograman yang diukur.
@@ -1199,11 +1199,11 @@ Perbaikan profesional bertumpu pada identifikasi masalah, tindakan beralasan, bu
 
 Pengembangan praktik harus reflektif, terbuka pada bukti, dan melindungi identitas murid.
 
-- A: Data anonim dan rubrik memungkinkan masukan profesional sambil menjaga identitas.
+- A: Rubrik dan hasil anonim membantu rekan menelaah masalah pembelajaran pengujian tanpa membuka identitas murid.
 - B: Nilai dan kontak publik melampaui kebutuhan telaah praktik.
-- C: Masukan yang diuji menghasilkan bukti relevansi pada kelas sendiri.
+- C: Uji pada kesulitan yang ditemukan memberi bukti apakah saran membantu murid merancang dan menjelaskan pengujian.
 - D: Keterbatasan membantu menilai jangkauan temuan secara proporsional.
-- E: Satu percobaan kecil tidak membandingkan seluruh metode atau konteks.
+- E: Saran perlu ditelaah dan diuji dalam konteks kelas; penerapan langsung belum memberi dasar bahwa masalah pembelajaran tertangani.
 
 ### 51. p1-051 — C
 
@@ -1245,7 +1245,7 @@ Kesetaraan tujuan dapat disertai variasi dukungan agar hambatan akses tidak meng
 
 Pembelajaran responsif menghargai identitas bahasa sekaligus menjaga target akademik.
 
-- 1: Keseragaman aksen bukan prasyarat bernalar; syarat ini menghalangi partisipasi.
+- 1: Koreksi setiap pelafalan menghambat penyampaian gagasan yang sudah dapat dipahami, sementara tujuan diskusi bukan latihan pelafalan.
 - 2: Aksen tidak menunjukkan tingkat kemampuan berpikir.
 - 3: Contoh istilah membantu akses tanpa merendahkan bahasa rumah.
 
@@ -1261,12 +1261,12 @@ Peran, pemantauan partisipasi, dan scaffolding mendukung keterlibatan seluruh si
 
 ### 57. p1-057 — D
 
-Dukungan spesifik berdasarkan prasyarat lebih efektif daripada stigma atau tuntutan tanpa bantuan.
+Langkah awal ialah memetakan kesulitan istilah, bukan langsung menyamakan tugas, mensyaratkan seluruh hafalan, atau menyerahkan pekerjaan kepada teman. Dukungan dipilih setelah kebutuhan diketahui.
 
 - A: Kesetaraan kesempatan memerlukan dukungan terhadap prasyarat yang belum dikenal.
 - B: Hafalan menyeluruh sebagai syarat partisipasi menghambat bantuan bertahap yang diperlukan.
 - C: Pengambilalihan tugas tidak memberi kesempatan atau bukti pemahaman murid pindahan.
-- D: Diagnosis dan dukungan ringkas menanggapi kebutuhan awal dan dapat disesuaikan dari kemajuan.
+- D: Pemeriksaan awal memetakan istilah atau prasyarat yang perlu didukung; hasilnya menjadi dasar memilih glosarium dan bantuan berikutnya.
 
 ### 58. p1-058 — A
 
@@ -1370,8 +1370,8 @@ Etika menuntut empati dan privasi; jika terdapat risiko keselamatan, guru mengik
 
 Keteladanan ditunjukkan oleh keadilan, integritas, dan tanggung jawab memperbaiki kesalahan.
 
-- 1: Kriteria yang diketahui dan konsisten menunjukkan keadilan penilaian.
-- 2: Mengakui dan memperbaiki kekeliruan mencontohkan integritas serta tanggung jawab.
+- 1: Peninjauan memakai kriteria yang sama menjaga keadilan saat memperbaiki kesalahan penilaian.
+- 2: Koreksi berbasis bukti dan komunikasi kepada pihak terkait menunjukkan integritas serta tanggung jawab atas penilaian.
 - 3: Kedekatan pribadi tidak menjadi bukti capaian belajar.
 
 ### 70. p1-070 — C
@@ -1397,8 +1397,8 @@ Pola pikir bertumbuh tampak dalam penerimaan masukan, eksperimen terukur, dan ti
 
 Keputusan guru perlu konsisten membangun partisipasi dan rasa aman untuk mengembangkan potensi semua murid.
 
-- A: Label pendiam menghakimi tanpa membuka ruang kontribusi.
-- B: Pemanggilan dengan ancaman malu mengurangi rasa aman.
+- A: Pelabelan dari frekuensi bicara mengabaikan kesempatan dan hambatan murid untuk berpartisipasi.
+- B: Menegur ketidaksiapan sebelum memberi waktu berpikir belum mengatasi hambatan partisipasi.
 - C: Dominasi tetap tidak memberi kesempatan berkembang bagi yang lain.
 - D: Waktu berpikir dan giliran aman membangun partisipasi yang konsisten.
 
@@ -1407,7 +1407,7 @@ Keputusan guru perlu konsisten membangun partisipasi dan rasa aman untuk mengemb
 Budaya belajar positif menekankan perkembangan, standar yang jelas, dan peluang belajar dari kesalahan.
 
 - 1: Kelompok tetap dari ranking mengabaikan kemajuan dan kebutuhan yang berubah.
-- 2: Ranking sebagai identitas tetap menutup pandangan tentang kemajuan.
+- 2: Peringkat menunjukkan posisi relatif; peringkat yang tetap tidak meniadakan peningkatan capaian kriteria belajar.
 - 3: Revisi dengan kriteria memberi jalur nyata untuk memperbaiki capaian.
 
 ### 74. p1-074 — B
@@ -1424,7 +1424,7 @@ Komunikasi inklusif dan empatik mencari pemahaman bersama dan tindakan yang berb
 Umpan balik inklusif menyesuaikan cara komunikasi sambil menghargai martabat dan kebutuhan murid.
 
 - A: Kalimat dan contoh spesifik memperjelas pesan perbaikan.
-- B: Kesempatan bertanya mengecek apakah pesan dapat ditindaklanjuti.
+- B: Penjelasan kembali memberi bukti apakah murid memahami langkah perbaikan; kesempatan bertanya membantu mengklarifikasi bagian yang belum jelas.
 - C: Ejekan pengucapan menstigma latar bahasa.
 - D: Saluran visual atau tertulis membantu kebutuhan komunikasi tertentu.
 - E: Memotong penjelasan menghilangkan informasi dan partisipasi murid.
@@ -1451,7 +1451,7 @@ Kolaborasi memerlukan komunikasi terarah dan perlindungan kerahasiaan data murid
 Komunitas pembelajaran berguna ketika praktik, bukti, dan refleksi dibagikan secara bertanggung jawab.
 
 - A: Kontribusi bukti dan tindak lanjut menjadikan komunitas tempat belajar profesional bersama.
-- B: Kecepatan diskusi tidak membenarkan penghilangan atribusi karya rekan.
+- B: Materi rekan perlu dibagikan dengan atribusi yang sesuai; penghilangan atribusi tidak menunjukkan kontribusi profesional yang bertanggung jawab.
 - C: Satu konteks tidak cukup mendukung penerapan universal.
 - D: Daftar aktivitas tanpa bukti dan refleksi sulit dipakai untuk menilai atau memperbaiki praktik.
 
@@ -1459,14 +1459,14 @@ Komunitas pembelajaran berguna ketika praktik, bukti, dan refleksi dibagikan sec
 
 Tujuan pendidikan mencakup penguasaan pengetahuan, karakter, kolaborasi, dan penerapan yang bertanggung jawab.
 
-- A: Kemiripan produk tanpa alasan belum menunjukkan penguasaan atau kemandirian berpikir.
+- A: Produk dan penjelasan langkah menunjukkan sebagian capaian, tetapi belum menunjukkan penerapan pada masalah baru sebagaimana tujuan pendidikan yang lebih luas.
 - B: Angka saja belum memberi bukti penerapan pengetahuan, karakter, dan kolaborasi.
 - C: Kecepatan tanpa penalaran dan tanggung jawab belum menunjukkan tujuan pendidikan secara utuh.
 - D: Penalaran, etika, kolaborasi, dan penerapan memberi bukti hasil pendidikan yang lebih lengkap.
 
 ### 80. p1-080 — A, B, D
 
-Konteks lokal dapat menggantikan media mahal jika tujuan dan penalaran tetap dipertahankan secara aman.
+Pengamatan setempat yang aman menyediakan sumber data; format pencatatan dan contoh analisis membantu mengolahnya. Membandingkan hasil dengan konsep serta membahas keterbatasan menjaga ketepatan simpulan. Tujuan analisis tidak dihapus karena alat terbatas.
 
 - A: Pengamatan aman dengan prosedur jelas memberi data lokal yang dapat dianalisis.
 - B: Format sederhana dan contoh membantu mengatasi kebutuhan prasyarat analisis.
