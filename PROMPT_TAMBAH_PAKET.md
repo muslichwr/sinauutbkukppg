@@ -4,6 +4,8 @@ Tambahkan **satu paket simulasi ujian penuh berikutnya**: tepat **80 soal baru (
 
 Gunakan Juknis sebagai otoritas; PDF panduan definitif sebagai inspirasi tingkat penalaran/kualitas distraktor, bukan sebagai kisi-kisi baru. Baca seluruh paket lama, variasikan indikator, konteks kasus RPL/PPLG untuk PCK, kualitas bukti/stimulus, dan tindakan pedagogis. Hindari duplikasi substansi atau hanya mengganti tokoh/angka; jangan salin contoh soal pendamping mentah-mentah.
 
+Baca `docs/PENYELARASAN_PPG_UKPPPG.md` sebagai pedoman konsep PPG dan celah cakupan paket lama. Mulai dari kode resmi, pilih konsep pendukung yang diperlukan, lalu susun kasus pengambilan keputusan. Jangan menentukan bobot per mata kuliah, menguji hafalan nama teori/produk perkuliahan, atau menulis ulang Paket 1 dan 2. Untuk PCK pertahankan integrasi materi empat elemen CP RPL dengan keputusan pedagogis; untuk PU gunakan konteks umum. Utamakan pendalaman yang belum beragam, bukan mengulang pola kasus lama.
+
 Untuk setiap butir, verifikasi satu kunci yang tepat (atau kombinasi/kategori valid), pembahasan yang membedakan opsi, pemetaan kode, dan kelayakan kesulitan. Integrasikan sebagai paket baru tanpa menimpa soal/riwayat lama. Jalankan tes jumlah, komposisi, tipe kunci, ID unik, tampilan paket baru, penilaian dan pembahasan. Jangan mengklaim telah menguji hal yang tidak diuji.
 
 Laporkan paket ke berapa, kode yang tercakup, komposisi tiga bentuk soal (rancangan latihan), temuan audit, dan hasil validasi.

@@ -14,6 +14,13 @@
       "version": "2026-11-18.1",
       "file": "paket_2.json",
       "reviewFile": "references/Paket_2_dan_Pembahasan.md"
+    },
+    {
+      "id": 3,
+      "title": "Paket 3",
+      "version": "2026-11-18.1",
+      "file": "paket_3.json",
+      "reviewFile": "references/Paket_3_dan_Pembahasan.md"
     }
   ]
 }

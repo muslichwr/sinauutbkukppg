@@ -47,3 +47,7 @@ Jangan memodifikasi proyek lain atau mempublikasikan sesuatu tanpa diminta.
 ## Pembekuan Paket 1 setelah finalisasi
 
 Paket 1 versi `2026-11-18.6` dibekukan. Jangan melakukan penyuntingan tambahan untuk preferensi gaya atau mengulang audit tanpa masalah substansial yang teridentifikasi. Koreksi substansial harus dicatat alasannya, memakai versi bank baru, dan mempertahankan snapshot riwayat. Penambahan Paket 2 tidak boleh mengubah Paket 1. Lihat `docs/FINALISASI_PAKET_1.md`.
+
+## Penyelarasan substansi PPG untuk paket berikutnya
+
+Gunakan `docs/PENYELARASAN_PPG_UKPPPG.md`: tentukan subkompetensi Juknis dahulu, baru konsep PPG yang mendukung dan keputusan guru pada kasus. Nama/jumlah mata kuliah bukan kisi-kisi atau bobot resmi. PPL hanya sumber inspirasi kasus; kegiatan/produk Projek Kepemimpinan, Seminar PPG, dan Pengembangan Kebugaran Jasmani tidak dijadikan topik tersendiri tanpa hubungan langsung dengan indikator. Kolaborasi, inovasi, dan refleksi tetap boleh diuji menurut indikator yang sesuai. Paket 1 dan 2 tidak ditulis ulang untuk penyelarasan ini; gunakan hasil audit cakupan untuk variasi paket baru.

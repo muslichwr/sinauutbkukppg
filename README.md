@@ -1,6 +1,6 @@
 # Drill UTBK UKPPPG 2026 — PPLG/RPL
 
-Latihan orisinal, bukan soal resmi/bocoran. Satu simulasi selalu **80 soal: 50 PCK + 30 PU**, meliputi PG, PGK Kategori, MCMA, dan 17 subkompetensi. Tersedia **Paket 1** versi `2026-11-18.6` (dibekukan) dan **Paket 2** versi `2026-11-18.1`. Lihat [laporan Paket 2](docs/PAKET_2_SIAP.md).
+Latihan orisinal, bukan soal resmi/bocoran. Satu simulasi selalu **80 soal: 50 PCK + 30 PU**, meliputi PG, PGK Kategori, MCMA, dan 17 subkompetensi. Tersedia **Paket 1** versi `2026-11-18.6` (dibekukan), **Paket 2** dan **Paket 3** masing-masing versi `2026-11-18.1`. Lihat [laporan Paket 2](docs/PAKET_2_SIAP.md) dan [laporan Paket 3](docs/PAKET_3_SIAP.md).
 
 ## Cara memakai
 
@@ -61,7 +61,7 @@ Tes memakai profil browser terisolasi dan tidak menyentuh progres profil belajar
 
 ## Menambah paket berikutnya
 
-Paket 2 sudah tersedia. Kirim `PROMPT_TAMBAH_PAKET.md` untuk Paket 3 dan seterusnya. Gunakan nomor serta jalur baru; jangan menimpa paket yang tersedia. Contoh langkah Paket 3:
+Paket 3 sudah tersedia. Kirim `PROMPT_TAMBAH_PAKET.md` hanya jika kelak membutuhkan paket berikutnya. Gunakan nomor serta jalur baru; jangan menimpa paket yang tersedia. Untuk Paket 4, sesuaikan contoh pola di bawah menjadi nomor 4:
 
 1. Membaca paket lama dan rujukan, menulis `data/paket_3.json`: 80 butir baru, 50/30, tiga bentuk, 17 kode. Tiap butir memuat `package: 3`, `id: 1..80`, UID `p3-001` dst., `code`, `section`, `type`, `difficulty`, `cp_element`, `stem`, `options`, `key`, `why`, dan `explanations` satu alasan per opsi.
 2. Menambahkan entri katalog ID 3 dengan judul, versi, file tersebut, dan `reviewFile: references/Paket_3_dan_Pembahasan.md`. Jalur review wajib unik, `.md`, dan di luar arsip. Jangan menimpa Paket 1 atau Paket 2.
