@@ -1,5 +1,7 @@
 # Verifikasi faktual — 18 November 2026
 
+Tambahan Mode Belajar: `node tests/study.cjs` lulus pada Chrome desktop file:// offline menggunakan dependensi QA yang sudah tersedia. Satu rangkaian memeriksa PG benar/salah, MCMA dan Kategori yang tidak dinilai saat klik opsi, tombol lihat tanpa menjawab, alasan dari bank, navigasi, refresh, akses ketiga paket, penguncian simulasi, dan kesamaan snapshot/riwayat simulasi sebelum-sesudah belajar. `node --check assets/app.js` lulus. Tidak mengulang tes mobile, lintas browser, stress/storage, atau seluruh suite UI lama untuk penambahan ini. Isi bank diperiksa dengan build `--check`, tanpa build yang menulis ulang data.
+
 Lingkungan Windows, Python 3.11, Node 24, Chrome headless dan Playwright lokal. Aplikasi diuji melalui `file://`; alur utama dan pengisian penuh diuji dengan jaringan dimatikan. Tidak ada server atau publikasi.
 
 | Perintah | Cakupan |

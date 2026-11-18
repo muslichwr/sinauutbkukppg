@@ -24,11 +24,46 @@
     }
   }
   load();
+  const STUDY_STORAGE = 'ukpppg-pplg-study:v1';
+  let study = { schemaVersion: 1, lastOpen: null, sessions: {} }, studyWarning = '', studyBlocked = false;
+  try {
+    const saved = JSON.parse(localStorage.getItem(STUDY_STORAGE) || 'null');
+    if (saved) {
+      if (saved.schemaVersion !== 1 || !saved.sessions || typeof saved.sessions !== 'object' || Array.isArray(saved.sessions)) throw new Error('Progres belajar tidak sah');
+      study = saved;
+    }
+  } catch (e) { studyBlocked = true; studyWarning = 'Progres belajar tidak dapat dibaca. Belajar hanya di memori; data lama tidak ditimpa.'; }
+  function studyPack() { return bank.packages.find(p => `${p.id}@${p.version}` === view.studyKey); }
+  function studySession() {
+    const pack = studyPack(), progress = study.sessions[view.studyKey];
+    return pack && progress ? { ...progress, title: pack.title, questions: pack.questions, status: 'active', flagged: {} } : null;
+  }
+  function saveStudy() {
+    if (!studyBlocked) {
+      try { localStorage.setItem(STUDY_STORAGE, JSON.stringify(study)); }
+      catch (e) { studyBlocked = true; studyWarning = 'Progres belajar BELUM tersimpan. Tetap di halaman ini; progres terbaru hanya di memori.'; }
+    }
+    showStorage();
+  }
+  function openStudy(packageId) {
+    const pack = bank.packages.find(p => p.id === packageId);
+    if (!pack) return;
+    const key = `${pack.id}@${pack.version}`;
+    let progress = study.sessions[key];
+    if (!progress || !Number.isInteger(progress.idx) || progress.idx < 0 || progress.idx >= pack.questions.length ||
+        !progress.answers || typeof progress.answers !== 'object' || !progress.shown || typeof progress.shown !== 'object') {
+      progress = { idx: 0, answers: {}, shown: {} };
+      study.sessions[key] = progress;
+    }
+    view = { mode: 'study', studyKey: key, wrongOnly: false };
+    study.lastOpen = key; saveStudy(); render();
+  }
   function current(data = db) { return data.attempts.find(a => a.id === view.id); }
   function showStorage() {
     const el = document.getElementById('storage-status');
-    el.className = storageWarning ? 'hint storage-error' : 'muted small';
-    el.textContent = storageWarning || 'Progres tersimpan di browser ini. Data dapat hilang jika data browser dihapus; tidak tersinkron antarperangkat.';
+    const warning = view.mode === 'study' ? studyWarning : storageWarning;
+    el.className = warning ? 'hint storage-error' : 'muted small';
+    el.textContent = warning || 'Progres tersimpan di browser ini. Data dapat hilang jika data browser dihapus; tidak tersinkron antarperangkat.';
   }
   // Web Locks serializes read/merge/write across tabs where supported, including modern Chrome file://.
   async function mutate(action, fullRender = true) {
@@ -80,6 +115,8 @@
     // Resume the last active full attempt after refresh; Beranda never ends its timer.
     const active = [...db.attempts].reverse().find(a => a.status === 'active');
     if (active) view = { mode: 'exam', id: active.id, wrongOnly: false };
+    const lastStudy = bank.packages.find(p => `${p.id}@${p.version}` === study.lastOpen);
+    if (lastStudy) { openStudy(lastStudy.id); return; }
     render();
   }
   function date(ms) { return new Date(ms).toLocaleString('id-ID'); }
@@ -87,8 +124,8 @@
     const options = bank.packages.map(p => `<option value="${p.id}">${esc(p.title)} • 80 soal • v${esc(p.version)}</option>`).join('');
     const active = db.attempts.filter(a => a.status === 'active');
     const history = [...db.attempts].reverse().filter(a => a.status !== 'active');
-    return `<section class="hero"><span class="pill">LATIHAN ORISINAL • PPLG/RPL</span><h1>Simulasi Ujian Penuh</h1><p>Kerjakan satu paket utuh: <b>80 soal = 50 PCK + 30 Pedagogi Umum</b>. Jawaban dapat diubah dan ditandai ragu. Nilai, kunci, serta pembahasan terbuka setelah ujian selesai.</p><div class="chips"><span class="chip">PG</span><span class="chip">PGK Kategori</span><span class="chip">PGK MCMA</span><span class="chip">17 subkompetensi</span></div></section>
-      <section class="panel"><h2>Mulai latihan</h2><div class="controls"><label for="package-select">Pilih paket</label><select id="package-select">${options}</select><label for="duration">Durasi latihan (menit)</label><input id="duration" type="number" min="0" max="600" step="1" value="${minutes}" inputmode="numeric"><span class="small muted">0 = tanpa batas waktu</span>${btn('start', 'Mulai simulasi 80 soal', '', 'primary')}</div><p class="small muted">Default 150 menit adalah pengaturan latihan. Ikuti durasi pada kartu ujian/TUK untuk sesi sebenarnya. Timer berjalan saat pindah ke beranda, menutup tab, atau komputer tidur; waktu habis mengakhiri ujian.</p><p class="small muted">Komposisi bentuk soal dan distribusi per kode merupakan rancangan latihan internal, bukan bobot resmi. Skor: satu poin per butir jika seluruh respons tepat; bukan nilai atau batas lulus resmi.</p></section>
+    return `<section class="hero"><span class="pill">LATIHAN ORISINAL • PPLG/RPL</span><h1>Simulasi Ujian Penuh</h1><p>Kerjakan satu paket utuh: <b>80 soal = 50 PCK + 30 Pedagogi Umum</b>. Jawaban dapat diubah dan ditandai ragu. Pada Simulasi Ujian, nilai, kunci, serta pembahasan terbuka setelah selesai. Pilih Mode Belajar untuk memeriksa dan membaca pembahasan per soal.</p><div class="chips"><span class="chip">PG</span><span class="chip">PGK Kategori</span><span class="chip">PGK MCMA</span><span class="chip">17 subkompetensi</span></div></section>
+      <section class="panel"><h2>Mulai latihan</h2><div class="controls"><label for="package-select">Pilih paket</label><select id="package-select">${options}</select><label for="mode-select">Mode latihan</label><select id="mode-select"><option value="exam">Simulasi Ujian</option><option value="study">Mode Belajar (Pembahasan Langsung)</option></select><span id="duration-controls"><label for="duration">Durasi latihan (menit)</label><input id="duration" type="number" min="0" max="600" step="1" value="${minutes}" inputmode="numeric"><span class="small muted">0 = tanpa batas waktu</span></span>${btn('start', 'Mulai simulasi 80 soal', '', 'primary')}</div><p id="timer-hint" class="small muted">Default 150 menit adalah pengaturan latihan. Ikuti durasi pada kartu ujian/TUK untuk sesi sebenarnya. Timer berjalan saat pindah ke beranda, menutup tab, atau komputer tidur; waktu habis mengakhiri ujian.</p><p class="small muted">Komposisi bentuk soal dan distribusi per kode merupakan rancangan latihan internal, bukan bobot resmi. Skor: satu poin per butir jika seluruh respons tepat; bukan nilai atau batas lulus resmi.</p></section>
       ${active.length ? `<section class="panel spaced"><h2>Simulasi berjalan</h2>${active.map(a => `<div class="history-row"><div><b>${esc(a.title)}</b><div class="small muted">${count(a)}/80 lengkap • dimulai ${date(a.startedAt)} • v${esc(a.bankVersion)}</div></div>${btn('resume', 'Lanjutkan simulasi', `data-id="${esc(a.id)}"`, 'primary')}</div>`).join('')}</section>` : ''}
       <section class="panel spaced"><h2>Riwayat latihan</h2>${history.length ? history.map(a => { const r = Core.summarize(a); return `<div class="history-row"><div><b>${esc(a.title)}</b> • ${a.status === 'archived' ? 'arsip, bukan simulasi penuh' : `${r.correct}/80 benar (${Math.round(r.correct / 80 * 100)}%)`}<div class="small muted">${date(a.completedAt)} • v${esc(a.bankVersion)}${a.finishReason === 'timeout' ? ' • waktu habis' : ''}</div></div>${btn('result', a.status === 'archived' ? 'Buka arsip prototipe' : 'Lihat hasil', `data-id="${esc(a.id)}"`)}</div>`; }).join('') : '<p class="muted">Hasil muncul setelah simulasi pertama selesai.</p>'}</section>
       <p class="resource">Rujukan: <a href="references/Juknis%20UKPPPG%20Calon%20Guru%20Tahun%202026.pdf">Juknis resmi yang disediakan</a> hal. 7 dan 47. <a href="references/Panduan_Definitif_UTBK_UKPPPG_2026_NQ.pdf">Panduan pendamping</a> digunakan untuk pola kasus dan analisis pengecoh. Ini latihan, bukan soal resmi/bocoran.</p>`;
@@ -118,11 +155,16 @@
     if (q.type === 'MCMA') return Array.isArray(response) && response.length ? response.join(', ') : 'belum dijawab';
     return q.options.map((_, i) => response && response[i] === 'T' ? 'Tepat' : response && response[i] === 'F' ? 'Tidak tepat' : '—').join(' / ');
   }
-  function reviewPanel(a, idx) {
-    const r = Core.review(a, idx);
+  function reviewPanel(a, idx, studyResult = null) {
+    const r = studyResult ? { question: a.questions[idx], answer: a.answers[a.questions[idx].uid], correct: studyResult === 'checked' ? Core.correct(a.questions[idx], a.answers[a.questions[idx].uid]) : null } : Core.review(a, idx);
     if (!r) return '';
     const q = r.question;
-    return `<section class="review ${r.correct ? '' : 'bad'}"><h3>${r.correct ? 'Jawaban tepat' : 'Perlu dipelajari'}</h3><p>Jawabanmu: ${esc(answerText(q, r.answer))}</p><p><b>Kunci:</b> ${esc(answerText(q, q.key))}</p><p>${esc(q.why)}</p>${(q.explanations || []).map((reason, i) => `<p class="option-reason"><b>${q.type === 'Kategori' ? `Pernyataan ${i + 1}` : `Opsi ${'ABCDE'[i]}`}:</b> ${esc(reason)}</p>`).join('')}</section>`;
+    return `<section class="review ${r.correct === false ? 'bad' : ''}"><h3>${studyResult ? r.correct === null ? 'Pembahasan' : r.correct ? 'Jawaban benar' : 'Jawaban salah' : r.correct ? 'Jawaban tepat' : 'Perlu dipelajari'}</h3><p>Jawabanmu: ${esc(answerText(q, r.answer))}</p><p><b>Kunci:</b> ${esc(answerText(q, q.key))}</p><p>${esc(q.why)}</p>${(q.explanations || []).map((reason, i) => `<p class="option-reason"><b>${q.type === 'Kategori' ? `Pernyataan ${i + 1}` : `Opsi ${'ABCDE'[i]}`}:</b> ${esc(reason)}</p>`).join('')}</section>`;
+  }
+  function studyView(a) {
+    const q = a.questions[a.idx];
+    return `<div class="examhead"><div><b>${esc(a.title)} • Mode Belajar</b><p class="small muted">Tanpa timer. Periksa jawaban atau langsung baca pembahasan. Progres ini terpisah dari simulasi.</p></div><span class="pill">Soal ${a.idx + 1} / ${a.questions.length}</span></div>
+      <div class="layout spaced"><article class="panel question"><div class="qinfo"><span class="pill">${q.section} • ${q.code} • ${typeName(q.type)}</span></div><h2 id="question-title" class="qtitle" tabindex="-1">${esc(q.stem)}</h2><p class="small muted">${q.type === 'PG' ? 'Pilih satu jawaban paling tepat.' : q.type === 'MCMA' ? 'Pilih semua jawaban yang tepat, lalu tekan Periksa Jawaban.' : 'Jawab tiap pernyataan, lalu tekan Periksa Jawaban.'}</p>${choices(q, a, false)}<div class="controls">${btn('study-check', 'Periksa Jawaban', '', 'primary')}${btn('study-reveal', 'Lihat Pembahasan')}</div>${a.shown[q.uid] ? reviewPanel(a, a.idx, a.shown[q.uid]) : ''}<div class="bar">${btn('go', '← Sebelumnya', `data-index="${a.idx - 1}" ${a.idx === 0 ? 'disabled' : ''}`)}${btn('go', 'Berikutnya →', `data-index="${a.idx + 1}" ${a.idx === a.questions.length - 1 ? 'disabled' : ''}`, 'primary')}</div></article><aside class="panel sticky"><b>Navigasi nomor</b><nav class="numbers" aria-label="Navigasi soal">${nav(a)}</nav><p class="small muted">Hijau muda: jawaban lengkap. Pelajari nomor mana pun; tidak perlu menyelesaikan seluruh paket.</p>${btn('home', 'Kembali ke beranda')}</aside></div>`;
   }
   function exam(a) {
     const done = a.status !== 'active', q = a.questions[a.idx], list = indices(a), position = list.indexOf(a.idx);
@@ -139,6 +181,11 @@
     return `<section class="hero"><span class="pill">HASIL LATIHAN • BUKAN NILAI UKPPPG</span><h1>Hasil ${esc(a.title)}</h1><p>${archived ? 'Arsip prototipe dipertahankan dengan soal dan urutan jawaban asli. Sesi awal dapat berupa latihan parsial dan pernah membuka kunci; arsip ini bukan hasil simulasi penuh.' : `Selesai ${date(a.completedAt)}${a.finishReason === 'timeout' ? ' karena waktu habis' : ''}.`} Versi soal: ${esc(a.bankVersion)}.</p></section><section class="panel"><div class="result-grid"><div class="stat"><div>Ketepatan latihan</div><div class="score">${Math.round(r.correct / r.total * 100)}%</div></div><div class="stat"><div>Benar</div><strong>${r.correct} / ${r.total}</strong></div><div class="stat"><div>Belum lengkap</div><strong>${r.unanswered}</strong></div></div><p class="small muted">Satu butir bernilai 1 jika seluruh respons tepat. Jawaban sebagian atau pilihan MCMA berlebih bernilai 0. Butir salah termasuk belum lengkap: ${r.wrong.length}. Bukan rumus nilai atau batas kelulusan resmi.</p>${table(r.sections, 'Per bagian', 'sections')}${table(r.types, 'Per bentuk soal', 'types')}${table(r.codes, 'Per subkompetensi utama', 'codes')}<div class="endsection">${btn('review', 'Tinjau semua jawaban')}${r.wrong.length ? btn('wrong', 'Review jawaban salah', '', 'teal') : ''}${!archived ? btn('retry', 'Ulang paket penuh', '', 'primary') : ''}${btn('home', 'Kembali ke beranda')}</div><p class="small muted">Review kesalahan menampilkan hasil sesi ini. Ulang paket selalu memulai 80 soal baru pada versi paket yang tersedia; riwayat lama tetap disimpan.</p></section>`;
   }
   function render() {
+    if (view.mode === 'study') {
+      const session = studySession();
+      if (session) { app.innerHTML = studyView(session); showStorage(); return; }
+      view.mode = 'home';
+    }
     const a = current();
     if (view.mode !== 'home' && !a) view.mode = 'home';
     if (a && view.mode === 'result' && a.status === 'active') view.mode = 'exam';
@@ -161,6 +208,7 @@
   async function startPackage(packageId, forceNew = false) {
     const pack = bank.packages.find(p => p.id === packageId);
     if (!pack) return;
+    study.lastOpen = null; saveStudy();
     await mutate(data => {
       data.attempts.forEach(a => Core.expire(a, Date.now()));
       let a = forceNew ? null : [...data.attempts].reverse().find(a => a.packageId === packageId && a.status === 'active');
@@ -176,18 +224,36 @@
     const target = event.target.closest('[data-action]');
     if (!target || target.disabled) return;
     const action = target.dataset.action;
-    if (action === 'home') { view.mode = 'home'; render(); return; }
+    if (action === 'home') { study.lastOpen = null; saveStudy(); view.mode = 'home'; render(); return; }
     if (action === 'export') { exportData(); return; }
     if (action === 'start') {
+      if (document.getElementById('mode-select').value === 'study') { openStudy(Number(document.getElementById('package-select').value)); return; }
       const input = document.getElementById('duration');
       if (!input.reportValidity() || input.value.trim() === '') return;
       minutes = Number(input.value);
       await startPackage(Number(document.getElementById('package-select').value)); return;
     }
     if (action === 'resume' || action === 'result') {
+      study.lastOpen = null; saveStudy();
       if (target.dataset.id) view.id = target.dataset.id;
       view.mode = action === 'resume' ? 'exam' : 'result'; view.wrongOnly = false;
       await mutate(data => { const a = current(data); if (a) Core.expire(a, Date.now()); }); return;
+    }
+    if (view.mode === 'study') {
+      const a = studySession(); if (!a) return;
+      const progress = study.sessions[view.studyKey], q = a.questions[a.idx];
+      if (action === 'go') {
+        const i = Number(target.dataset.index);
+        if (!Number.isInteger(i) || i < 0 || i >= a.questions.length) return;
+        progress.idx = i;
+      } else if (action === 'study-check') {
+        if (!Core.answered(q, a.answers[q.uid])) { alert('Lengkapi jawaban terlebih dahulu, atau pilih Lihat Pembahasan.'); return; }
+        progress.shown[q.uid] = 'checked';
+      } else if (action === 'study-reveal') progress.shown[q.uid] = 'revealed';
+      else return;
+      saveStudy(); render();
+      if (action === 'go') document.getElementById('question-title')?.focus();
+      return;
     }
     const a = current();
     if (!a) return;
@@ -216,7 +282,29 @@
   });
   app.addEventListener('change', async event => {
     const input = event.target;
+    if (input.id === 'mode-select') {
+      const learning = input.value === 'study';
+      document.querySelector('[data-action="start"]').textContent = learning ? 'Mulai Mode Belajar' : 'Mulai simulasi 80 soal';
+      document.getElementById('duration-controls').hidden = learning;
+      document.getElementById('timer-hint').hidden = learning;
+      return;
+    }
     if (!input.matches('input[name="answer"], input[data-cat]')) return;
+    if (view.mode === 'study') {
+      const a = studySession(); if (!a) return;
+      const q = a.questions[a.idx], progress = study.sessions[view.studyKey];
+      let response;
+      if (input.dataset.cat !== undefined) {
+        response = Array.isArray(a.answers[q.uid]) ? [...a.answers[q.uid]] : Array(q.options.length).fill('');
+        response[Number(input.dataset.cat)] = input.value;
+      } else if (q.type === 'PG') response = input.value;
+      else { response = Array.isArray(a.answers[q.uid]) ? a.answers[q.uid].filter(v => v !== input.value) : []; if (input.checked) response.push(input.value); response.sort(); }
+      progress.answers[q.uid] = response;
+      delete progress.shown[q.uid]; saveStudy();
+      app.querySelector('.review')?.remove();
+      app.querySelector('.numbers').innerHTML = nav(studySession());
+      return;
+    }
     const a = current();
     if (!a || a.status !== 'active') return;
     const uid = a.questions[a.idx].uid, value = input.value, checked = input.checked, cat = input.dataset.cat;

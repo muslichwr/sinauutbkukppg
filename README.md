@@ -15,6 +15,14 @@ Skor latihan: satu poin jika seluruh respons pada butir tepat, selain itu nol. B
 
 ## Data lokal dan riwayat
 
+### Mode Belajar (Pembahasan Langsung)
+
+Di beranda, pilih paket dan **Mode Belajar**, lalu klik **Mulai Mode Belajar**. Mode ini tanpa timer dan tidak menambah percobaan simulasi. Pilih jawaban lalu tekan **Periksa Jawaban**, atau tekan **Lihat Pembahasan** untuk langsung membaca. MCMA dan Kategori menunggu tombol pemeriksaan; Kategori perlu diisi seluruhnya untuk dinilai. Mengubah jawaban menutup hasil sebelumnya sampai diperiksa lagi.
+
+Navigasi nomor dan Sebelumnya/Berikutnya bebas digunakan. Jawaban, nomor terakhir, serta pembahasan yang dibuka disimpan per paket dan versi dalam key terpisah `ukpppg-pplg-study:v1`; refresh melanjutkan sesi belajar yang terakhir terbuka. Beranda mengembalikan pemilihan mode. Isi bank dan snapshot simulasi tidak diubah. Bila ada simulasi bertimer yang masih berjalan, timernya tetap berjalan saat Anda belajar, sesuai perilaku simulasi semula.
+
+### Penyimpanan simulasi
+
 - Key stabil: `ukpppg-pplg-drill:v2`. Setiap percobaan menyimpan versi dan snapshot soal; pembaruan bank tidak mengganti soal/kunci riwayat. Tidak ada penghapusan otomatis.
 - Progres prototipe dari key `ukin2026-pplg-v1` disalin sebagai **arsip prototipe** dengan urutan, soal, serta jawaban asli. Arsip mungkin parsial/pernah membuka kunci; tidak dianggap simulasi penuh. Key asli tetap utuh.
 - Data melekat pada browser, profil, dan lokasi berkas. Penghapusan data, mode privat, perpindahan perangkat/folder, atau kuota penuh dapat menghilangkan akses riwayat. Tidak ada sinkronisasi akun.
